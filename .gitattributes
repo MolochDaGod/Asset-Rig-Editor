@@ -1,0 +1,4 @@
+# Binary assets - stored directly (no LFS)
+*.glb binary
+*.fbx binary
+*.zip binary

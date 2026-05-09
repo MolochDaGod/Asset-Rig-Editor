@@ -1,0 +1,103 @@
+Toon Low-Poly RTS Fantasy Units — Build Sheet (Easy)
+This sheet reorganizes the exact pack specs you provided into a checklist you can follow while building or configuring the models.
+
+Global pack rules (apply to all units below)
+Stylization: Toon Low-Poly RTS fantasy units.
+Rigging: Mecanim ready and Humanoid Rigged (except cavalry units).
+Textures: 9 color texture skins (one single 2048x2048 texture for all characters).
+1) Toon Low-Poly RTS Fantasy Orc Units pack (Ideal for strategy games)
+Fully Customizable parts
+Heads: 9 head variants
+Body: 5 body variants
+Arms: 4 arm variants
+Legs: 3 leg variants
+Shoulderpad variants: 2
+Weapons: 12 weapon variants
+Shields: 4 shield variants
+Mount: Horse mount
+Worker equipment props: Wood Pile and Goods Bag for Worker Units
+Siege model: Catapult model
+Ready-to-use assets
+Character prefabs: 25 ready to use character prefabs
+Single-mesh equipped models: 25 ready to use single mesh equipped models
+Animation Sets
+Infantry (shield and weapon)
+Spearman
+Archer
+Mage (staff and weapon)
+Worker
+Cavalry (shield and weapon)
+Cavalry with Spear/Lance
+Cavalry Archer
+Cavalry Mage
+Catapult
+2) Toon Low-Poly RTS Fantasy Undead Units pack (Ideal for strategy games)
+Fully Customizable parts
+Heads: 13 head variants
+Body: 7 body variants
+Arms: 5 arm variants
+Legs: 4 leg variants
+Shoulderpad variants: 3
+Weapons: 13 weapon variants
+Shields: 3 shield variants
+Mount: Undead Horse mount
+Worker equipment props: Wood Pile and Goods Bag for Worker Units
+Ready-to-use assets
+Character prefabs: 20 ready to use character prefabs
+Single-mesh equipped models: 20 ready to use single mesh equipped models
+Animation Sets
+Infantry (shield and weapon)
+Spearman
+Archer
+Mage (staff and weapon)
+Worker
+Cavalry (shield and weapon)
+Cavalry with Spear/Lance
+Cavalry Archer
+Cavalry Mage
+3) Toon Low-Poly RTS Fantasy Dwarf Units pack (Ideal for strategy games)
+Fully Customizable parts
+Heads: 14 head variants
+Body: 5 body variants
+Arms: 3 arm variants
+Legs: 3 leg variants
+Shoulderpad variants: 3
+Weapons: 13 weapon variants
+Shields: 4 shield variants
+Mount: Ram mount
+Worker equipment props: Wood Pile and Goods Bag for Worker Units
+Ready-to-use assets
+Character prefabs: 20 ready to use character prefabs
+Single-mesh equipped models: 20 ready to use single mesh equipped models
+Polycount
+Infantry Units range between 450 - 700 triangles
+Cavalry Units range between 800 - 1000 triangles
+Animation Sets
+Infantry (shield and weapon)
+Spearman
+Archer
+Mage (staff and weapon)
+Worker
+Cavalry (shield and weapon)
+Cavalry with Spear/Lance
+Cavalry Archer
+Cavalry Mage
+Quick “Build an RTS unit” checklist (works for all three packs)
+Pick the unit type you want (Infantry / Spearman / Archer / Mage / Worker / Cavalry / Catapult).
+Choose the faction (Orc / Undead / Dwarf).
+Assemble the character by selecting:
+Head variant
+Body variant
+Arm variant
+Leg variant
+Shoulderpad variant (if applicable)
+Weapon variant
+Shield variant (if applicable)
+Add mount/equipment if the unit type requires it:
+Orc cavalry uses Horse mount
+Undead cavalry uses Undead Horse mount
+Dwarf cavalry uses Ram mount
+Worker units use Wood Pile and Goods Bag for Worker Units
+Catapult uses Catapult model (Orc pack only, per your list)
+Use the pack’s shared Toon skin texture: one 2048x2048 texture for all characters.
+Ensure you select animations from the correct Animation Sets list.

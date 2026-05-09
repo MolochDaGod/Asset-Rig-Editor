@@ -1,0 +1,2910 @@
+{
+  "infantry": {
+    "barbarian": {
+      "folder": "barbarian",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 26.5,
+      "parts": [
+        {
+          "name": "BRB_weapon_staff_A",
+          "file": "BRB_weapon_staff_A.glb",
+          "sizeKB": 29.2
+        },
+        {
+          "name": "BRB_weapon_Bow",
+          "file": "BRB_weapon_Bow.glb",
+          "sizeKB": 28.7
+        },
+        {
+          "name": "BRB_weapon_staff_C",
+          "file": "BRB_weapon_staff_C.glb",
+          "sizeKB": 34.5
+        },
+        {
+          "name": "BRB_weapon_staff_B",
+          "file": "BRB_weapon_staff_B.glb",
+          "sizeKB": 29.4
+        },
+        {
+          "name": "BRB_Shield_A",
+          "file": "BRB_Shield_A.glb",
+          "sizeKB": 28.9
+        },
+        {
+          "name": "BRB_Shield_C",
+          "file": "BRB_Shield_C.glb",
+          "sizeKB": 29.8
+        },
+        {
+          "name": "BRB_Shield_D",
+          "file": "BRB_Shield_D.glb",
+          "sizeKB": 29.7
+        },
+        {
+          "name": "BRB_Shield_B",
+          "file": "BRB_Shield_B.glb",
+          "sizeKB": 29.7
+        },
+        {
+          "name": "BRB_weapon_sword_A",
+          "file": "BRB_weapon_sword_A.glb",
+          "sizeKB": 29
+        },
+        {
+          "name": "BRB_weapon_spear",
+          "file": "BRB_weapon_spear.glb",
+          "sizeKB": 29
+        },
+        {
+          "name": "BRB_weapon_axe_A",
+          "file": "BRB_weapon_axe_A.glb",
+          "sizeKB": 29.9
+        },
+        {
+          "name": "BRB_weapon_sword_B",
+          "file": "BRB_weapon_sword_B.glb",
+          "sizeKB": 29.6
+        },
+        {
+          "name": "BRB_weapon_hammer_A",
+          "file": "BRB_weapon_hammer_A.glb",
+          "sizeKB": 29.3
+        },
+        {
+          "name": "BRB_weapon_Dagger",
+          "file": "BRB_weapon_Dagger.glb",
+          "sizeKB": 28.7
+        },
+        {
+          "name": "BRB_weapon_axe_B",
+          "file": "BRB_weapon_axe_B.glb",
+          "sizeKB": 30.8
+        },
+        {
+          "name": "BRB_weapon_hammer_B",
+          "file": "BRB_weapon_hammer_B.glb",
+          "sizeKB": 29.9
+        },
+        {
+          "name": "BRB_weapon_axe_C",
+          "file": "BRB_weapon_axe_C.glb",
+          "sizeKB": 31.5
+        },
+        {
+          "name": "BRB_Xtra_wood",
+          "file": "BRB_Xtra_wood.glb",
+          "sizeKB": 30.5
+        },
+        {
+          "name": "BRB_Xtra_bag",
+          "file": "BRB_Xtra_bag.glb",
+          "sizeKB": 29.9
+        },
+        {
+          "name": "BRB_Xtra_quiver",
+          "file": "BRB_Xtra_quiver.glb",
+          "sizeKB": 31.2
+        },
+        {
+          "name": "BRB_body_F",
+          "file": "BRB_body_F.glb",
+          "sizeKB": 40.7
+        },
+        {
+          "name": "BRB_head_I",
+          "file": "BRB_head_I.glb",
+          "sizeKB": 35.7
+        },
+        {
+          "name": "BRB_head_J",
+          "file": "BRB_head_J.glb",
+          "sizeKB": 31.8
+        },
+        {
+          "name": "BRB_head_C",
+          "file": "BRB_head_C.glb",
+          "sizeKB": 33.2
+        },
+        {
+          "name": "BRB_body_A",
+          "file": "BRB_body_A.glb",
+          "sizeKB": 37.2
+        },
+        {
+          "name": "BRB_body_B",
+          "file": "BRB_body_B.glb",
+          "sizeKB": 37.2
+        },
+        {
+          "name": "BRB_body_E",
+          "file": "BRB_body_E.glb",
+          "sizeKB": 37.2
+        },
+        {
+          "name": "BRB_head_B",
+          "file": "BRB_head_B.glb",
+          "sizeKB": 32.8
+        },
+        {
+          "name": "BRB_body_D",
+          "file": "BRB_body_D.glb",
+          "sizeKB": 37.2
+        },
+        {
+          "name": "BRB_head_A",
+          "file": "BRB_head_A.glb",
+          "sizeKB": 30.8
+        },
+        {
+          "name": "BRB_shoulderpads_B",
+          "file": "BRB_shoulderpads_B.glb",
+          "sizeKB": 32.5
+        },
+        {
+          "name": "BRB_body_G",
+          "file": "BRB_body_G.glb",
+          "sizeKB": 41.2
+        },
+        {
+          "name": "BRB_head_D",
+          "file": "BRB_head_D.glb",
+          "sizeKB": 35.9
+        },
+        {
+          "name": "BRB_head_F",
+          "file": "BRB_head_F.glb",
+          "sizeKB": 41.8
+        },
+        {
+          "name": "BRB_head_H",
+          "file": "BRB_head_H.glb",
+          "sizeKB": 39.7
+        },
+        {
+          "name": "BRB_shoulderpads_C",
+          "file": "BRB_shoulderpads_C.glb",
+          "sizeKB": 44.5
+        },
+        {
+          "name": "BRB_shoulderpads_A",
+          "file": "BRB_shoulderpads_A.glb",
+          "sizeKB": 32.3
+        },
+        {
+          "name": "BRB_head_E",
+          "file": "BRB_head_E.glb",
+          "sizeKB": 34.2
+        },
+        {
+          "name": "BRB_head_G",
+          "file": "BRB_head_G.glb",
+          "sizeKB": 32.2
+        },
+        {
+          "name": "BRB_body_C",
+          "file": "BRB_body_C.glb",
+          "sizeKB": 37.2
+        },
+        {
+          "name": "BRB_body_H",
+          "file": "BRB_body_H.glb",
+          "sizeKB": 41.2
+        },
+        {
+          "name": "BRB_arms_A",
+          "file": "BRB_arms_A.glb",
+          "sizeKB": 30.5
+        },
+        {
+          "name": "BRB_legs_A",
+          "file": "BRB_legs_A.glb",
+          "sizeKB": 32.3
+        },
+        {
+          "name": "BRB_arms_B",
+          "file": "BRB_arms_B.glb",
+          "sizeKB": 30.8
+        },
+        {
+          "name": "BRB_legs_B",
+          "file": "BRB_legs_B.glb",
+          "sizeKB": 32.3
+        },
+        {
+          "name": "BRB_arms_C",
+          "file": "BRB_arms_C.glb",
+          "sizeKB": 35
+        },
+        {
+          "name": "BRB_legs_C",
+          "file": "BRB_legs_C.glb",
+          "sizeKB": 32.3
+        }
+      ]
+    },
+    "dwarf": {
+      "folder": "dwarf",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 26.8,
+      "parts": [
+        {
+          "name": "DWF_Weapon_bow",
+          "file": "DWF_Weapon_bow.glb",
+          "sizeKB": 29.2
+        },
+        {
+          "name": "DWF_Weapon_staff_B",
+          "file": "DWF_Weapon_staff_B.glb",
+          "sizeKB": 34.5
+        },
+        {
+          "name": "DWF_Weapon_staff_A",
+          "file": "DWF_Weapon_staff_A.glb",
+          "sizeKB": 29.5
+        },
+        {
+          "name": "DWF_Shield_B",
+          "file": "DWF_Shield_B.glb",
+          "sizeKB": 30
+        },
+        {
+          "name": "DWF_Shield_A",
+          "file": "DWF_Shield_A.glb",
+          "sizeKB": 29.2
+        },
+        {
+          "name": "DWF_Shield_C",
+          "file": "DWF_Shield_C.glb",
+          "sizeKB": 30.7
+        },
+        {
+          "name": "DWF_Shield_D",
+          "file": "DWF_Shield_D.glb",
+          "sizeKB": 30.5
+        },
+        {
+          "name": "DWF_Weapon_dagger",
+          "file": "DWF_Weapon_dagger.glb",
+          "sizeKB": 29.2
+        },
+        {
+          "name": "DWF_Weapon_spear",
+          "file": "DWF_Weapon_spear.glb",
+          "sizeKB": 29.1
+        },
+        {
+          "name": "DWF_Weapon_axe_B",
+          "file": "DWF_Weapon_axe_B.glb",
+          "sizeKB": 30.9
+        },
+        {
+          "name": "DWF_Weapon_pick",
+          "file": "DWF_Weapon_pick.glb",
+          "sizeKB": 32
+        },
+        {
+          "name": "DWF_Weapon_axe_A",
+          "file": "DWF_Weapon_axe_A.glb",
+          "sizeKB": 30.6
+        },
+        {
+          "name": "DWF_Weapon_axe_C",
+          "file": "DWF_Weapon_axe_C.glb",
+          "sizeKB": 32.8
+        },
+        {
+          "name": "DWF_Weapon_sword_B",
+          "file": "DWF_Weapon_sword_B.glb",
+          "sizeKB": 30.4
+        },
+        {
+          "name": "DWF_Weapon_hammer_B",
+          "file": "DWF_Weapon_hammer_B.glb",
+          "sizeKB": 30.3
+        },
+        {
+          "name": "DWF_Weapon_hammer_A",
+          "file": "DWF_Weapon_hammer_A.glb",
+          "sizeKB": 30
+        },
+        {
+          "name": "DWF_Weapon_sword_A",
+          "file": "DWF_Weapon_sword_A.glb",
+          "sizeKB": 29.5
+        },
+        {
+          "name": "DWF_Xtra_wood",
+          "file": "DWF_Xtra_wood.glb",
+          "sizeKB": 30.7
+        },
+        {
+          "name": "DWF_Xtra_bag",
+          "file": "DWF_Xtra_bag.glb",
+          "sizeKB": 30.2
+        },
+        {
+          "name": "DWF_Xtra_quiver",
+          "file": "DWF_Xtra_quiver.glb",
+          "sizeKB": 31.7
+        },
+        {
+          "name": "DWF_Units_Body_A",
+          "file": "DWF_Units_Body_A.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "DWF_Units_Head_A",
+          "file": "DWF_Units_Head_A.glb",
+          "sizeKB": 32.9
+        },
+        {
+          "name": "DWF_Units_Body_E",
+          "file": "DWF_Units_Body_E.glb",
+          "sizeKB": 42.3
+        },
+        {
+          "name": "DWF_Units_Body_B",
+          "file": "DWF_Units_Body_B.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "DWF_Units_Body_C",
+          "file": "DWF_Units_Body_C.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "DWF_Units_Body_D",
+          "file": "DWF_Units_Body_D.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "DWF_Units_Shoulderpads_A",
+          "file": "DWF_Units_Shoulderpads_A.glb",
+          "sizeKB": 32.5
+        },
+        {
+          "name": "DWF_Units_Shoulderpads_B",
+          "file": "DWF_Units_Shoulderpads_B.glb",
+          "sizeKB": 32.5
+        },
+        {
+          "name": "DWF_Units_Shoulderpads_C",
+          "file": "DWF_Units_Shoulderpads_C.glb",
+          "sizeKB": 32.8
+        },
+        {
+          "name": "DWF_Units_Head_M",
+          "file": "DWF_Units_Head_M.glb",
+          "sizeKB": 33.7
+        },
+        {
+          "name": "DWF_Units_Head_N",
+          "file": "DWF_Units_Head_N.glb",
+          "sizeKB": 33.7
+        },
+        {
+          "name": "DWF_Units_Arms_A",
+          "file": "DWF_Units_Arms_A.glb",
+          "sizeKB": 31.1
+        },
+        {
+          "name": "DWF_Units_Legs_A",
+          "file": "DWF_Units_Legs_A.glb",
+          "sizeKB": 32.6
+        },
+        {
+          "name": "DWF_Units_Legs_B",
+          "file": "DWF_Units_Legs_B.glb",
+          "sizeKB": 32.6
+        },
+        {
+          "name": "DWF_Units_Arms_B",
+          "file": "DWF_Units_Arms_B.glb",
+          "sizeKB": 31.1
+        },
+        {
+          "name": "DWF_Units_Legs_C",
+          "file": "DWF_Units_Legs_C.glb",
+          "sizeKB": 32.6
+        },
+        {
+          "name": "DWF_Units_Arms_C",
+          "file": "DWF_Units_Arms_C.glb",
+          "sizeKB": 31.1
+        },
+        {
+          "name": "DWF_Units_Head_B",
+          "file": "DWF_Units_Head_B.glb",
+          "sizeKB": 34.6
+        },
+        {
+          "name": "DWF_Units_Head_C",
+          "file": "DWF_Units_Head_C.glb",
+          "sizeKB": 36.8
+        },
+        {
+          "name": "DWF_Units_Head_D",
+          "file": "DWF_Units_Head_D.glb",
+          "sizeKB": 35.6
+        },
+        {
+          "name": "DWF_Units_Head_E",
+          "file": "DWF_Units_Head_E.glb",
+          "sizeKB": 35.5
+        },
+        {
+          "name": "DWF_Units_Head_F",
+          "file": "DWF_Units_Head_F.glb",
+          "sizeKB": 40.8
+        },
+        {
+          "name": "DWF_Units_Head_G",
+          "file": "DWF_Units_Head_G.glb",
+          "sizeKB": 36.5
+        },
+        {
+          "name": "DWF_Units_Head_H",
+          "file": "DWF_Units_Head_H.glb",
+          "sizeKB": 41.8
+        },
+        {
+          "name": "DWF_Units_Head_I",
+          "file": "DWF_Units_Head_I.glb",
+          "sizeKB": 39.5
+        },
+        {
+          "name": "DWF_Units_Head_J",
+          "file": "DWF_Units_Head_J.glb",
+          "sizeKB": 36.2
+        },
+        {
+          "name": "DWF_Units_Head_K",
+          "file": "DWF_Units_Head_K.glb",
+          "sizeKB": 40.7
+        },
+        {
+          "name": "DWF_Units_Head_L",
+          "file": "DWF_Units_Head_L.glb",
+          "sizeKB": 35.7
+        }
+      ]
+    },
+    "elf": {
+      "folder": "elf",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 26.1,
+      "parts": [
+        {
+          "name": "ELF_weapon_bow",
+          "file": "ELF_weapon_bow.glb",
+          "sizeKB": 29.4
+        },
+        {
+          "name": "ELF_weapon_staff_B",
+          "file": "ELF_weapon_staff_B.glb",
+          "sizeKB": 30.5
+        },
+        {
+          "name": "ELF_weapon_staff_C",
+          "file": "ELF_weapon_staff_C.glb",
+          "sizeKB": 32.8
+        },
+        {
+          "name": "ELF_weapon_staff_A",
+          "file": "ELF_weapon_staff_A.glb",
+          "sizeKB": 31.2
+        },
+        {
+          "name": "ELF_shield_C",
+          "file": "ELF_shield_C.glb",
+          "sizeKB": 30
+        },
+        {
+          "name": "ELF_shield_B",
+          "file": "ELF_shield_B.glb",
+          "sizeKB": 29.2
+        },
+        {
+          "name": "ELF_shield_A",
+          "file": "ELF_shield_A.glb",
+          "sizeKB": 29
+        },
+        {
+          "name": "ELF_weapon_axe",
+          "file": "ELF_weapon_axe.glb",
+          "sizeKB": 29.6
+        },
+        {
+          "name": "ELF_weapon_hammer",
+          "file": "ELF_weapon_hammer.glb",
+          "sizeKB": 28.9
+        },
+        {
+          "name": "ELF_weapon_sword_B",
+          "file": "ELF_weapon_sword_B.glb",
+          "sizeKB": 29.1
+        },
+        {
+          "name": "ELF_weapon_dagger",
+          "file": "ELF_weapon_dagger.glb",
+          "sizeKB": 28.5
+        },
+        {
+          "name": "ELF_weapon_sword_A",
+          "file": "ELF_weapon_sword_A.glb",
+          "sizeKB": 29.1
+        },
+        {
+          "name": "ELF_weapon_spear",
+          "file": "ELF_weapon_spear.glb",
+          "sizeKB": 28.7
+        },
+        {
+          "name": "ELF_Xtra_wood",
+          "file": "ELF_Xtra_wood.glb",
+          "sizeKB": 30.1
+        },
+        {
+          "name": "ELF_Xtra_bag",
+          "file": "ELF_Xtra_bag.glb",
+          "sizeKB": 29.5
+        },
+        {
+          "name": "ELF_Xtra_quiver",
+          "file": "ELF_Xtra_quiver.glb",
+          "sizeKB": 30.8
+        },
+        {
+          "name": "ELF_Units_Legs_A",
+          "file": "ELF_Units_Legs_A.glb",
+          "sizeKB": 31.7
+        },
+        {
+          "name": "ELF_Units_Arms_A",
+          "file": "ELF_Units_Arms_A.glb",
+          "sizeKB": 30.1
+        },
+        {
+          "name": "ELF_Units_Body_F",
+          "file": "ELF_Units_Body_F.glb",
+          "sizeKB": 40.3
+        },
+        {
+          "name": "ELF_Units_Body_A",
+          "file": "ELF_Units_Body_A.glb",
+          "sizeKB": 36.8
+        },
+        {
+          "name": "ELF_Units_Head_A",
+          "file": "ELF_Units_Head_A.glb",
+          "sizeKB": 37.9
+        },
+        {
+          "name": "ELF_Units_Body_B",
+          "file": "ELF_Units_Body_B.glb",
+          "sizeKB": 36.8
+        },
+        {
+          "name": "ELF_Units_Arms_B",
+          "file": "ELF_Units_Arms_B.glb",
+          "sizeKB": 30.1
+        },
+        {
+          "name": "ELF_Units_Legs_B",
+          "file": "ELF_Units_Legs_B.glb",
+          "sizeKB": 31.7
+        },
+        {
+          "name": "ELF_Units_Body_E",
+          "file": "ELF_Units_Body_E.glb",
+          "sizeKB": 36.8
+        },
+        {
+          "name": "ELF_Units_Arms_C",
+          "file": "ELF_Units_Arms_C.glb",
+          "sizeKB": 30.1
+        },
+        {
+          "name": "ELF_Units_Legs_C",
+          "file": "ELF_Units_Legs_C.glb",
+          "sizeKB": 31.7
+        },
+        {
+          "name": "ELF_Units_Head_C",
+          "file": "ELF_Units_Head_C.glb",
+          "sizeKB": 33.8
+        },
+        {
+          "name": "ELF_Units_Body_C",
+          "file": "ELF_Units_Body_C.glb",
+          "sizeKB": 36.8
+        },
+        {
+          "name": "ELF_Units_Shoulderpads_B",
+          "file": "ELF_Units_Shoulderpads_B.glb",
+          "sizeKB": 31.6
+        },
+        {
+          "name": "ELF_Units_Head_E",
+          "file": "ELF_Units_Head_E.glb",
+          "sizeKB": 38
+        },
+        {
+          "name": "ELF_Units_Head_B",
+          "file": "ELF_Units_Head_B.glb",
+          "sizeKB": 34.3
+        },
+        {
+          "name": "ELF_Units_Head_D",
+          "file": "ELF_Units_Head_D.glb",
+          "sizeKB": 33.8
+        },
+        {
+          "name": "ELF_Units_Head_G",
+          "file": "ELF_Units_Head_G.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "ELF_Units_Head_L",
+          "file": "ELF_Units_Head_L.glb",
+          "sizeKB": 40.2
+        },
+        {
+          "name": "ELF_Units_Body_D",
+          "file": "ELF_Units_Body_D.glb",
+          "sizeKB": 36.8
+        },
+        {
+          "name": "ELF_Units_Shoulderpads_A",
+          "file": "ELF_Units_Shoulderpads_A.glb",
+          "sizeKB": 31.6
+        },
+        {
+          "name": "ELF_Units_Shoulderpads_C",
+          "file": "ELF_Units_Shoulderpads_C.glb",
+          "sizeKB": 33.1
+        },
+        {
+          "name": "ELF_Units_Head_N",
+          "file": "ELF_Units_Head_N.glb",
+          "sizeKB": 45.2
+        },
+        {
+          "name": "ELF_Units_Head_F",
+          "file": "ELF_Units_Head_F.glb",
+          "sizeKB": 41.1
+        },
+        {
+          "name": "ELF_Units_Head_H",
+          "file": "ELF_Units_Head_H.glb",
+          "sizeKB": 38.6
+        },
+        {
+          "name": "ELF_Units_Head_I",
+          "file": "ELF_Units_Head_I.glb",
+          "sizeKB": 43.2
+        },
+        {
+          "name": "ELF_Units_Head_J",
+          "file": "ELF_Units_Head_J.glb",
+          "sizeKB": 42.6
+        },
+        {
+          "name": "ELF_Units_Head_M",
+          "file": "ELF_Units_Head_M.glb",
+          "sizeKB": 46.7
+        },
+        {
+          "name": "ELF_Units_Head_K",
+          "file": "ELF_Units_Head_K.glb",
+          "sizeKB": 48.4
+        },
+        {
+          "name": "ELF_Units_Head_O",
+          "file": "ELF_Units_Head_O.glb",
+          "sizeKB": 34.4
+        },
+        {
+          "name": "ELF_Units_Head_P",
+          "file": "ELF_Units_Head_P.glb",
+          "sizeKB": 34.4
+        }
+      ]
+    },
+    "human": {
+      "folder": "human",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 23.4,
+      "parts": [
+        {
+          "name": "WK_weapon_staff_A",
+          "file": "WK_weapon_staff_A.glb",
+          "sizeKB": 25.9
+        },
+        {
+          "name": "WK_weapon_staff_B",
+          "file": "WK_weapon_staff_B.glb",
+          "sizeKB": 27.3
+        },
+        {
+          "name": "WK_weapon_staff_C",
+          "file": "WK_weapon_staff_C.glb",
+          "sizeKB": 25.9
+        },
+        {
+          "name": "WK_weapon_Bow",
+          "file": "WK_weapon_Bow.glb",
+          "sizeKB": 25.6
+        },
+        {
+          "name": "WK_Shield_A",
+          "file": "WK_Shield_A.glb",
+          "sizeKB": 25.8
+        },
+        {
+          "name": "WK_Shield_C",
+          "file": "WK_Shield_C.glb",
+          "sizeKB": 26.5
+        },
+        {
+          "name": "WK_Shield_B",
+          "file": "WK_Shield_B.glb",
+          "sizeKB": 26.9
+        },
+        {
+          "name": "WK_Shield_D",
+          "file": "WK_Shield_D.glb",
+          "sizeKB": 25.6
+        },
+        {
+          "name": "WK_weapon_spear",
+          "file": "WK_weapon_spear.glb",
+          "sizeKB": 25.9
+        },
+        {
+          "name": "WK_weapon_sword_A",
+          "file": "WK_weapon_sword_A.glb",
+          "sizeKB": 25.9
+        },
+        {
+          "name": "WK_weapon_hammer_B",
+          "file": "WK_weapon_hammer_B.glb",
+          "sizeKB": 26.6
+        },
+        {
+          "name": "WK_weapon_pick",
+          "file": "WK_weapon_pick.glb",
+          "sizeKB": 26.3
+        },
+        {
+          "name": "WK_weapon_sword_B",
+          "file": "WK_weapon_sword_B.glb",
+          "sizeKB": 25.9
+        },
+        {
+          "name": "WK_weapon_axe_B",
+          "file": "WK_weapon_axe_B.glb",
+          "sizeKB": 26.8
+        },
+        {
+          "name": "WK_weapon_hammer_A",
+          "file": "WK_weapon_hammer_A.glb",
+          "sizeKB": 26.2
+        },
+        {
+          "name": "WK_weapon_axe_A",
+          "file": "WK_weapon_axe_A.glb",
+          "sizeKB": 26.6
+        },
+        {
+          "name": "WK_Xtra_wood",
+          "file": "WK_Xtra_wood.glb",
+          "sizeKB": 27.3
+        },
+        {
+          "name": "WK_Xtra_bag",
+          "file": "WK_Xtra_bag.glb",
+          "sizeKB": 26.7
+        },
+        {
+          "name": "WK_Xtra_quiver",
+          "file": "WK_Xtra_quiver.glb",
+          "sizeKB": 28.1
+        },
+        {
+          "name": "WK_Units_Body_A",
+          "file": "WK_Units_Body_A.glb",
+          "sizeKB": 33.8
+        },
+        {
+          "name": "WK_Units_Body_B",
+          "file": "WK_Units_Body_B.glb",
+          "sizeKB": 34.1
+        },
+        {
+          "name": "WK_Units_Body_D",
+          "file": "WK_Units_Body_D.glb",
+          "sizeKB": 33.8
+        },
+        {
+          "name": "WK_Units_Body_C",
+          "file": "WK_Units_Body_C.glb",
+          "sizeKB": 34.1
+        },
+        {
+          "name": "WK_Units_shoulderpads_A",
+          "file": "WK_Units_shoulderpads_A.glb",
+          "sizeKB": 28.6
+        },
+        {
+          "name": "WK_Units_head_C",
+          "file": "WK_Units_head_C.glb",
+          "sizeKB": 31
+        },
+        {
+          "name": "WK_Units_head_B",
+          "file": "WK_Units_head_B.glb",
+          "sizeKB": 30
+        },
+        {
+          "name": "WK_Units_head_A",
+          "file": "WK_Units_head_A.glb",
+          "sizeKB": 27.3
+        },
+        {
+          "name": "WK_Units_Legs_A",
+          "file": "WK_Units_Legs_A.glb",
+          "sizeKB": 29.1
+        },
+        {
+          "name": "WK_Units_Arms_A",
+          "file": "WK_Units_Arms_A.glb",
+          "sizeKB": 27.4
+        },
+        {
+          "name": "WK_Units_Legs_B",
+          "file": "WK_Units_Legs_B.glb",
+          "sizeKB": 29
+        },
+        {
+          "name": "WK_Units_Arms_B",
+          "file": "WK_Units_Arms_B.glb",
+          "sizeKB": 27.4
+        },
+        {
+          "name": "WK_Units_Legs_C",
+          "file": "WK_Units_Legs_C.glb",
+          "sizeKB": 29.1
+        },
+        {
+          "name": "WK_Units_Arms_C",
+          "file": "WK_Units_Arms_C.glb",
+          "sizeKB": 27.4
+        },
+        {
+          "name": "WK_Units_Body_E",
+          "file": "WK_Units_Body_E.glb",
+          "sizeKB": 37.5
+        },
+        {
+          "name": "WK_Units_head_E",
+          "file": "WK_Units_head_E.glb",
+          "sizeKB": 28
+        },
+        {
+          "name": "WK_Units_Arms_D",
+          "file": "WK_Units_Arms_D.glb",
+          "sizeKB": 27.4
+        },
+        {
+          "name": "WK_Units_head_D",
+          "file": "WK_Units_head_D.glb",
+          "sizeKB": 28.3
+        },
+        {
+          "name": "WK_Units_head_H",
+          "file": "WK_Units_head_H.glb",
+          "sizeKB": 28.6
+        },
+        {
+          "name": "WK_Units_head_G",
+          "file": "WK_Units_head_G.glb",
+          "sizeKB": 28.6
+        },
+        {
+          "name": "WK_Units_head_F",
+          "file": "WK_Units_head_F.glb",
+          "sizeKB": 29.6
+        },
+        {
+          "name": "WK_Units_shoulderpads_B",
+          "file": "WK_Units_shoulderpads_B.glb",
+          "sizeKB": 29
+        },
+        {
+          "name": "WK_Units_head_I",
+          "file": "WK_Units_head_I.glb",
+          "sizeKB": 28.3
+        }
+      ]
+    },
+    "orc": {
+      "folder": "orc",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 28,
+      "parts": [
+        {
+          "name": "ORC_weapon_Bow",
+          "file": "ORC_weapon_Bow.glb",
+          "sizeKB": 30.2
+        },
+        {
+          "name": "ORC_weapon_staff_A",
+          "file": "ORC_weapon_staff_A.glb",
+          "sizeKB": 30.6
+        },
+        {
+          "name": "ORC_weapon_staff_C",
+          "file": "ORC_weapon_staff_C.glb",
+          "sizeKB": 36.6
+        },
+        {
+          "name": "ORC_weapon_staff_B",
+          "file": "ORC_weapon_staff_B.glb",
+          "sizeKB": 33.1
+        },
+        {
+          "name": "ORC_Shield_A",
+          "file": "ORC_Shield_A.glb",
+          "sizeKB": 30.4
+        },
+        {
+          "name": "ORC_Shield_C",
+          "file": "ORC_Shield_C.glb",
+          "sizeKB": 30.4
+        },
+        {
+          "name": "ORC_Shield_B",
+          "file": "ORC_Shield_B.glb",
+          "sizeKB": 30.8
+        },
+        {
+          "name": "ORC_Shield_D",
+          "file": "ORC_Shield_D.glb",
+          "sizeKB": 32.9
+        },
+        {
+          "name": "ORC_weapon_spear",
+          "file": "ORC_weapon_spear.glb",
+          "sizeKB": 30.5
+        },
+        {
+          "name": "ORC_weapon_Hammer",
+          "file": "ORC_weapon_Hammer.glb",
+          "sizeKB": 30.8
+        },
+        {
+          "name": "ORC_weapon_Dagger",
+          "file": "ORC_weapon_Dagger.glb",
+          "sizeKB": 30.1
+        },
+        {
+          "name": "ORC_weapon_Axe_C",
+          "file": "ORC_weapon_Axe_C.glb",
+          "sizeKB": 31.3
+        },
+        {
+          "name": "ORC_weapon_Sword_B",
+          "file": "ORC_weapon_Sword_B.glb",
+          "sizeKB": 31.3
+        },
+        {
+          "name": "ORC_weapon_Axe_A",
+          "file": "ORC_weapon_Axe_A.glb",
+          "sizeKB": 30.2
+        },
+        {
+          "name": "ORC_weapon_Mace_A",
+          "file": "ORC_weapon_Mace_A.glb",
+          "sizeKB": 31.7
+        },
+        {
+          "name": "ORC_weapon_Axe_B",
+          "file": "ORC_weapon_Axe_B.glb",
+          "sizeKB": 31
+        },
+        {
+          "name": "ORC_weapon_Sword_A",
+          "file": "ORC_weapon_Sword_A.glb",
+          "sizeKB": 30.9
+        },
+        {
+          "name": "ORC_Xtra_quiver",
+          "file": "ORC_Xtra_quiver.glb",
+          "sizeKB": 32.7
+        },
+        {
+          "name": "ORC_Units_Body_A",
+          "file": "ORC_Units_Body_A.glb",
+          "sizeKB": 38.5
+        },
+        {
+          "name": "ORC_Units_Body_C",
+          "file": "ORC_Units_Body_C.glb",
+          "sizeKB": 38.5
+        },
+        {
+          "name": "ORC_Xtra_Wood",
+          "file": "ORC_Xtra_Wood.glb",
+          "sizeKB": 33.6
+        },
+        {
+          "name": "ORC_Xtra_Bag",
+          "file": "ORC_Xtra_Bag.glb",
+          "sizeKB": 32.7
+        },
+        {
+          "name": "ORC_Units_Body_B",
+          "file": "ORC_Units_Body_B.glb",
+          "sizeKB": 38.5
+        },
+        {
+          "name": "ORC_Units_Body_F",
+          "file": "ORC_Units_Body_F.glb",
+          "sizeKB": 42.7
+        },
+        {
+          "name": "ORC_Units_Head_A",
+          "file": "ORC_Units_Head_A.glb",
+          "sizeKB": 33.5
+        },
+        {
+          "name": "ORC_Units_Body_E",
+          "file": "ORC_Units_Body_E.glb",
+          "sizeKB": 38.5
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_C",
+          "file": "ORC_Units_Shoulderpads_C.glb",
+          "sizeKB": 33.6
+        },
+        {
+          "name": "ORC_Units_Head_H",
+          "file": "ORC_Units_Head_H.glb",
+          "sizeKB": 34.4
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_B",
+          "file": "ORC_Units_Shoulderpads_B.glb",
+          "sizeKB": 33.6
+        },
+        {
+          "name": "ORC_Units_Arms_C",
+          "file": "ORC_Units_Arms_C.glb",
+          "sizeKB": 32
+        },
+        {
+          "name": "ORC_Units_Legs_D",
+          "file": "ORC_Units_Legs_D.glb",
+          "sizeKB": 33.6
+        },
+        {
+          "name": "ORC_Units_Legs_B",
+          "file": "ORC_Units_Legs_B.glb",
+          "sizeKB": 33.6
+        },
+        {
+          "name": "ORC_Units_Arms_A",
+          "file": "ORC_Units_Arms_A.glb",
+          "sizeKB": 32
+        },
+        {
+          "name": "ORC_Units_Legs_C",
+          "file": "ORC_Units_Legs_C.glb",
+          "sizeKB": 33.6
+        },
+        {
+          "name": "ORC_Units_Arms_B",
+          "file": "ORC_Units_Arms_B.glb",
+          "sizeKB": 32
+        },
+        {
+          "name": "ORC_Units_Head_B",
+          "file": "ORC_Units_Head_B.glb",
+          "sizeKB": 38
+        },
+        {
+          "name": "ORC_Units_Head_C",
+          "file": "ORC_Units_Head_C.glb",
+          "sizeKB": 34.1
+        },
+        {
+          "name": "ORC_Units_Head_F",
+          "file": "ORC_Units_Head_F.glb",
+          "sizeKB": 40.6
+        },
+        {
+          "name": "ORC_Units_Head_G",
+          "file": "ORC_Units_Head_G.glb",
+          "sizeKB": 34.5
+        },
+        {
+          "name": "ORC_Units_Body_D",
+          "file": "ORC_Units_Body_D.glb",
+          "sizeKB": 38.5
+        },
+        {
+          "name": "ORC_Units_Head_D",
+          "file": "ORC_Units_Head_D.glb",
+          "sizeKB": 34.7
+        },
+        {
+          "name": "ORC_Units_Head_E",
+          "file": "ORC_Units_Head_E.glb",
+          "sizeKB": 38
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_F",
+          "file": "ORC_Units_Shoulderpads_F.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_E",
+          "file": "ORC_Units_Shoulderpads_E.glb",
+          "sizeKB": 39.1
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_D",
+          "file": "ORC_Units_Shoulderpads_D.glb",
+          "sizeKB": 33.3
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_A",
+          "file": "ORC_Units_Shoulderpads_A.glb",
+          "sizeKB": 31.4
+        },
+        {
+          "name": "ORC_Units_Legs_A",
+          "file": "ORC_Units_Legs_A.glb",
+          "sizeKB": 33.6
+        },
+        {
+          "name": "ORC_Units_Body_G",
+          "file": "ORC_Units_Body_G.glb",
+          "sizeKB": 42.7
+        }
+      ]
+    },
+    "undead": {
+      "folder": "undead",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 33.1,
+      "parts": [
+        {
+          "name": "UD_weapon_staff_C",
+          "file": "UD_weapon_staff_C.glb",
+          "sizeKB": 35.5
+        },
+        {
+          "name": "UD_weapon_Bow",
+          "file": "UD_weapon_Bow.glb",
+          "sizeKB": 35.3
+        },
+        {
+          "name": "UD_weapon_staff_D",
+          "file": "UD_weapon_staff_D.glb",
+          "sizeKB": 38.4
+        },
+        {
+          "name": "UD_weapon_staff_A",
+          "file": "UD_weapon_staff_A.glb",
+          "sizeKB": 35.2
+        },
+        {
+          "name": "UD_weapon_staff_B",
+          "file": "UD_weapon_staff_B.glb",
+          "sizeKB": 39.9
+        },
+        {
+          "name": "UD_Shield_A",
+          "file": "UD_Shield_A.glb",
+          "sizeKB": 35.5
+        },
+        {
+          "name": "UD_Shield_B",
+          "file": "UD_Shield_B.glb",
+          "sizeKB": 36.1
+        },
+        {
+          "name": "UD_Shield_C",
+          "file": "UD_Shield_C.glb",
+          "sizeKB": 36.6
+        },
+        {
+          "name": "UD_weapon_Hammer",
+          "file": "UD_weapon_Hammer.glb",
+          "sizeKB": 35.9
+        },
+        {
+          "name": "UD_weapon_Axe_A",
+          "file": "UD_weapon_Axe_A.glb",
+          "sizeKB": 36.3
+        },
+        {
+          "name": "UD_weapon_Axe_B",
+          "file": "UD_weapon_Axe_B.glb",
+          "sizeKB": 37.2
+        },
+        {
+          "name": "UD_weapon_Spear",
+          "file": "UD_weapon_Spear.glb",
+          "sizeKB": 35.6
+        },
+        {
+          "name": "UD_weapon_Sword_A",
+          "file": "UD_weapon_Sword_A.glb",
+          "sizeKB": 35.3
+        },
+        {
+          "name": "UD_weapon_Sword_B",
+          "file": "UD_weapon_Sword_B.glb",
+          "sizeKB": 35.5
+        },
+        {
+          "name": "UD_weapon_Sword_C",
+          "file": "UD_weapon_Sword_C.glb",
+          "sizeKB": 36.7
+        },
+        {
+          "name": "UD_Xtra_Wood",
+          "file": "UD_Xtra_Wood.glb",
+          "sizeKB": 37
+        },
+        {
+          "name": "UD_Xtra_Bag",
+          "file": "UD_Xtra_Bag.glb",
+          "sizeKB": 36.4
+        },
+        {
+          "name": "UD_Xtra_Quiver",
+          "file": "UD_Xtra_Quiver.glb",
+          "sizeKB": 37.8
+        },
+        {
+          "name": "UD_Units_body_G",
+          "file": "UD_Units_body_G.glb",
+          "sizeKB": 47.6
+        },
+        {
+          "name": "UD_Units_body_C",
+          "file": "UD_Units_body_C.glb",
+          "sizeKB": 42.2
+        },
+        {
+          "name": "UD_Units_body_F",
+          "file": "UD_Units_body_F.glb",
+          "sizeKB": 42.2
+        },
+        {
+          "name": "UD_Units_body_D",
+          "file": "UD_Units_body_D.glb",
+          "sizeKB": 43.1
+        },
+        {
+          "name": "UD_Units_shoulderpads_A",
+          "file": "UD_Units_shoulderpads_A.glb",
+          "sizeKB": 38.7
+        },
+        {
+          "name": "UD_Units_body_A",
+          "file": "UD_Units_body_A.glb",
+          "sizeKB": 41
+        },
+        {
+          "name": "UD_Units_body_B",
+          "file": "UD_Units_body_B.glb",
+          "sizeKB": 42.8
+        },
+        {
+          "name": "UD_Units_head_D",
+          "file": "UD_Units_head_D.glb",
+          "sizeKB": 40.9
+        },
+        {
+          "name": "UD_Units_arms_D",
+          "file": "UD_Units_arms_D.glb",
+          "sizeKB": 38.8
+        },
+        {
+          "name": "UD_Units_legs_D",
+          "file": "UD_Units_legs_D.glb",
+          "sizeKB": 38.7
+        },
+        {
+          "name": "UD_Units_shoulderpads_B",
+          "file": "UD_Units_shoulderpads_B.glb",
+          "sizeKB": 41.2
+        },
+        {
+          "name": "UD_Units_head_F",
+          "file": "UD_Units_head_F.glb",
+          "sizeKB": 38.2
+        },
+        {
+          "name": "UD_Units_arms_B",
+          "file": "UD_Units_arms_B.glb",
+          "sizeKB": 38.8
+        },
+        {
+          "name": "UD_Units_legs_B",
+          "file": "UD_Units_legs_B.glb",
+          "sizeKB": 40.3
+        },
+        {
+          "name": "UD_Units_head_L",
+          "file": "UD_Units_head_L.glb",
+          "sizeKB": 39
+        },
+        {
+          "name": "UD_Units_arms_E",
+          "file": "UD_Units_arms_E.glb",
+          "sizeKB": 38.8
+        },
+        {
+          "name": "UD_Units_arms_C",
+          "file": "UD_Units_arms_C.glb",
+          "sizeKB": 37.2
+        },
+        {
+          "name": "UD_Units_legs_C",
+          "file": "UD_Units_legs_C.glb",
+          "sizeKB": 39.9
+        },
+        {
+          "name": "UD_Units_arms_A",
+          "file": "UD_Units_arms_A.glb",
+          "sizeKB": 39.1
+        },
+        {
+          "name": "UD_Units_legs_A",
+          "file": "UD_Units_legs_A.glb",
+          "sizeKB": 38.8
+        },
+        {
+          "name": "UD_Units_head_A",
+          "file": "UD_Units_head_A.glb",
+          "sizeKB": 36.9
+        },
+        {
+          "name": "UD_Units_head_B",
+          "file": "UD_Units_head_B.glb",
+          "sizeKB": 39.4
+        },
+        {
+          "name": "UD_Units_head_H",
+          "file": "UD_Units_head_H.glb",
+          "sizeKB": 36.9
+        },
+        {
+          "name": "UD_Units_head_I",
+          "file": "UD_Units_head_I.glb",
+          "sizeKB": 39.6
+        },
+        {
+          "name": "UD_Units_head_K",
+          "file": "UD_Units_head_K.glb",
+          "sizeKB": 38.1
+        },
+        {
+          "name": "UD_Units_head_C",
+          "file": "UD_Units_head_C.glb",
+          "sizeKB": 38.9
+        },
+        {
+          "name": "UD_Units_head_E",
+          "file": "UD_Units_head_E.glb",
+          "sizeKB": 45.7
+        },
+        {
+          "name": "UD_Units_body_E",
+          "file": "UD_Units_body_E.glb",
+          "sizeKB": 43.1
+        },
+        {
+          "name": "UD_Units_head_G",
+          "file": "UD_Units_head_G.glb",
+          "sizeKB": 38.2
+        },
+        {
+          "name": "UD_Units_head_M",
+          "file": "UD_Units_head_M.glb",
+          "sizeKB": 40.9
+        },
+        {
+          "name": "UD_Units_head_J",
+          "file": "UD_Units_head_J.glb",
+          "sizeKB": 38.3
+        },
+        {
+          "name": "UD_Units_shoulderpads_C",
+          "file": "UD_Units_shoulderpads_C.glb",
+          "sizeKB": 38.7
+        }
+      ]
+    }
+  },
+  "cavalry": {
+    "barbarian": {
+      "folder": "barbarian-cavalry",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 34.1,
+      "parts": [
+        {
+          "name": "BRB_Horse",
+          "file": "BRB_Horse.glb",
+          "sizeKB": 52.3
+        },
+        {
+          "name": "BRB_horse_Seat",
+          "file": "BRB_horse_Seat.glb",
+          "sizeKB": 37.9
+        },
+        {
+          "name": "BRB_body_F",
+          "file": "BRB_body_F.glb",
+          "sizeKB": 48.2
+        },
+        {
+          "name": "BRB_head_I",
+          "file": "BRB_head_I.glb",
+          "sizeKB": 43.2
+        },
+        {
+          "name": "BRB_head_J",
+          "file": "BRB_head_J.glb",
+          "sizeKB": 39.3
+        },
+        {
+          "name": "BRB_head_C",
+          "file": "BRB_head_C.glb",
+          "sizeKB": 40.7
+        },
+        {
+          "name": "BRB_body_A",
+          "file": "BRB_body_A.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "BRB_body_B",
+          "file": "BRB_body_B.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "BRB_body_E",
+          "file": "BRB_body_E.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "BRB_head_B",
+          "file": "BRB_head_B.glb",
+          "sizeKB": 40.4
+        },
+        {
+          "name": "BRB_body_D",
+          "file": "BRB_body_D.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "BRB_head_A",
+          "file": "BRB_head_A.glb",
+          "sizeKB": 38.3
+        },
+        {
+          "name": "BRB_shoulderpads_B",
+          "file": "BRB_shoulderpads_B.glb",
+          "sizeKB": 40
+        },
+        {
+          "name": "BRB_body_G",
+          "file": "BRB_body_G.glb",
+          "sizeKB": 48.7
+        },
+        {
+          "name": "BRB_head_D",
+          "file": "BRB_head_D.glb",
+          "sizeKB": 43.4
+        },
+        {
+          "name": "BRB_head_F",
+          "file": "BRB_head_F.glb",
+          "sizeKB": 49.3
+        },
+        {
+          "name": "BRB_head_H",
+          "file": "BRB_head_H.glb",
+          "sizeKB": 47.2
+        },
+        {
+          "name": "BRB_shoulderpads_C",
+          "file": "BRB_shoulderpads_C.glb",
+          "sizeKB": 52
+        },
+        {
+          "name": "BRB_shoulderpads_A",
+          "file": "BRB_shoulderpads_A.glb",
+          "sizeKB": 39.9
+        },
+        {
+          "name": "BRB_head_E",
+          "file": "BRB_head_E.glb",
+          "sizeKB": 41.7
+        },
+        {
+          "name": "BRB_head_G",
+          "file": "BRB_head_G.glb",
+          "sizeKB": 39.7
+        },
+        {
+          "name": "BRB_body_C",
+          "file": "BRB_body_C.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "BRB_body_H",
+          "file": "BRB_body_H.glb",
+          "sizeKB": 48.7
+        },
+        {
+          "name": "BRB_arms_A",
+          "file": "BRB_arms_A.glb",
+          "sizeKB": 38.1
+        },
+        {
+          "name": "BRB_legs_A",
+          "file": "BRB_legs_A.glb",
+          "sizeKB": 39.8
+        },
+        {
+          "name": "BRB_arms_B",
+          "file": "BRB_arms_B.glb",
+          "sizeKB": 38.3
+        },
+        {
+          "name": "BRB_legs_B",
+          "file": "BRB_legs_B.glb",
+          "sizeKB": 39.8
+        },
+        {
+          "name": "BRB_arms_C",
+          "file": "BRB_arms_C.glb",
+          "sizeKB": 42.5
+        },
+        {
+          "name": "BRB_legs_C",
+          "file": "BRB_legs_C.glb",
+          "sizeKB": 39.8
+        },
+        {
+          "name": "BRB_weapon_staff_A",
+          "file": "BRB_weapon_staff_A.glb",
+          "sizeKB": 36.7
+        },
+        {
+          "name": "BRB_weapon_Bow",
+          "file": "BRB_weapon_Bow.glb",
+          "sizeKB": 36.3
+        },
+        {
+          "name": "BRB_weapon_staff_C",
+          "file": "BRB_weapon_staff_C.glb",
+          "sizeKB": 42
+        },
+        {
+          "name": "BRB_weapon_staff_B",
+          "file": "BRB_weapon_staff_B.glb",
+          "sizeKB": 36.9
+        },
+        {
+          "name": "BRB_Shield_A",
+          "file": "BRB_Shield_A.glb",
+          "sizeKB": 36.5
+        },
+        {
+          "name": "BRB_Shield_C",
+          "file": "BRB_Shield_C.glb",
+          "sizeKB": 37.3
+        },
+        {
+          "name": "BRB_Shield_D",
+          "file": "BRB_Shield_D.glb",
+          "sizeKB": 37.3
+        },
+        {
+          "name": "BRB_Shield_B",
+          "file": "BRB_Shield_B.glb",
+          "sizeKB": 37.3
+        },
+        {
+          "name": "BRB_weapon_sword_A",
+          "file": "BRB_weapon_sword_A.glb",
+          "sizeKB": 36.5
+        },
+        {
+          "name": "BRB_weapon_spear",
+          "file": "BRB_weapon_spear.glb",
+          "sizeKB": 36.5
+        },
+        {
+          "name": "BRB_weapon_axe_A",
+          "file": "BRB_weapon_axe_A.glb",
+          "sizeKB": 37.5
+        },
+        {
+          "name": "BRB_weapon_sword_B",
+          "file": "BRB_weapon_sword_B.glb",
+          "sizeKB": 37.2
+        },
+        {
+          "name": "BRB_weapon_hammer_A",
+          "file": "BRB_weapon_hammer_A.glb",
+          "sizeKB": 36.8
+        },
+        {
+          "name": "BRB_weapon_Dagger",
+          "file": "BRB_weapon_Dagger.glb",
+          "sizeKB": 36.2
+        },
+        {
+          "name": "BRB_weapon_axe_B",
+          "file": "BRB_weapon_axe_B.glb",
+          "sizeKB": 38.4
+        },
+        {
+          "name": "BRB_weapon_hammer_B",
+          "file": "BRB_weapon_hammer_B.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "BRB_weapon_axe_C",
+          "file": "BRB_weapon_axe_C.glb",
+          "sizeKB": 39
+        },
+        {
+          "name": "BRB_Xtra_quiver",
+          "file": "BRB_Xtra_quiver.glb",
+          "sizeKB": 38.8
+        }
+      ]
+    },
+    "dwarf": {
+      "folder": "dwarf-cavalry",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 34.3,
+      "parts": [
+        {
+          "name": "DWF_Weapon_bow",
+          "file": "DWF_Weapon_bow.glb",
+          "sizeKB": 36.7
+        },
+        {
+          "name": "DWF_Weapon_staff_B",
+          "file": "DWF_Weapon_staff_B.glb",
+          "sizeKB": 41.9
+        },
+        {
+          "name": "DWF_Weapon_staff_A",
+          "file": "DWF_Weapon_staff_A.glb",
+          "sizeKB": 36.9
+        },
+        {
+          "name": "DWF_Shield_B",
+          "file": "DWF_Shield_B.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "DWF_Shield_A",
+          "file": "DWF_Shield_A.glb",
+          "sizeKB": 36.7
+        },
+        {
+          "name": "DWF_Shield_C",
+          "file": "DWF_Shield_C.glb",
+          "sizeKB": 38.1
+        },
+        {
+          "name": "DWF_Shield_D",
+          "file": "DWF_Shield_D.glb",
+          "sizeKB": 38
+        },
+        {
+          "name": "DWF_Weapon_dagger",
+          "file": "DWF_Weapon_dagger.glb",
+          "sizeKB": 36.6
+        },
+        {
+          "name": "DWF_Weapon_spear",
+          "file": "DWF_Weapon_spear.glb",
+          "sizeKB": 36.5
+        },
+        {
+          "name": "DWF_Weapon_axe_B",
+          "file": "DWF_Weapon_axe_B.glb",
+          "sizeKB": 38.4
+        },
+        {
+          "name": "DWF_Weapon_pick",
+          "file": "DWF_Weapon_pick.glb",
+          "sizeKB": 39.4
+        },
+        {
+          "name": "DWF_Weapon_axe_A",
+          "file": "DWF_Weapon_axe_A.glb",
+          "sizeKB": 38
+        },
+        {
+          "name": "DWF_Weapon_axe_C",
+          "file": "DWF_Weapon_axe_C.glb",
+          "sizeKB": 40.2
+        },
+        {
+          "name": "DWF_Weapon_sword_B",
+          "file": "DWF_Weapon_sword_B.glb",
+          "sizeKB": 37.8
+        },
+        {
+          "name": "DWF_Weapon_hammer_B",
+          "file": "DWF_Weapon_hammer_B.glb",
+          "sizeKB": 37.7
+        },
+        {
+          "name": "DWF_Weapon_hammer_A",
+          "file": "DWF_Weapon_hammer_A.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "DWF_Weapon_sword_A",
+          "file": "DWF_Weapon_sword_A.glb",
+          "sizeKB": 37
+        },
+        {
+          "name": "DWF_Xtra_quiver",
+          "file": "DWF_Xtra_quiver.glb",
+          "sizeKB": 39.1
+        },
+        {
+          "name": "DWF_Mount_Ram",
+          "file": "DWF_Mount_Ram.glb",
+          "sizeKB": 56.8
+        },
+        {
+          "name": "DWF_Units_Body_A",
+          "file": "DWF_Units_Body_A.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "DWF_Units_Head_A",
+          "file": "DWF_Units_Head_A.glb",
+          "sizeKB": 40.3
+        },
+        {
+          "name": "DWF_Units_Body_E",
+          "file": "DWF_Units_Body_E.glb",
+          "sizeKB": 49.7
+        },
+        {
+          "name": "DWF_Units_Body_B",
+          "file": "DWF_Units_Body_B.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "DWF_Units_Body_C",
+          "file": "DWF_Units_Body_C.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "DWF_Units_Body_D",
+          "file": "DWF_Units_Body_D.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "DWF_Units_Shoulderpads_A",
+          "file": "DWF_Units_Shoulderpads_A.glb",
+          "sizeKB": 40
+        },
+        {
+          "name": "DWF_Units_Shoulderpads_B",
+          "file": "DWF_Units_Shoulderpads_B.glb",
+          "sizeKB": 40
+        },
+        {
+          "name": "DWF_Units_Shoulderpads_C",
+          "file": "DWF_Units_Shoulderpads_C.glb",
+          "sizeKB": 40.2
+        },
+        {
+          "name": "DWF_Units_Head_M",
+          "file": "DWF_Units_Head_M.glb",
+          "sizeKB": 41.1
+        },
+        {
+          "name": "DWF_Units_Head_N",
+          "file": "DWF_Units_Head_N.glb",
+          "sizeKB": 41.1
+        },
+        {
+          "name": "DWF_Units_Arms_A",
+          "file": "DWF_Units_Arms_A.glb",
+          "sizeKB": 38.5
+        },
+        {
+          "name": "DWF_Units_Legs_A",
+          "file": "DWF_Units_Legs_A.glb",
+          "sizeKB": 40
+        },
+        {
+          "name": "DWF_Units_Legs_B",
+          "file": "DWF_Units_Legs_B.glb",
+          "sizeKB": 40
+        },
+        {
+          "name": "DWF_Units_Arms_B",
+          "file": "DWF_Units_Arms_B.glb",
+          "sizeKB": 38.5
+        },
+        {
+          "name": "DWF_Units_Legs_C",
+          "file": "DWF_Units_Legs_C.glb",
+          "sizeKB": 40
+        },
+        {
+          "name": "DWF_Units_Arms_C",
+          "file": "DWF_Units_Arms_C.glb",
+          "sizeKB": 38.5
+        },
+        {
+          "name": "DWF_Units_Head_B",
+          "file": "DWF_Units_Head_B.glb",
+          "sizeKB": 42
+        },
+        {
+          "name": "DWF_Units_Head_C",
+          "file": "DWF_Units_Head_C.glb",
+          "sizeKB": 44.2
+        },
+        {
+          "name": "DWF_Units_Head_D",
+          "file": "DWF_Units_Head_D.glb",
+          "sizeKB": 43
+        },
+        {
+          "name": "DWF_Units_Head_E",
+          "file": "DWF_Units_Head_E.glb",
+          "sizeKB": 42.9
+        },
+        {
+          "name": "DWF_Units_Head_F",
+          "file": "DWF_Units_Head_F.glb",
+          "sizeKB": 48.2
+        },
+        {
+          "name": "DWF_Units_Head_G",
+          "file": "DWF_Units_Head_G.glb",
+          "sizeKB": 43.9
+        },
+        {
+          "name": "DWF_Units_Head_H",
+          "file": "DWF_Units_Head_H.glb",
+          "sizeKB": 49.2
+        },
+        {
+          "name": "DWF_Units_Head_I",
+          "file": "DWF_Units_Head_I.glb",
+          "sizeKB": 47
+        },
+        {
+          "name": "DWF_Units_Head_J",
+          "file": "DWF_Units_Head_J.glb",
+          "sizeKB": 43.6
+        },
+        {
+          "name": "DWF_Units_Head_K",
+          "file": "DWF_Units_Head_K.glb",
+          "sizeKB": 48.2
+        },
+        {
+          "name": "DWF_Units_Head_L",
+          "file": "DWF_Units_Head_L.glb",
+          "sizeKB": 43.1
+        }
+      ]
+    },
+    "elf": {
+      "folder": "elf-cavalry",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 34.1,
+      "parts": [
+        {
+          "name": "ELF_Horse",
+          "file": "ELF_Horse.glb",
+          "sizeKB": 52.3
+        },
+        {
+          "name": "ELF_horse_Seat",
+          "file": "ELF_horse_Seat.glb",
+          "sizeKB": 37.9
+        },
+        {
+          "name": "ELF_Units_Legs_A",
+          "file": "ELF_Units_Legs_A.glb",
+          "sizeKB": 39.7
+        },
+        {
+          "name": "ELF_Units_Arms_A",
+          "file": "ELF_Units_Arms_A.glb",
+          "sizeKB": 38.1
+        },
+        {
+          "name": "ELF_Units_Body_F",
+          "file": "ELF_Units_Body_F.glb",
+          "sizeKB": 48.2
+        },
+        {
+          "name": "ELF_Units_Body_A",
+          "file": "ELF_Units_Body_A.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "ELF_Units_Head_A",
+          "file": "ELF_Units_Head_A.glb",
+          "sizeKB": 45.9
+        },
+        {
+          "name": "ELF_Units_Body_B",
+          "file": "ELF_Units_Body_B.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "ELF_Units_Arms_B",
+          "file": "ELF_Units_Arms_B.glb",
+          "sizeKB": 38.1
+        },
+        {
+          "name": "ELF_Units_Legs_B",
+          "file": "ELF_Units_Legs_B.glb",
+          "sizeKB": 39.7
+        },
+        {
+          "name": "ELF_Units_Body_E",
+          "file": "ELF_Units_Body_E.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "ELF_Units_Arms_C",
+          "file": "ELF_Units_Arms_C.glb",
+          "sizeKB": 38.1
+        },
+        {
+          "name": "ELF_Units_Legs_C",
+          "file": "ELF_Units_Legs_C.glb",
+          "sizeKB": 39.7
+        },
+        {
+          "name": "ELF_Units_Head_C",
+          "file": "ELF_Units_Head_C.glb",
+          "sizeKB": 41.8
+        },
+        {
+          "name": "ELF_Units_Body_C",
+          "file": "ELF_Units_Body_C.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "ELF_Units_Shoulderpads_B",
+          "file": "ELF_Units_Shoulderpads_B.glb",
+          "sizeKB": 39.5
+        },
+        {
+          "name": "ELF_Units_Head_E",
+          "file": "ELF_Units_Head_E.glb",
+          "sizeKB": 45.9
+        },
+        {
+          "name": "ELF_Units_Head_B",
+          "file": "ELF_Units_Head_B.glb",
+          "sizeKB": 42.2
+        },
+        {
+          "name": "ELF_Units_Head_D",
+          "file": "ELF_Units_Head_D.glb",
+          "sizeKB": 41.8
+        },
+        {
+          "name": "ELF_Units_Head_G",
+          "file": "ELF_Units_Head_G.glb",
+          "sizeKB": 45.3
+        },
+        {
+          "name": "ELF_Units_Head_L",
+          "file": "ELF_Units_Head_L.glb",
+          "sizeKB": 48.2
+        },
+        {
+          "name": "ELF_Units_Body_D",
+          "file": "ELF_Units_Body_D.glb",
+          "sizeKB": 44.8
+        },
+        {
+          "name": "ELF_Units_Shoulderpads_A",
+          "file": "ELF_Units_Shoulderpads_A.glb",
+          "sizeKB": 39.5
+        },
+        {
+          "name": "ELF_Units_Shoulderpads_C",
+          "file": "ELF_Units_Shoulderpads_C.glb",
+          "sizeKB": 41
+        },
+        {
+          "name": "ELF_Units_Head_N",
+          "file": "ELF_Units_Head_N.glb",
+          "sizeKB": 53.1
+        },
+        {
+          "name": "ELF_Units_Head_F",
+          "file": "ELF_Units_Head_F.glb",
+          "sizeKB": 49
+        },
+        {
+          "name": "ELF_Units_Head_H",
+          "file": "ELF_Units_Head_H.glb",
+          "sizeKB": 46.5
+        },
+        {
+          "name": "ELF_Units_Head_I",
+          "file": "ELF_Units_Head_I.glb",
+          "sizeKB": 51.1
+        },
+        {
+          "name": "ELF_Units_Head_J",
+          "file": "ELF_Units_Head_J.glb",
+          "sizeKB": 50.5
+        },
+        {
+          "name": "ELF_Units_Head_M",
+          "file": "ELF_Units_Head_M.glb",
+          "sizeKB": 54.6
+        },
+        {
+          "name": "ELF_Units_Head_K",
+          "file": "ELF_Units_Head_K.glb",
+          "sizeKB": 56.3
+        },
+        {
+          "name": "ELF_Units_Head_O",
+          "file": "ELF_Units_Head_O.glb",
+          "sizeKB": 42.3
+        },
+        {
+          "name": "ELF_Units_Head_P",
+          "file": "ELF_Units_Head_P.glb",
+          "sizeKB": 42.3
+        },
+        {
+          "name": "ELF_weapon_bow",
+          "file": "ELF_weapon_bow.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "ELF_weapon_staff_B",
+          "file": "ELF_weapon_staff_B.glb",
+          "sizeKB": 38.4
+        },
+        {
+          "name": "ELF_weapon_staff_C",
+          "file": "ELF_weapon_staff_C.glb",
+          "sizeKB": 40.8
+        },
+        {
+          "name": "ELF_weapon_staff_A",
+          "file": "ELF_weapon_staff_A.glb",
+          "sizeKB": 39.1
+        },
+        {
+          "name": "ELF_shield_C",
+          "file": "ELF_shield_C.glb",
+          "sizeKB": 37.9
+        },
+        {
+          "name": "ELF_shield_B",
+          "file": "ELF_shield_B.glb",
+          "sizeKB": 37.1
+        },
+        {
+          "name": "ELF_shield_A",
+          "file": "ELF_shield_A.glb",
+          "sizeKB": 36.9
+        },
+        {
+          "name": "ELF_weapon_axe",
+          "file": "ELF_weapon_axe.glb",
+          "sizeKB": 37.6
+        },
+        {
+          "name": "ELF_weapon_hammer",
+          "file": "ELF_weapon_hammer.glb",
+          "sizeKB": 36.8
+        },
+        {
+          "name": "ELF_weapon_sword_B",
+          "file": "ELF_weapon_sword_B.glb",
+          "sizeKB": 37
+        },
+        {
+          "name": "ELF_weapon_dagger",
+          "file": "ELF_weapon_dagger.glb",
+          "sizeKB": 36.4
+        },
+        {
+          "name": "ELF_weapon_sword_A",
+          "file": "ELF_weapon_sword_A.glb",
+          "sizeKB": 37.1
+        },
+        {
+          "name": "ELF_weapon_spear",
+          "file": "ELF_weapon_spear.glb",
+          "sizeKB": 36.6
+        },
+        {
+          "name": "ELF_weapon_lance",
+          "file": "ELF_weapon_lance.glb",
+          "sizeKB": 38.6
+        },
+        {
+          "name": "ELF_Xtra_quiver",
+          "file": "ELF_Xtra_quiver.glb",
+          "sizeKB": 38.8
+        }
+      ]
+    },
+    "human": {
+      "folder": "human-cavalry",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 31,
+      "parts": [
+        {
+          "name": "WK_Horse",
+          "file": "WK_Horse.glb",
+          "sizeKB": 49.2
+        },
+        {
+          "name": "WK_weapon_staff_A",
+          "file": "WK_weapon_staff_A.glb",
+          "sizeKB": 33.4
+        },
+        {
+          "name": "WK_weapon_staff_B",
+          "file": "WK_weapon_staff_B.glb",
+          "sizeKB": 34.9
+        },
+        {
+          "name": "WK_weapon_staff_C",
+          "file": "WK_weapon_staff_C.glb",
+          "sizeKB": 33.4
+        },
+        {
+          "name": "WK_weapon_Bow",
+          "file": "WK_weapon_Bow.glb",
+          "sizeKB": 33.2
+        },
+        {
+          "name": "WK_Shield_A",
+          "file": "WK_Shield_A.glb",
+          "sizeKB": 33.4
+        },
+        {
+          "name": "WK_Shield_C",
+          "file": "WK_Shield_C.glb",
+          "sizeKB": 34
+        },
+        {
+          "name": "WK_Shield_B",
+          "file": "WK_Shield_B.glb",
+          "sizeKB": 34.5
+        },
+        {
+          "name": "WK_Shield_D",
+          "file": "WK_Shield_D.glb",
+          "sizeKB": 33.2
+        },
+        {
+          "name": "WK_weapon_spear",
+          "file": "WK_weapon_spear.glb",
+          "sizeKB": 33.4
+        },
+        {
+          "name": "WK_weapon_sword_A",
+          "file": "WK_weapon_sword_A.glb",
+          "sizeKB": 33.4
+        },
+        {
+          "name": "WK_weapon_hammer_B",
+          "file": "WK_weapon_hammer_B.glb",
+          "sizeKB": 34.2
+        },
+        {
+          "name": "WK_weapon_pick",
+          "file": "WK_weapon_pick.glb",
+          "sizeKB": 33.8
+        },
+        {
+          "name": "WK_weapon_sword_B",
+          "file": "WK_weapon_sword_B.glb",
+          "sizeKB": 33.4
+        },
+        {
+          "name": "WK_weapon_axe_B",
+          "file": "WK_weapon_axe_B.glb",
+          "sizeKB": 34.4
+        },
+        {
+          "name": "WK_weapon_lance",
+          "file": "WK_weapon_lance.glb",
+          "sizeKB": 35.4
+        },
+        {
+          "name": "WK_weapon_hammer_A",
+          "file": "WK_weapon_hammer_A.glb",
+          "sizeKB": 33.7
+        },
+        {
+          "name": "WK_weapon_axe_A",
+          "file": "WK_weapon_axe_A.glb",
+          "sizeKB": 34.2
+        },
+        {
+          "name": "WK_Xtra_quiver",
+          "file": "WK_Xtra_quiver.glb",
+          "sizeKB": 35.6
+        },
+        {
+          "name": "WK_Units_Body_A",
+          "file": "WK_Units_Body_A.glb",
+          "sizeKB": 41.4
+        },
+        {
+          "name": "WK_Units_Body_B",
+          "file": "WK_Units_Body_B.glb",
+          "sizeKB": 41.7
+        },
+        {
+          "name": "WK_Units_Body_D",
+          "file": "WK_Units_Body_D.glb",
+          "sizeKB": 41.4
+        },
+        {
+          "name": "WK_Units_Body_C",
+          "file": "WK_Units_Body_C.glb",
+          "sizeKB": 41.7
+        },
+        {
+          "name": "WK_Units_shoulderpads_A",
+          "file": "WK_Units_shoulderpads_A.glb",
+          "sizeKB": 36.2
+        },
+        {
+          "name": "WK_Units_head_C",
+          "file": "WK_Units_head_C.glb",
+          "sizeKB": 38.6
+        },
+        {
+          "name": "WK_Units_head_B",
+          "file": "WK_Units_head_B.glb",
+          "sizeKB": 37.5
+        },
+        {
+          "name": "WK_Units_head_A",
+          "file": "WK_Units_head_A.glb",
+          "sizeKB": 34.9
+        },
+        {
+          "name": "WK_Units_Legs_A",
+          "file": "WK_Units_Legs_A.glb",
+          "sizeKB": 36.7
+        },
+        {
+          "name": "WK_Units_Arms_A",
+          "file": "WK_Units_Arms_A.glb",
+          "sizeKB": 35
+        },
+        {
+          "name": "WK_Units_Legs_B",
+          "file": "WK_Units_Legs_B.glb",
+          "sizeKB": 36.6
+        },
+        {
+          "name": "WK_Units_Arms_B",
+          "file": "WK_Units_Arms_B.glb",
+          "sizeKB": 35
+        },
+        {
+          "name": "WK_Units_Legs_C",
+          "file": "WK_Units_Legs_C.glb",
+          "sizeKB": 36.7
+        },
+        {
+          "name": "WK_Units_Arms_C",
+          "file": "WK_Units_Arms_C.glb",
+          "sizeKB": 35
+        },
+        {
+          "name": "WK_Units_Body_E",
+          "file": "WK_Units_Body_E.glb",
+          "sizeKB": 45.1
+        },
+        {
+          "name": "WK_Units_head_E",
+          "file": "WK_Units_head_E.glb",
+          "sizeKB": 35.6
+        },
+        {
+          "name": "WK_Units_Arms_D",
+          "file": "WK_Units_Arms_D.glb",
+          "sizeKB": 35
+        },
+        {
+          "name": "WK_Units_head_D",
+          "file": "WK_Units_head_D.glb",
+          "sizeKB": 35.9
+        },
+        {
+          "name": "WK_Units_head_H",
+          "file": "WK_Units_head_H.glb",
+          "sizeKB": 36.2
+        },
+        {
+          "name": "WK_Units_head_G",
+          "file": "WK_Units_head_G.glb",
+          "sizeKB": 36.2
+        },
+        {
+          "name": "WK_Units_head_F",
+          "file": "WK_Units_head_F.glb",
+          "sizeKB": 37.1
+        },
+        {
+          "name": "WK_Units_shoulderpads_B",
+          "file": "WK_Units_shoulderpads_B.glb",
+          "sizeKB": 36.6
+        },
+        {
+          "name": "WK_Units_head_I",
+          "file": "WK_Units_head_I.glb",
+          "sizeKB": 35.9
+        },
+        {
+          "name": "WK_horse_Seat",
+          "file": "WK_horse_Seat.glb",
+          "sizeKB": 34.8
+        }
+      ]
+    },
+    "orc": {
+      "folder": "orc-cavalry",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 34.3,
+      "parts": [
+        {
+          "name": "ORC_Mount_Wolf",
+          "file": "ORC_Mount_Wolf.glb",
+          "sizeKB": 54.5
+        },
+        {
+          "name": "ORC_weapon_Bow",
+          "file": "ORC_weapon_Bow.glb",
+          "sizeKB": 36.5
+        },
+        {
+          "name": "ORC_weapon_staff_A",
+          "file": "ORC_weapon_staff_A.glb",
+          "sizeKB": 36.9
+        },
+        {
+          "name": "ORC_weapon_staff_C",
+          "file": "ORC_weapon_staff_C.glb",
+          "sizeKB": 42.9
+        },
+        {
+          "name": "ORC_weapon_staff_B",
+          "file": "ORC_weapon_staff_B.glb",
+          "sizeKB": 39.4
+        },
+        {
+          "name": "ORC_Shield_A",
+          "file": "ORC_Shield_A.glb",
+          "sizeKB": 36.7
+        },
+        {
+          "name": "ORC_Shield_C",
+          "file": "ORC_Shield_C.glb",
+          "sizeKB": 36.7
+        },
+        {
+          "name": "ORC_Shield_B",
+          "file": "ORC_Shield_B.glb",
+          "sizeKB": 37.1
+        },
+        {
+          "name": "ORC_Shield_D",
+          "file": "ORC_Shield_D.glb",
+          "sizeKB": 39.2
+        },
+        {
+          "name": "ORC_weapon_spear",
+          "file": "ORC_weapon_spear.glb",
+          "sizeKB": 36.8
+        },
+        {
+          "name": "ORC_weapon_Hammer",
+          "file": "ORC_weapon_Hammer.glb",
+          "sizeKB": 37.1
+        },
+        {
+          "name": "ORC_weapon_Dagger",
+          "file": "ORC_weapon_Dagger.glb",
+          "sizeKB": 36.4
+        },
+        {
+          "name": "ORC_weapon_Axe_C",
+          "file": "ORC_weapon_Axe_C.glb",
+          "sizeKB": 37.6
+        },
+        {
+          "name": "ORC_weapon_Sword_B",
+          "file": "ORC_weapon_Sword_B.glb",
+          "sizeKB": 37.6
+        },
+        {
+          "name": "ORC_weapon_Axe_A",
+          "file": "ORC_weapon_Axe_A.glb",
+          "sizeKB": 36.5
+        },
+        {
+          "name": "ORC_weapon_Mace_A",
+          "file": "ORC_weapon_Mace_A.glb",
+          "sizeKB": 38
+        },
+        {
+          "name": "ORC_weapon_Axe_B",
+          "file": "ORC_weapon_Axe_B.glb",
+          "sizeKB": 37.4
+        },
+        {
+          "name": "ORC_weapon_Sword_A",
+          "file": "ORC_weapon_Sword_A.glb",
+          "sizeKB": 37.3
+        },
+        {
+          "name": "ORC_Xtra_quiver",
+          "file": "ORC_Xtra_quiver.glb",
+          "sizeKB": 39
+        },
+        {
+          "name": "ORC_Units_Body_A",
+          "file": "ORC_Units_Body_A.glb",
+          "sizeKB": 44.9
+        },
+        {
+          "name": "ORC_Units_Body_C",
+          "file": "ORC_Units_Body_C.glb",
+          "sizeKB": 44.9
+        },
+        {
+          "name": "ORC_Units_Body_B",
+          "file": "ORC_Units_Body_B.glb",
+          "sizeKB": 44.9
+        },
+        {
+          "name": "ORC_Units_Body_F",
+          "file": "ORC_Units_Body_F.glb",
+          "sizeKB": 49
+        },
+        {
+          "name": "ORC_Units_Head_A",
+          "file": "ORC_Units_Head_A.glb",
+          "sizeKB": 39.8
+        },
+        {
+          "name": "ORC_Units_Body_E",
+          "file": "ORC_Units_Body_E.glb",
+          "sizeKB": 44.9
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_C",
+          "file": "ORC_Units_Shoulderpads_C.glb",
+          "sizeKB": 39.9
+        },
+        {
+          "name": "ORC_Units_Head_H",
+          "file": "ORC_Units_Head_H.glb",
+          "sizeKB": 40.7
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_B",
+          "file": "ORC_Units_Shoulderpads_B.glb",
+          "sizeKB": 39.9
+        },
+        {
+          "name": "ORC_Units_Arms_C",
+          "file": "ORC_Units_Arms_C.glb",
+          "sizeKB": 38.3
+        },
+        {
+          "name": "ORC_Units_Legs_D",
+          "file": "ORC_Units_Legs_D.glb",
+          "sizeKB": 39.9
+        },
+        {
+          "name": "ORC_Units_Legs_B",
+          "file": "ORC_Units_Legs_B.glb",
+          "sizeKB": 39.9
+        },
+        {
+          "name": "ORC_Units_Arms_A",
+          "file": "ORC_Units_Arms_A.glb",
+          "sizeKB": 38.3
+        },
+        {
+          "name": "ORC_Units_Legs_C",
+          "file": "ORC_Units_Legs_C.glb",
+          "sizeKB": 39.9
+        },
+        {
+          "name": "ORC_Units_Arms_B",
+          "file": "ORC_Units_Arms_B.glb",
+          "sizeKB": 38.3
+        },
+        {
+          "name": "ORC_Units_Head_B",
+          "file": "ORC_Units_Head_B.glb",
+          "sizeKB": 44.4
+        },
+        {
+          "name": "ORC_Units_Head_C",
+          "file": "ORC_Units_Head_C.glb",
+          "sizeKB": 40.5
+        },
+        {
+          "name": "ORC_Units_Head_F",
+          "file": "ORC_Units_Head_F.glb",
+          "sizeKB": 46.9
+        },
+        {
+          "name": "ORC_Units_Head_G",
+          "file": "ORC_Units_Head_G.glb",
+          "sizeKB": 40.9
+        },
+        {
+          "name": "ORC_Units_Body_D",
+          "file": "ORC_Units_Body_D.glb",
+          "sizeKB": 44.9
+        },
+        {
+          "name": "ORC_Units_Head_D",
+          "file": "ORC_Units_Head_D.glb",
+          "sizeKB": 41.1
+        },
+        {
+          "name": "ORC_Units_Head_E",
+          "file": "ORC_Units_Head_E.glb",
+          "sizeKB": 44.4
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_F",
+          "file": "ORC_Units_Shoulderpads_F.glb",
+          "sizeKB": 43.7
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_E",
+          "file": "ORC_Units_Shoulderpads_E.glb",
+          "sizeKB": 45.4
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_D",
+          "file": "ORC_Units_Shoulderpads_D.glb",
+          "sizeKB": 39.6
+        },
+        {
+          "name": "ORC_Units_Shoulderpads_A",
+          "file": "ORC_Units_Shoulderpads_A.glb",
+          "sizeKB": 37.7
+        },
+        {
+          "name": "ORC_Units_Legs_A",
+          "file": "ORC_Units_Legs_A.glb",
+          "sizeKB": 39.9
+        },
+        {
+          "name": "ORC_Units_Body_G",
+          "file": "ORC_Units_Body_G.glb",
+          "sizeKB": 49
+        }
+      ]
+    },
+    "undead": {
+      "folder": "undead-cavalry",
+      "skeleton": "_skeleton.glb",
+      "skeletonKB": 40.5,
+      "parts": [
+        {
+          "name": "UD_Horse",
+          "file": "UD_Horse.glb",
+          "sizeKB": 63
+        },
+        {
+          "name": "UD_Units_body_G",
+          "file": "UD_Units_body_G.glb",
+          "sizeKB": 55
+        },
+        {
+          "name": "UD_Units_body_C",
+          "file": "UD_Units_body_C.glb",
+          "sizeKB": 49.7
+        },
+        {
+          "name": "UD_Units_body_F",
+          "file": "UD_Units_body_F.glb",
+          "sizeKB": 49.7
+        },
+        {
+          "name": "UD_Units_body_D",
+          "file": "UD_Units_body_D.glb",
+          "sizeKB": 50.6
+        },
+        {
+          "name": "UD_Units_shoulderpads_A",
+          "file": "UD_Units_shoulderpads_A.glb",
+          "sizeKB": 46.1
+        },
+        {
+          "name": "UD_Units_body_A",
+          "file": "UD_Units_body_A.glb",
+          "sizeKB": 48.5
+        },
+        {
+          "name": "UD_Units_body_B",
+          "file": "UD_Units_body_B.glb",
+          "sizeKB": 50.2
+        },
+        {
+          "name": "UD_Units_head_D",
+          "file": "UD_Units_head_D.glb",
+          "sizeKB": 48.4
+        },
+        {
+          "name": "UD_Units_arms_D",
+          "file": "UD_Units_arms_D.glb",
+          "sizeKB": 46.3
+        },
+        {
+          "name": "UD_Units_legs_D",
+          "file": "UD_Units_legs_D.glb",
+          "sizeKB": 46.1
+        },
+        {
+          "name": "UD_Units_shoulderpads_B",
+          "file": "UD_Units_shoulderpads_B.glb",
+          "sizeKB": 48.6
+        },
+        {
+          "name": "UD_Units_head_F",
+          "file": "UD_Units_head_F.glb",
+          "sizeKB": 45.6
+        },
+        {
+          "name": "UD_Units_arms_B",
+          "file": "UD_Units_arms_B.glb",
+          "sizeKB": 46.3
+        },
+        {
+          "name": "UD_Units_legs_B",
+          "file": "UD_Units_legs_B.glb",
+          "sizeKB": 47.7
+        },
+        {
+          "name": "UD_Units_head_L",
+          "file": "UD_Units_head_L.glb",
+          "sizeKB": 46.4
+        },
+        {
+          "name": "UD_Units_arms_E",
+          "file": "UD_Units_arms_E.glb",
+          "sizeKB": 46.3
+        },
+        {
+          "name": "UD_Units_arms_C",
+          "file": "UD_Units_arms_C.glb",
+          "sizeKB": 44.7
+        },
+        {
+          "name": "UD_Units_legs_C",
+          "file": "UD_Units_legs_C.glb",
+          "sizeKB": 47.3
+        },
+        {
+          "name": "UD_Units_arms_A",
+          "file": "UD_Units_arms_A.glb",
+          "sizeKB": 46.5
+        },
+        {
+          "name": "UD_Units_legs_A",
+          "file": "UD_Units_legs_A.glb",
+          "sizeKB": 46.3
+        },
+        {
+          "name": "UD_Units_head_A",
+          "file": "UD_Units_head_A.glb",
+          "sizeKB": 44.4
+        },
+        {
+          "name": "UD_Units_head_B",
+          "file": "UD_Units_head_B.glb",
+          "sizeKB": 46.9
+        },
+        {
+          "name": "UD_Units_head_H",
+          "file": "UD_Units_head_H.glb",
+          "sizeKB": 44.4
+        },
+        {
+          "name": "UD_Units_head_I",
+          "file": "UD_Units_head_I.glb",
+          "sizeKB": 47
+        },
+        {
+          "name": "UD_Units_head_K",
+          "file": "UD_Units_head_K.glb",
+          "sizeKB": 45.5
+        },
+        {
+          "name": "UD_Units_head_C",
+          "file": "UD_Units_head_C.glb",
+          "sizeKB": 46.4
+        },
+        {
+          "name": "UD_Units_head_E",
+          "file": "UD_Units_head_E.glb",
+          "sizeKB": 53.2
+        },
+        {
+          "name": "UD_Units_body_E",
+          "file": "UD_Units_body_E.glb",
+          "sizeKB": 50.6
+        },
+        {
+          "name": "UD_Units_head_G",
+          "file": "UD_Units_head_G.glb",
+          "sizeKB": 45.6
+        },
+        {
+          "name": "UD_Units_head_M",
+          "file": "UD_Units_head_M.glb",
+          "sizeKB": 48.3
+        },
+        {
+          "name": "UD_Units_head_J",
+          "file": "UD_Units_head_J.glb",
+          "sizeKB": 45.7
+        },
+        {
+          "name": "UD_Units_shoulderpads_C",
+          "file": "UD_Units_shoulderpads_C.glb",
+          "sizeKB": 46.1
+        },
+        {
+          "name": "UD_weapon_staff_C",
+          "file": "UD_weapon_staff_C.glb",
+          "sizeKB": 43
+        },
+        {
+          "name": "UD_weapon_Bow",
+          "file": "UD_weapon_Bow.glb",
+          "sizeKB": 42.7
+        },
+        {
+          "name": "UD_weapon_staff_D",
+          "file": "UD_weapon_staff_D.glb",
+          "sizeKB": 45.8
+        },
+        {
+          "name": "UD_weapon_staff_A",
+          "file": "UD_weapon_staff_A.glb",
+          "sizeKB": 42.7
+        },
+        {
+          "name": "UD_weapon_staff_B",
+          "file": "UD_weapon_staff_B.glb",
+          "sizeKB": 47.4
+        },
+        {
+          "name": "UD_Shield_A",
+          "file": "UD_Shield_A.glb",
+          "sizeKB": 42.9
+        },
+        {
+          "name": "UD_Shield_B",
+          "file": "UD_Shield_B.glb",
+          "sizeKB": 43.6
+        },
+        {
+          "name": "UD_Shield_C",
+          "file": "UD_Shield_C.glb",
+          "sizeKB": 44.1
+        },
+        {
+          "name": "UD_weapon_Hammer",
+          "file": "UD_weapon_Hammer.glb",
+          "sizeKB": 43.3
+        },
+        {
+          "name": "UD_weapon_Axe_A",
+          "file": "UD_weapon_Axe_A.glb",
+          "sizeKB": 43.7
+        },
+        {
+          "name": "UD_weapon_Axe_B",
+          "file": "UD_weapon_Axe_B.glb",
+          "sizeKB": 44.7
+        },
+        {
+          "name": "UD_weapon_Spear",
+          "file": "UD_weapon_Spear.glb",
+          "sizeKB": 43
+        },
+        {
+          "name": "UD_weapon_Sword_A",
+          "file": "UD_weapon_Sword_A.glb",
+          "sizeKB": 42.8
+        },
+        {
+          "name": "UD_weapon_Sword_B",
+          "file": "UD_weapon_Sword_B.glb",
+          "sizeKB": 43
+        },
+        {
+          "name": "UD_weapon_Sword_C",
+          "file": "UD_weapon_Sword_C.glb",
+          "sizeKB": 44.2
+        },
+        {
+          "name": "UD_weapon_lance",
+          "file": "UD_weapon_lance.glb",
+          "sizeKB": 44.4
+        },
+        {
+          "name": "UD_Xtra_Quiver",
+          "file": "UD_Xtra_Quiver.glb",
+          "sizeKB": 45.2
+        }
+      ]
+    }
+  }
+}

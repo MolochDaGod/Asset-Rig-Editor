@@ -1,0 +1,611 @@
+{
+  "asset": {
+    "generator": "FBX2glTF v0.9.7",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
+  "buffers": [
+    {
+      "byteLength": 53076,
+      "uri": "siege_wk_catapult.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 240,
+      "byteOffset": 0,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 360,
+      "byteOffset": 240,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 360,
+      "byteOffset": 600,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 240,
+      "byteOffset": 960,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3516,
+      "byteOffset": 1200,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 10212,
+      "byteOffset": 4716,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 10212,
+      "byteOffset": 14928,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6808,
+      "byteOffset": 25140,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 6808,
+      "byteOffset": 31948,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 13616,
+      "byteOffset": 38756,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 704,
+      "byteOffset": 52372
+    }
+  ],
+  "scenes": [
+    {
+      "name": "Root Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "count": 120,
+      "bufferView": 0,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 30,
+      "bufferView": 1,
+      "byteOffset": 0,
+      "min": [
+        -0.100648194551468,
+        -0.109988249838352,
+        -0.08991389721632
+      ],
+      "max": [
+        0.100648194551468,
+        0.109988212585449,
+        0.0899139419198036
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 30,
+      "bufferView": 2,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 30,
+      "bufferView": 3,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "count": 1758,
+      "bufferView": 4,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 851,
+      "bufferView": 5,
+      "byteOffset": 0,
+      "min": [
+        -0.371142327785492,
+        -0.466108739376068,
+        0.0062453062273562
+      ],
+      "max": [
+        0.367147207260132,
+        0.68772566318512,
+        0.652575075626373
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 851,
+      "bufferView": 6,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 851,
+      "bufferView": 7,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5123,
+      "type": "VEC4",
+      "count": 851,
+      "bufferView": 8,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC4",
+      "count": 851,
+      "bufferView": 9,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "MAT4",
+      "count": 11,
+      "bufferView": 10,
+      "byteOffset": 0
+    }
+  ],
+  "images": [
+    {
+      "name": "Map #9",
+      "uri": "../textures/WK_Standard_Units.png"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "textures": [
+    {
+      "name": "Map #9",
+      "sampler": 0,
+      "source": 0
+    }
+  ],
+  "materials": [
+    {
+      "name": "WK_Standard_Units",
+      "alphaMode": "OPAQUE",
+      "extras": {
+        "fromFBX": {
+          "shadingModel": "Phong",
+          "isTruePBR": false
+        }
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "extensions": {
+        "KHR_materials_unlit": {}
+      }
+    },
+    {
+      "name": "WK_Standard_Units",
+      "alphaMode": "OPAQUE",
+      "extras": {
+        "fromFBX": {
+          "shadingModel": "Phong",
+          "isTruePBR": false
+        }
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "extensions": {
+        "KHR_materials_unlit": {}
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "WK_Catapult_rock",
+      "primitives": [
+        {
+          "material": 1,
+          "mode": 4,
+          "attributes": {
+            "NORMAL": 2,
+            "POSITION": 1,
+            "TEXCOORD_0": 3
+          },
+          "indices": 0
+        }
+      ]
+    },
+    {
+      "name": "WK_Catapult",
+      "primitives": [
+        {
+          "material": 1,
+          "mode": 4,
+          "attributes": {
+            "JOINTS_0": 8,
+            "NORMAL": 6,
+            "POSITION": 5,
+            "TEXCOORD_0": 7,
+            "WEIGHTS_0": 9
+          },
+          "indices": 4
+        }
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "joints": [
+        7,
+        10,
+        2,
+        1,
+        6,
+        4,
+        11,
+        3,
+        9,
+        13,
+        12
+      ],
+      "inverseBindMatrices": 10,
+      "skeleton": 1
+    }
+  ],
+  "nodes": [
+    {
+      "name": "RootNode",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [
+        1
+      ]
+    },
+    {
+      "name": "Bone_Root",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        -0.5,
+        0.499999970197678,
+        0.499999970197678,
+        0.5
+      ],
+      "scale": [
+        2.53999996185303,
+        2.53999996185303,
+        2.53999996185303
+      ],
+      "children": [
+        2,
+        10,
+        11,
+        12,
+        13
+      ]
+    },
+    {
+      "name": "Bone_Platform",
+      "translation": [
+        -0.112012289464474,
+        -0.0232571493834257,
+        0.126841679215431
+      ],
+      "rotation": [
+        5.33850510464617e-8,
+        0.707106709480286,
+        0.707106828689575,
+        2.83789717059335e-7
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [
+        3,
+        6,
+        7,
+        9
+      ]
+    },
+    {
+      "name": "Bone_Arm",
+      "translation": [
+        -0.0707842260599136,
+        -0.00436179153621197,
+        0.0238823685795069
+      ],
+      "rotation": [
+        0.0308436099439859,
+        0.706433713436127,
+        0.706433832645416,
+        0.0308432783931494
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [
+        4
+      ]
+    },
+    {
+      "name": "Bone_stone",
+      "translation": [
+        0.606563091278076,
+        -0.00103187561035156,
+        0.0528771579265594
+      ],
+      "rotation": [
+        -0.521333754062653,
+        -0.477714478969574,
+        -0.477714449167252,
+        0.521333754062653
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [
+        5
+      ]
+    },
+    {
+      "name": "WK_Catapult_rock",
+      "translation": [
+        0.054234217852354,
+        0.00668567651882768,
+        1.52550640564186e-7
+      ],
+      "rotation": [
+        5.02429620531739e-15,
+        0.707106709480286,
+        -5.02429535828445e-15,
+        0.707106828689575
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "mesh": 0
+    },
+    {
+      "name": "Bone_body_B",
+      "translation": [
+        0.0920527949929237,
+        -0.0101250456646085,
+        -0.160324260592461
+      ],
+      "rotation": [
+        -3.09085876892823e-8,
+        0.707106709480286,
+        0.707106828689575,
+        -3.68083419743925e-7
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_body_A",
+      "translation": [
+        0.0920529663562775,
+        -0.0101251024752855,
+        0.199909955263138
+      ],
+      "rotation": [
+        -3.09085876892823e-8,
+        0.707106709480286,
+        0.707106828689575,
+        -3.68083419743925e-7
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [
+        8
+      ]
+    },
+    {
+      "name": "WK_Catapult",
+      "translation": [
+        0.204065203666687,
+        -0.176652863621712,
+        -0.116716526448727
+      ],
+      "rotation": [
+        9.55318242290559e-8,
+        -7.30554887695689e-8,
+        -0.707106828689575,
+        0.707106709480286
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "mesh": 1,
+      "skin": 0
+    },
+    {
+      "name": "Bone_front",
+      "translation": [
+        0.225130259990692,
+        -0.0216909311711788,
+        0.0232570357620716
+      ],
+      "rotation": [
+        -0.707106649875641,
+        -3.09085770311412e-8,
+        4.29900637755054e-7,
+        0.70710688829422
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_wheel_A",
+      "translation": [
+        -0.108862318098545,
+        0.304559201002121,
+        0.124151058495045
+      ],
+      "rotation": [
+        -1.68587391158326e-7,
+        1.68587391158326e-7,
+        -0.70710676908493,
+        0.70710676908493
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_wheel_B",
+      "translation": [
+        0.360294878482819,
+        0.262643963098526,
+        0.114685609936714
+      ],
+      "rotation": [
+        -3.37174782316652e-7,
+        3.37174782316652e-7,
+        -0.70710676908493,
+        0.70710676908493
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_wheel_C",
+      "translation": [
+        0.360294908285141,
+        -0.271662890911102,
+        0.114685826003551
+      ],
+      "rotation": [
+        -5.05762159264123e-7,
+        5.05762159264123e-7,
+        -0.70710676908493,
+        0.70710676908493
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_wheel_C001D",
+      "translation": [
+        -0.110366590321064,
+        -0.299578994512558,
+        0.124107517302036
+      ],
+      "rotation": [
+        -0.00000101152431852825,
+        0.00000101152431852825,
+        -0.70710676908493,
+        0.70710676908493
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

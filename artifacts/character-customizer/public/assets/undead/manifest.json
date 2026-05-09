@@ -1,0 +1,35 @@
+{
+  "race": "undead",
+  "label": "Forsaken Court",
+  "heightMeters": 1.83,
+  "accentColor": "#c89cff",
+  "baseUrl": "/assets/undead/",
+  "character": {
+    "infantry": "character/infantry.gltf",
+    "cavalry": "character/cavalry.gltf",
+    "siege": []
+  },
+  "equipment": [
+    {
+      "id": "UD_Shield_C",
+      "url": "equipment/UD_Shield_C.gltf"
+    },
+    {
+      "id": "UD_weapon_Spear",
+      "url": "equipment/UD_weapon_Spear.gltf"
+    },
+    {
+      "id": "UD_weapon_Sword_C",
+      "url": "equipment/UD_weapon_Sword_C.gltf"
+    },
+    {
+      "id": "UD_weapon_staff_B",
+      "url": "equipment/UD_weapon_staff_B.gltf"
+    }
+  ],
+  "animations": [],
+  "textures": [
+    "textures/UD_Standard_Units.png",
+    "textures/UD_Standard_Units_brown.png"
+  ]
+}

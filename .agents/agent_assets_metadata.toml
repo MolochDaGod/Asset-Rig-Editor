@@ -1,0 +1,44 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "9Il1N-TRu24ZhMGx8k6b3"
+uri = "file://attached_assets/model_summary.csv"
+type = "table"
+title = "Model Summary (1 row per FBX - 68 rows)"
+
+[[outputs]]
+id = "YU79QLMxR04g7Nfg_3XKr"
+uri = "file://attached_assets/model_manifest.csv"
+type = "table"
+title = "Full Model Manifest (classified - 2,880 rows)"
+
+[[outputs]]
+id = "iUmtokmPv71KrL88Qen1R"
+uri = "file://attached_assets/mmo_parts.csv"
+type = "table"
+title = "Source FBX parts (586 rows, with skin bones · unchanged)"
+
+[[outputs]]
+id = "3TeqaJz1xpIElFcuotpIR"
+uri = "file://attached_assets/meshy_prompts.csv"
+type = "table"
+title = "Meshy AI Prompts — race-correct generation prompts (586 rows)"
+
+[[outputs]]
+id = "W8hPKq96vdq0AnW5lVsvX"
+uri = "file://attached_assets/gltf_inventory.csv"
+type = "table"
+title = "glTF Inventory — every converted GLB with full metadata"
+
+[[outputs]]
+id = "58C6A94hNhE4_visYCLEM"
+uri = "file://artifacts/character-customizer/public/models/gltf/manifest.json"
+type = "unspecified"
+title = "Runtime manifest.json — source of truth for the customizer"
+
+[[outputs]]
+id = "RwX2cbVJiGz_msgIZxT8y"
+uri = "file://artifacts/character-customizer/public/tpose-for-mixamo/tpose-for-mixamo.tar.gz"
+type = "unspecified"
+title = "All 6 race T-pose meshes (upload to Mixamo)"

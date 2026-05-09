@@ -1,0 +1,65 @@
+{
+  "generated": "2026-04-17T09:30:12.063Z",
+  "races": {
+    "barbarian": {
+      "manifest": "/assets/barbarian/manifest.json",
+      "colors": "/assets/barbarian/colors.json",
+      "counts": {
+        "equipment": 5,
+        "animations": 2,
+        "textures": 2,
+        "characters": 2
+      }
+    },
+    "dwarf": {
+      "manifest": "/assets/dwarf/manifest.json",
+      "colors": "/assets/dwarf/colors.json",
+      "counts": {
+        "equipment": 0,
+        "animations": 10,
+        "textures": 2,
+        "characters": 2
+      }
+    },
+    "elf": {
+      "manifest": "/assets/elf/manifest.json",
+      "colors": "/assets/elf/colors.json",
+      "counts": {
+        "equipment": 2,
+        "animations": 9,
+        "textures": 7,
+        "characters": 3
+      }
+    },
+    "orc": {
+      "manifest": "/assets/orc/manifest.json",
+      "colors": "/assets/orc/colors.json",
+      "counts": {
+        "equipment": 3,
+        "animations": 8,
+        "textures": 7,
+        "characters": 3
+      }
+    },
+    "undead": {
+      "manifest": "/assets/undead/manifest.json",
+      "colors": "/assets/undead/colors.json",
+      "counts": {
+        "equipment": 4,
+        "animations": 0,
+        "textures": 2,
+        "characters": 2
+      }
+    },
+    "human": {
+      "manifest": "/assets/human/manifest.json",
+      "colors": "/assets/human/colors.json",
+      "counts": {
+        "equipment": 2,
+        "animations": 7,
+        "textures": 8,
+        "characters": 3
+      }
+    }
+  }
+}

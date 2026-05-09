@@ -1,0 +1,3915 @@
+{
+  "generatedAt": "2026-04-18T22:41:38.767Z",
+  "races": {
+    "human": {
+      "infantry": {
+        "meshCount": 42,
+        "meshNames": [
+          "WK_weapon_staff_A",
+          "WK_weapon_staff_B",
+          "WK_weapon_staff_C",
+          "WK_weapon_Bow",
+          "WK_Shield_A",
+          "WK_Shield_C",
+          "WK_Shield_B",
+          "WK_Shield_D",
+          "WK_weapon_spear",
+          "WK_weapon_sword_A",
+          "WK_weapon_hammer_B",
+          "WK_weapon_pick",
+          "WK_weapon_sword_B",
+          "WK_weapon_axe_B",
+          "WK_weapon_hammer_A",
+          "WK_weapon_axe_A",
+          "WK_Xtra_wood",
+          "WK_Xtra_bag",
+          "WK_Xtra_quiver",
+          "WK_Units_Body_A",
+          "WK_Units_Body_B",
+          "WK_Units_Body_D",
+          "WK_Units_Body_C",
+          "WK_Units_shoulderpads_A",
+          "WK_Units_head_C",
+          "WK_Units_head_B",
+          "WK_Units_head_A",
+          "WK_Units_Legs_A",
+          "WK_Units_Arms_A",
+          "WK_Units_Legs_B",
+          "WK_Units_Arms_B",
+          "WK_Units_Legs_C",
+          "WK_Units_Arms_C",
+          "WK_Units_Body_E",
+          "WK_Units_head_E",
+          "WK_Units_Arms_D",
+          "WK_Units_head_D",
+          "WK_Units_head_H",
+          "WK_Units_head_G",
+          "WK_Units_head_F",
+          "WK_Units_shoulderpads_B",
+          "WK_Units_head_I"
+        ],
+        "boneNames": [
+          "Bip001 Pelvis",
+          "Bip001 Spine",
+          "Bip001 R Thigh",
+          "Bip001 R Clavicle",
+          "Bip001 L Clavicle",
+          "Bip001 R UpperArm",
+          "Bip001 Head",
+          "Bip001 Neck",
+          "Bip001 R Foot",
+          "Bip001 R Calf",
+          "Bip001 L Foot",
+          "Bip001 L Calf",
+          "Bip001 L Thigh",
+          "Bip001 R Forearm",
+          "Bip001 R Hand",
+          "Bip001 L UpperArm",
+          "Bip001 L Forearm",
+          "Bip001 L Hand"
+        ],
+        "attachPoints": [
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Bone_wood",
+          "Bone_bag",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "WK_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_Bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_Shield_D",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_hammer_B",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_pick",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_hammer_A",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_Xtra_wood",
+            "slot": "prop",
+            "kind": "wood",
+            "attachPoint": "Bone_wood"
+          },
+          {
+            "name": "WK_Xtra_bag",
+            "slot": "prop",
+            "kind": "bag",
+            "attachPoint": "Bone_bag"
+          },
+          {
+            "name": "WK_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          },
+          {
+            "name": "WK_Units_Body_A",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_Body_B",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_Body_D",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_Body_C",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "WK_Units_head_C",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_B",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_A",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_Legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "WK_Units_Arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "WK_Units_Legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "WK_Units_Arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "WK_Units_Legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "WK_Units_Arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "WK_Units_Body_E",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_head_E",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_Arms_D",
+            "slot": "arms"
+          },
+          {
+            "name": "WK_Units_head_D",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_H",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_G",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_F",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "WK_Units_head_I",
+            "slot": "head"
+          }
+        ]
+      },
+      "cavalry": {
+        "meshCount": 43,
+        "meshNames": [
+          "WK_Horse",
+          "WK_weapon_staff_A",
+          "WK_weapon_staff_B",
+          "WK_weapon_staff_C",
+          "WK_weapon_Bow",
+          "WK_Shield_A",
+          "WK_Shield_C",
+          "WK_Shield_B",
+          "WK_Shield_D",
+          "WK_weapon_spear",
+          "WK_weapon_sword_A",
+          "WK_weapon_hammer_B",
+          "WK_weapon_pick",
+          "WK_weapon_sword_B",
+          "WK_weapon_axe_B",
+          "WK_weapon_lance",
+          "WK_weapon_hammer_A",
+          "WK_weapon_axe_A",
+          "WK_Xtra_quiver",
+          "WK_Units_Body_A",
+          "WK_Units_Body_B",
+          "WK_Units_Body_D",
+          "WK_Units_Body_C",
+          "WK_Units_shoulderpads_A",
+          "WK_Units_head_C",
+          "WK_Units_head_B",
+          "WK_Units_head_A",
+          "WK_Units_Legs_A",
+          "WK_Units_Arms_A",
+          "WK_Units_Legs_B",
+          "WK_Units_Arms_B",
+          "WK_Units_Legs_C",
+          "WK_Units_Arms_C",
+          "WK_Units_Body_E",
+          "WK_Units_head_E",
+          "WK_Units_Arms_D",
+          "WK_Units_head_D",
+          "WK_Units_head_H",
+          "WK_Units_head_G",
+          "WK_Units_head_F",
+          "WK_Units_shoulderpads_B",
+          "WK_Units_head_I",
+          "WK_horse_Seat"
+        ],
+        "boneNames": [
+          "Bip001 Spine",
+          "Bip001 R Thigh",
+          "Bip001 Pelvis",
+          "Bip001 R UpperArm",
+          "Bip001 R Forearm",
+          "Bip001 Tail",
+          "Bip001 Neck",
+          "Bip001 Head",
+          "Bip001 L UpperArm",
+          "Bip001 L Forearm",
+          "Bip001 R Hand",
+          "Bip001 L Hand",
+          "Bip001 R Finger0",
+          "Bip001 L Finger0",
+          "Bip001 R Foot",
+          "Bip001 L Thigh",
+          "Bip001 L Foot",
+          "Bip001 R Calf",
+          "Bip001 R Toe0",
+          "Bip001 L Toe0",
+          "Bip001 Tail1",
+          "Bip001 L Calf",
+          "Bip001 Pelvis001",
+          "Bip001 Spine001",
+          "Bip001 R Thigh001",
+          "Bip001 R Clavicle001",
+          "Bip001 L Clavicle001",
+          "Bip001 R UpperArm001",
+          "Bip001 Head001",
+          "Bip001 Neck001",
+          "Bip001 R Foot001",
+          "Bip001 R Calf001",
+          "Bip001 L Foot001",
+          "Bip001 L Calf001",
+          "Bip001 L Thigh001",
+          "Bip001 R Forearm001",
+          "Bip001 R Hand001",
+          "Bip001 L UpperArm001",
+          "Bip001 L Forearm001",
+          "Bip001 L Hand001"
+        ],
+        "attachPoints": [
+          "Bone_Mount",
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "WK_Horse",
+            "slot": "mount"
+          },
+          {
+            "name": "WK_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_Bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_Shield_D",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "WK_weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_hammer_B",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_pick",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_lance",
+            "slot": "weapon",
+            "kind": "lance",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_hammer_A",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_weapon_axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "WK_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          },
+          {
+            "name": "WK_Units_Body_A",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_Body_B",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_Body_D",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_Body_C",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "WK_Units_head_C",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_B",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_A",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_Legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "WK_Units_Arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "WK_Units_Legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "WK_Units_Arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "WK_Units_Legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "WK_Units_Arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "WK_Units_Body_E",
+            "slot": "body"
+          },
+          {
+            "name": "WK_Units_head_E",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_Arms_D",
+            "slot": "arms"
+          },
+          {
+            "name": "WK_Units_head_D",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_H",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_G",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_head_F",
+            "slot": "head"
+          },
+          {
+            "name": "WK_Units_shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "WK_Units_head_I",
+            "slot": "head"
+          },
+          {
+            "name": "WK_horse_Seat",
+            "slot": "mount"
+          }
+        ]
+      },
+      "siege": {
+        "meshCount": 2,
+        "meshNames": [
+          "WK_Catapult_rock",
+          "WK_Catapult"
+        ],
+        "boneNames": [
+          "Bone_body_A",
+          "Bone_wheel_A",
+          "Bone_Platform",
+          "Bone_Root",
+          "Bone_body_B",
+          "Bone_stone",
+          "Bone_wheel_B",
+          "Bone_Arm",
+          "Bone_front",
+          "Bone_wheel_C001D",
+          "Bone_wheel_C"
+        ],
+        "attachPoints": [],
+        "parts": [
+          {
+            "name": "WK_Catapult_rock",
+            "slot": "siege_engine"
+          },
+          {
+            "name": "WK_Catapult",
+            "slot": "siege_engine"
+          }
+        ]
+      }
+    },
+    "elf": {
+      "infantry": {
+        "meshCount": 47,
+        "meshNames": [
+          "ELF_weapon_bow",
+          "ELF_weapon_staff_B",
+          "ELF_weapon_staff_C",
+          "ELF_weapon_staff_A",
+          "ELF_shield_C",
+          "ELF_shield_B",
+          "ELF_shield_A",
+          "ELF_weapon_axe",
+          "ELF_weapon_hammer",
+          "ELF_weapon_sword_B",
+          "ELF_weapon_dagger",
+          "ELF_weapon_sword_A",
+          "ELF_weapon_spear",
+          "ELF_Xtra_wood",
+          "ELF_Xtra_bag",
+          "ELF_Xtra_quiver",
+          "ELF_Units_Legs_A",
+          "ELF_Units_Arms_A",
+          "ELF_Units_Body_F",
+          "ELF_Units_Body_A",
+          "ELF_Units_Head_A",
+          "ELF_Units_Body_B",
+          "ELF_Units_Arms_B",
+          "ELF_Units_Legs_B",
+          "ELF_Units_Body_E",
+          "ELF_Units_Arms_C",
+          "ELF_Units_Legs_C",
+          "ELF_Units_Head_C",
+          "ELF_Units_Body_C",
+          "ELF_Units_Shoulderpads_B",
+          "ELF_Units_Head_E",
+          "ELF_Units_Head_B",
+          "ELF_Units_Head_D",
+          "ELF_Units_Head_G",
+          "ELF_Units_Head_L",
+          "ELF_Units_Body_D",
+          "ELF_Units_Shoulderpads_A",
+          "ELF_Units_Shoulderpads_C",
+          "ELF_Units_Head_N",
+          "ELF_Units_Head_F",
+          "ELF_Units_Head_H",
+          "ELF_Units_Head_I",
+          "ELF_Units_Head_J",
+          "ELF_Units_Head_M",
+          "ELF_Units_Head_K",
+          "ELF_Units_Head_O",
+          "ELF_Units_Head_P"
+        ],
+        "boneNames": [
+          "Bip001 R Foot",
+          "Bip001 R Calf",
+          "Bip001 R Thigh",
+          "Bip001 L Foot",
+          "Bip001 L Calf",
+          "Bip001 L Thigh",
+          "Bip001 R Forearm",
+          "Bip001 R UpperArm",
+          "Bip001 R Hand",
+          "Bip001 L UpperArm",
+          "Bip001 L Hand",
+          "Bip001 L Forearm",
+          "Bip001 Pelvis",
+          "Bip001 L Clavicle",
+          "Bip001 R Clavicle",
+          "Bip001 Spine",
+          "Bip001 Head",
+          "Bip001 Neck"
+        ],
+        "attachPoints": [
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Bone_wood",
+          "Bone_bag",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "ELF_weapon_bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ELF_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ELF_shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ELF_shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ELF_weapon_axe",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_hammer",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_dagger",
+            "slot": "weapon",
+            "kind": "dagger",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_Xtra_wood",
+            "slot": "prop",
+            "kind": "wood",
+            "attachPoint": "Bone_wood"
+          },
+          {
+            "name": "ELF_Xtra_bag",
+            "slot": "prop",
+            "kind": "bag",
+            "attachPoint": "Bone_bag"
+          },
+          {
+            "name": "ELF_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          },
+          {
+            "name": "ELF_Units_Legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "ELF_Units_Arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "ELF_Units_Body_F",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Body_A",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Head_A",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Body_B",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "ELF_Units_Legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "ELF_Units_Body_E",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "ELF_Units_Legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "ELF_Units_Head_C",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Body_C",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ELF_Units_Head_E",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_B",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_D",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_G",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_L",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Body_D",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ELF_Units_Shoulderpads_C",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ELF_Units_Head_N",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_F",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_H",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_I",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_J",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_M",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_K",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_O",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_P",
+            "slot": "head"
+          }
+        ]
+      },
+      "cavalry": {
+        "meshCount": 48,
+        "meshNames": [
+          "ELF_Horse",
+          "ELF_horse_Seat",
+          "ELF_Units_Legs_A",
+          "ELF_Units_Arms_A",
+          "ELF_Units_Body_F",
+          "ELF_Units_Body_A",
+          "ELF_Units_Head_A",
+          "ELF_Units_Body_B",
+          "ELF_Units_Arms_B",
+          "ELF_Units_Legs_B",
+          "ELF_Units_Body_E",
+          "ELF_Units_Arms_C",
+          "ELF_Units_Legs_C",
+          "ELF_Units_Head_C",
+          "ELF_Units_Body_C",
+          "ELF_Units_Shoulderpads_B",
+          "ELF_Units_Head_E",
+          "ELF_Units_Head_B",
+          "ELF_Units_Head_D",
+          "ELF_Units_Head_G",
+          "ELF_Units_Head_L",
+          "ELF_Units_Body_D",
+          "ELF_Units_Shoulderpads_A",
+          "ELF_Units_Shoulderpads_C",
+          "ELF_Units_Head_N",
+          "ELF_Units_Head_F",
+          "ELF_Units_Head_H",
+          "ELF_Units_Head_I",
+          "ELF_Units_Head_J",
+          "ELF_Units_Head_M",
+          "ELF_Units_Head_K",
+          "ELF_Units_Head_O",
+          "ELF_Units_Head_P",
+          "ELF_weapon_bow",
+          "ELF_weapon_staff_B",
+          "ELF_weapon_staff_C",
+          "ELF_weapon_staff_A",
+          "ELF_shield_C",
+          "ELF_shield_B",
+          "ELF_shield_A",
+          "ELF_weapon_axe",
+          "ELF_weapon_hammer",
+          "ELF_weapon_sword_B",
+          "ELF_weapon_dagger",
+          "ELF_weapon_sword_A",
+          "ELF_weapon_spear",
+          "ELF_weapon_lance",
+          "ELF_Xtra_quiver"
+        ],
+        "boneNames": [
+          "Bip001 Spine",
+          "Bip001 R Thigh",
+          "Bip001 Pelvis",
+          "Bip001 R UpperArm",
+          "Bip001 R Forearm",
+          "Bip001 Tail",
+          "Bip001 Neck",
+          "Bip001 Head",
+          "Bip001 L UpperArm",
+          "Bip001 L Forearm",
+          "Bip001 R Hand",
+          "Bip001 L Hand",
+          "Bip001 R Finger0",
+          "Bip001 L Finger0",
+          "Bip001 R Foot",
+          "Bip001 L Thigh",
+          "Bip001 L Foot",
+          "Bip001 R Calf",
+          "Bip001 R Toe0",
+          "Bip001 L Toe0",
+          "Bip001 Tail1",
+          "Bip001 L Calf",
+          "Bip001 R Foot001",
+          "Bip001 R Calf001",
+          "Bip001 R Thigh001",
+          "Bip001 L Foot001",
+          "Bip001 L Calf001",
+          "Bip001 L Thigh001",
+          "Bip001 R Forearm001",
+          "Bip001 R UpperArm001",
+          "Bip001 R Hand001",
+          "Bip001 L UpperArm001",
+          "Bip001 L Hand001",
+          "Bip001 L Forearm001",
+          "Bip001 Pelvis001",
+          "Bip001 L Clavicle001",
+          "Bip001 R Clavicle001",
+          "Bip001 Spine001",
+          "Bip001 Head001",
+          "Bip001 Neck001"
+        ],
+        "attachPoints": [
+          "Bone_Mount",
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Bone_wood",
+          "Bone_bag",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "ELF_Horse",
+            "slot": "mount"
+          },
+          {
+            "name": "ELF_horse_Seat",
+            "slot": "mount"
+          },
+          {
+            "name": "ELF_Units_Legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "ELF_Units_Arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "ELF_Units_Body_F",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Body_A",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Head_A",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Body_B",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "ELF_Units_Legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "ELF_Units_Body_E",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "ELF_Units_Legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "ELF_Units_Head_C",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Body_C",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ELF_Units_Head_E",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_B",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_D",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_G",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_L",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Body_D",
+            "slot": "body"
+          },
+          {
+            "name": "ELF_Units_Shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ELF_Units_Shoulderpads_C",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ELF_Units_Head_N",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_F",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_H",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_I",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_J",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_M",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_K",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_O",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_Units_Head_P",
+            "slot": "head"
+          },
+          {
+            "name": "ELF_weapon_bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ELF_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ELF_shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ELF_shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ELF_weapon_axe",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_hammer",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_dagger",
+            "slot": "weapon",
+            "kind": "dagger",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_weapon_lance",
+            "slot": "weapon",
+            "kind": "lance",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ELF_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          }
+        ]
+      },
+      "siege": {
+        "meshCount": 1,
+        "meshNames": [
+          "ELF_BoltThrower"
+        ],
+        "boneNames": [
+          "Bone_R_block",
+          "Bone_Ballista",
+          "Bone_R_wheel_A",
+          "Bone_string",
+          "Bone_R_wing_A",
+          "Bone_R_wheel_B",
+          "Bone_front",
+          "Bone_Bolt",
+          "Bone_L_block",
+          "Bone_L_wheel_B",
+          "Bone_L_wing_A",
+          "Bone_R_wing_B",
+          "Bone_L_wheel_A",
+          "Bone_L_wing_B"
+        ],
+        "attachPoints": [],
+        "parts": [
+          {
+            "name": "ELF_BoltThrower",
+            "slot": "siege_engine"
+          }
+        ]
+      }
+    },
+    "dwarf": {
+      "infantry": {
+        "meshCount": 48,
+        "meshNames": [
+          "DWF_Weapon_bow",
+          "DWF_Weapon_staff_B",
+          "DWF_Weapon_staff_A",
+          "DWF_Shield_B",
+          "DWF_Shield_A",
+          "DWF_Shield_C",
+          "DWF_Shield_D",
+          "DWF_Weapon_dagger",
+          "DWF_Weapon_spear",
+          "DWF_Weapon_axe_B",
+          "DWF_Weapon_pick",
+          "DWF_Weapon_axe_A",
+          "DWF_Weapon_axe_C",
+          "DWF_Weapon_sword_B",
+          "DWF_Weapon_hammer_B",
+          "DWF_Weapon_hammer_A",
+          "DWF_Weapon_sword_A",
+          "DWF_Xtra_wood",
+          "DWF_Xtra_bag",
+          "DWF_Xtra_quiver",
+          "DWF_Units_Body_A",
+          "DWF_Units_Head_A",
+          "DWF_Units_Body_E",
+          "DWF_Units_Body_B",
+          "DWF_Units_Body_C",
+          "DWF_Units_Body_D",
+          "DWF_Units_Shoulderpads_A",
+          "DWF_Units_Shoulderpads_B",
+          "DWF_Units_Shoulderpads_C",
+          "DWF_Units_Head_M",
+          "DWF_Units_Head_N",
+          "DWF_Units_Arms_A",
+          "DWF_Units_Legs_A",
+          "DWF_Units_Legs_B",
+          "DWF_Units_Arms_B",
+          "DWF_Units_Legs_C",
+          "DWF_Units_Arms_C",
+          "DWF_Units_Head_B",
+          "DWF_Units_Head_C",
+          "DWF_Units_Head_D",
+          "DWF_Units_Head_E",
+          "DWF_Units_Head_F",
+          "DWF_Units_Head_G",
+          "DWF_Units_Head_H",
+          "DWF_Units_Head_I",
+          "DWF_Units_Head_J",
+          "DWF_Units_Head_K",
+          "DWF_Units_Head_L"
+        ],
+        "boneNames": [
+          "Bip001 L Foot",
+          "Bip001 Pelvis",
+          "Bip001 R Calf",
+          "Bip001 R Foot",
+          "Bip001 R Thigh",
+          "Bip001 Spine",
+          "Bip001 L Calf",
+          "Bip001 L Thigh",
+          "Bip001 R Clavicle",
+          "Bip001 L Clavicle",
+          "Bip001 R UpperArm",
+          "Bip001 Head",
+          "Bip001 R Forearm",
+          "Bip001 R Hand",
+          "Bip001 L UpperArm",
+          "Bip001 L Forearm",
+          "Bip001 L Hand",
+          "Bip001 Neck"
+        ],
+        "attachPoints": [
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Bone_wood",
+          "Bone_bag",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "DWF_Weapon_bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Shield_D",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_dagger",
+            "slot": "weapon",
+            "kind": "dagger",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_pick",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_axe_C",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_hammer_B",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_hammer_A",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Xtra_wood",
+            "slot": "prop",
+            "kind": "wood",
+            "attachPoint": "Bone_wood"
+          },
+          {
+            "name": "DWF_Xtra_bag",
+            "slot": "prop",
+            "kind": "bag",
+            "attachPoint": "Bone_bag"
+          },
+          {
+            "name": "DWF_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          },
+          {
+            "name": "DWF_Units_Body_A",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Head_A",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Body_E",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Body_B",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Body_C",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Body_D",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "DWF_Units_Shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "DWF_Units_Shoulderpads_C",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "DWF_Units_Head_M",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_N",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "DWF_Units_Legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "DWF_Units_Legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "DWF_Units_Arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "DWF_Units_Legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "DWF_Units_Arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "DWF_Units_Head_B",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_C",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_D",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_E",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_F",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_G",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_H",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_I",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_J",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_K",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_L",
+            "slot": "head"
+          }
+        ]
+      },
+      "cavalry": {
+        "meshCount": 47,
+        "meshNames": [
+          "DWF_Weapon_bow",
+          "DWF_Weapon_staff_B",
+          "DWF_Weapon_staff_A",
+          "DWF_Shield_B",
+          "DWF_Shield_A",
+          "DWF_Shield_C",
+          "DWF_Shield_D",
+          "DWF_Weapon_dagger",
+          "DWF_Weapon_spear",
+          "DWF_Weapon_axe_B",
+          "DWF_Weapon_pick",
+          "DWF_Weapon_axe_A",
+          "DWF_Weapon_axe_C",
+          "DWF_Weapon_sword_B",
+          "DWF_Weapon_hammer_B",
+          "DWF_Weapon_hammer_A",
+          "DWF_Weapon_sword_A",
+          "DWF_Xtra_quiver",
+          "DWF_Mount_Ram",
+          "DWF_Units_Body_A",
+          "DWF_Units_Head_A",
+          "DWF_Units_Body_E",
+          "DWF_Units_Body_B",
+          "DWF_Units_Body_C",
+          "DWF_Units_Body_D",
+          "DWF_Units_Shoulderpads_A",
+          "DWF_Units_Shoulderpads_B",
+          "DWF_Units_Shoulderpads_C",
+          "DWF_Units_Head_M",
+          "DWF_Units_Head_N",
+          "DWF_Units_Arms_A",
+          "DWF_Units_Legs_A",
+          "DWF_Units_Legs_B",
+          "DWF_Units_Arms_B",
+          "DWF_Units_Legs_C",
+          "DWF_Units_Arms_C",
+          "DWF_Units_Head_B",
+          "DWF_Units_Head_C",
+          "DWF_Units_Head_D",
+          "DWF_Units_Head_E",
+          "DWF_Units_Head_F",
+          "DWF_Units_Head_G",
+          "DWF_Units_Head_H",
+          "DWF_Units_Head_I",
+          "DWF_Units_Head_J",
+          "DWF_Units_Head_K",
+          "DWF_Units_Head_L"
+        ],
+        "boneNames": [
+          "Bip001 Pelvis",
+          "Bip001 R Thigh",
+          "Bip001 Spine",
+          "Bip001 Neck",
+          "Bip001 R UpperArm",
+          "Bip001 Tail",
+          "Bip001 R Forearm",
+          "Bip001 R Finger0",
+          "Bip001 R Hand",
+          "Bip001 L Finger0",
+          "Bip001 L Hand",
+          "Bip001 L Forearm",
+          "Bip001 L UpperArm",
+          "Bip001 R Foot",
+          "Bip001 R Calf",
+          "Bip001 R Toe0",
+          "Bip001 L Foot",
+          "Bip001 L Toe0",
+          "Bip001 L Thigh",
+          "Bip001 Head",
+          "Bip001 L Calf",
+          "Bip001 L Foot001",
+          "Bip001 Pelvis001",
+          "Bip001 R Calf001",
+          "Bip001 R Foot001",
+          "Bip001 R Thigh001",
+          "Bip001 Spine001",
+          "Bip001 L Calf001",
+          "Bip001 L Thigh001",
+          "Bip001 R Clavicle001",
+          "Bip001 L Clavicle001",
+          "Bip001 R UpperArm001",
+          "Bip001 Head001",
+          "Bip001 R Forearm001",
+          "Bip001 R Hand001",
+          "Bip001 L UpperArm001",
+          "Bip001 L Forearm001",
+          "Bip001 L Hand001",
+          "Bip001 Neck001"
+        ],
+        "attachPoints": [
+          "Bone_Mount",
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Bone_wood",
+          "Bone_bag",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "DWF_Weapon_bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Shield_D",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_dagger",
+            "slot": "weapon",
+            "kind": "dagger",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_pick",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_axe_C",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_hammer_B",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_hammer_A",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Weapon_sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "DWF_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          },
+          {
+            "name": "DWF_Mount_Ram",
+            "slot": "mount"
+          },
+          {
+            "name": "DWF_Units_Body_A",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Head_A",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Body_E",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Body_B",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Body_C",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Body_D",
+            "slot": "body"
+          },
+          {
+            "name": "DWF_Units_Shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "DWF_Units_Shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "DWF_Units_Shoulderpads_C",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "DWF_Units_Head_M",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_N",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "DWF_Units_Legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "DWF_Units_Legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "DWF_Units_Arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "DWF_Units_Legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "DWF_Units_Arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "DWF_Units_Head_B",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_C",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_D",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_E",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_F",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_G",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_H",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_I",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_J",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_K",
+            "slot": "head"
+          },
+          {
+            "name": "DWF_Units_Head_L",
+            "slot": "head"
+          }
+        ]
+      }
+    },
+    "orc": {
+      "infantry": {
+        "meshCount": 48,
+        "meshNames": [
+          "ORC_weapon_Bow",
+          "ORC_weapon_staff_A",
+          "ORC_weapon_staff_C",
+          "ORC_weapon_staff_B",
+          "ORC_Shield_A",
+          "ORC_Shield_C",
+          "ORC_Shield_B",
+          "ORC_Shield_D",
+          "ORC_weapon_spear",
+          "ORC_weapon_Hammer",
+          "ORC_weapon_Dagger",
+          "ORC_weapon_Axe_C",
+          "ORC_weapon_Sword_B",
+          "ORC_weapon_Axe_A",
+          "ORC_weapon_Mace_A",
+          "ORC_weapon_Axe_B",
+          "ORC_weapon_Sword_A",
+          "ORC_Xtra_quiver",
+          "ORC_Units_Body_A",
+          "ORC_Units_Body_C",
+          "ORC_Xtra_Wood",
+          "ORC_Xtra_Bag",
+          "ORC_Units_Body_B",
+          "ORC_Units_Body_F",
+          "ORC_Units_Head_A",
+          "ORC_Units_Body_E",
+          "ORC_Units_Shoulderpads_C",
+          "ORC_Units_Head_H",
+          "ORC_Units_Shoulderpads_B",
+          "ORC_Units_Arms_C",
+          "ORC_Units_Legs_D",
+          "ORC_Units_Legs_B",
+          "ORC_Units_Arms_A",
+          "ORC_Units_Legs_C",
+          "ORC_Units_Arms_B",
+          "ORC_Units_Head_B",
+          "ORC_Units_Head_C",
+          "ORC_Units_Head_F",
+          "ORC_Units_Head_G",
+          "ORC_Units_Body_D",
+          "ORC_Units_Head_D",
+          "ORC_Units_Head_E",
+          "ORC_Units_Shoulderpads_F",
+          "ORC_Units_Shoulderpads_E",
+          "ORC_Units_Shoulderpads_D",
+          "ORC_Units_Shoulderpads_A",
+          "ORC_Units_Legs_A",
+          "ORC_Units_Body_G"
+        ],
+        "boneNames": [
+          "Bip001 Spine",
+          "Bip001 R Thigh",
+          "Bip001 Pelvis",
+          "Bip001 R UpperArm",
+          "Bip001 R Clavicle",
+          "Bip001 L Clavicle",
+          "Bip001 Head",
+          "Bip001 R Forearm",
+          "Bip001 R Foot",
+          "Bip001 R Calf",
+          "Bip001 L Foot",
+          "Bip001 L Calf",
+          "Bip001 L Thigh",
+          "Bip001 R Hand",
+          "Bip001 L UpperArm",
+          "Bip001 L Forearm",
+          "Bip001 L Hand",
+          "Bip001 Neck",
+          "Bone_wood",
+          "Bone_bag"
+        ],
+        "attachPoints": [
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "ORC_weapon_Bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_Shield_D",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Hammer",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Dagger",
+            "slot": "weapon",
+            "kind": "dagger",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Axe_C",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Mace_A",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          },
+          {
+            "name": "ORC_Units_Body_A",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Body_C",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Xtra_Wood",
+            "slot": "prop",
+            "kind": "wood",
+            "attachPoint": "Bone_wood"
+          },
+          {
+            "name": "ORC_Xtra_Bag",
+            "slot": "prop",
+            "kind": "bag",
+            "attachPoint": "Bone_bag"
+          },
+          {
+            "name": "ORC_Units_Body_B",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Body_F",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Head_A",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Body_E",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_C",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Head_H",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "ORC_Units_Legs_D",
+            "slot": "legs"
+          },
+          {
+            "name": "ORC_Units_Legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "ORC_Units_Arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "ORC_Units_Legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "ORC_Units_Arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "ORC_Units_Head_B",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Head_C",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Head_F",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Head_G",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Body_D",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Head_D",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Head_E",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_F",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_E",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_D",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "ORC_Units_Body_G",
+            "slot": "body"
+          }
+        ]
+      },
+      "cavalry": {
+        "meshCount": 47,
+        "meshNames": [
+          "ORC_Mount_Wolf",
+          "ORC_weapon_Bow",
+          "ORC_weapon_staff_A",
+          "ORC_weapon_staff_C",
+          "ORC_weapon_staff_B",
+          "ORC_Shield_A",
+          "ORC_Shield_C",
+          "ORC_Shield_B",
+          "ORC_Shield_D",
+          "ORC_weapon_spear",
+          "ORC_weapon_Hammer",
+          "ORC_weapon_Dagger",
+          "ORC_weapon_Axe_C",
+          "ORC_weapon_Sword_B",
+          "ORC_weapon_Axe_A",
+          "ORC_weapon_Mace_A",
+          "ORC_weapon_Axe_B",
+          "ORC_weapon_Sword_A",
+          "ORC_Xtra_quiver",
+          "ORC_Units_Body_A",
+          "ORC_Units_Body_C",
+          "ORC_Units_Body_B",
+          "ORC_Units_Body_F",
+          "ORC_Units_Head_A",
+          "ORC_Units_Body_E",
+          "ORC_Units_Shoulderpads_C",
+          "ORC_Units_Head_H",
+          "ORC_Units_Shoulderpads_B",
+          "ORC_Units_Arms_C",
+          "ORC_Units_Legs_D",
+          "ORC_Units_Legs_B",
+          "ORC_Units_Arms_A",
+          "ORC_Units_Legs_C",
+          "ORC_Units_Arms_B",
+          "ORC_Units_Head_B",
+          "ORC_Units_Head_C",
+          "ORC_Units_Head_F",
+          "ORC_Units_Head_G",
+          "ORC_Units_Body_D",
+          "ORC_Units_Head_D",
+          "ORC_Units_Head_E",
+          "ORC_Units_Shoulderpads_F",
+          "ORC_Units_Shoulderpads_E",
+          "ORC_Units_Shoulderpads_D",
+          "ORC_Units_Shoulderpads_A",
+          "ORC_Units_Legs_A",
+          "ORC_Units_Body_G"
+        ],
+        "boneNames": [
+          "Bip001 Spine",
+          "Bip001 R Thigh",
+          "Bip001 R Foot",
+          "Bip001 R Calf",
+          "Bip001 Pelvis",
+          "Bip001 L Foot",
+          "Bip001 R UpperArm",
+          "Bip001 R Clavicle",
+          "Bip001 L Thigh",
+          "Bip001 L Calf",
+          "Bip001 Neck",
+          "Bip001 Head",
+          "Bip001 Tail1",
+          "Bip001 Tail",
+          "Bip001 L UpperArm",
+          "Bip001 R Forearm",
+          "Bip001 R Hand",
+          "Bip001 L Hand",
+          "Bip001 R Toe0",
+          "Bip001 L Clavicle",
+          "Bip001 L Forearm",
+          "Bip001 L Toe0",
+          "Bip001 Spine001",
+          "Bip001 R Thigh001",
+          "Bip001 Pelvis001",
+          "Bip001 R UpperArm001",
+          "Bip001 R Clavicle001",
+          "Bip001 L Clavicle001",
+          "Bip001 Head001",
+          "Bip001 R Forearm001",
+          "Bip001 R Foot001",
+          "Bip001 R Calf001",
+          "Bip001 L Foot001",
+          "Bip001 L Calf001",
+          "Bip001 L Thigh001",
+          "Bip001 R Hand001",
+          "Bip001 L UpperArm001",
+          "Bip001 L Forearm001",
+          "Bip001 L Hand001",
+          "Bip001 Neck001"
+        ],
+        "attachPoints": [
+          "Bone_Mount",
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Bone_wood",
+          "Bone_bag",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "ORC_Mount_Wolf",
+            "slot": "mount"
+          },
+          {
+            "name": "ORC_weapon_Bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_Shield_D",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "ORC_weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Hammer",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Dagger",
+            "slot": "weapon",
+            "kind": "dagger",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Axe_C",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Mace_A",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_weapon_Sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "ORC_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          },
+          {
+            "name": "ORC_Units_Body_A",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Body_C",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Body_B",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Body_F",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Head_A",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Body_E",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_C",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Head_H",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "ORC_Units_Legs_D",
+            "slot": "legs"
+          },
+          {
+            "name": "ORC_Units_Legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "ORC_Units_Arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "ORC_Units_Legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "ORC_Units_Arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "ORC_Units_Head_B",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Head_C",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Head_F",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Head_G",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Body_D",
+            "slot": "body"
+          },
+          {
+            "name": "ORC_Units_Head_D",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Head_E",
+            "slot": "head"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_F",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_E",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_D",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "ORC_Units_Legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "ORC_Units_Body_G",
+            "slot": "body"
+          }
+        ]
+      },
+      "siege": {
+        "meshCount": 2,
+        "meshNames": [
+          "Orc_Catapult_stone",
+          "Orc_Catapult"
+        ],
+        "boneNames": [
+          "Bone_wheel_A",
+          "Bone_Root",
+          "Bone_Platform",
+          "Bone_body_A",
+          "Bone_Arm",
+          "Bone_body_B",
+          "Bone_stone",
+          "Bone_wheel_B",
+          "Bone_front",
+          "Bone_wheel_C",
+          "Bone_wheel_C001D"
+        ],
+        "attachPoints": [],
+        "parts": [
+          {
+            "name": "Orc_Catapult_stone",
+            "slot": "siege_engine"
+          },
+          {
+            "name": "Orc_Catapult",
+            "slot": "siege_engine"
+          }
+        ]
+      }
+    },
+    "undead": {
+      "infantry": {
+        "meshCount": 50,
+        "meshNames": [
+          "UD_weapon_staff_C",
+          "UD_weapon_Bow",
+          "UD_weapon_staff_D",
+          "UD_weapon_staff_A",
+          "UD_weapon_staff_B",
+          "UD_Shield_A",
+          "UD_Shield_B",
+          "UD_Shield_C",
+          "UD_weapon_Hammer",
+          "UD_weapon_Axe_A",
+          "UD_weapon_Axe_B",
+          "UD_weapon_Spear",
+          "UD_weapon_Sword_A",
+          "UD_weapon_Sword_B",
+          "UD_weapon_Sword_C",
+          "UD_Xtra_Wood",
+          "UD_Xtra_Bag",
+          "UD_Xtra_Quiver",
+          "UD_Units_body_G",
+          "UD_Units_body_C",
+          "UD_Units_body_F",
+          "UD_Units_body_D",
+          "UD_Units_shoulderpads_A",
+          "UD_Units_body_A",
+          "UD_Units_body_B",
+          "UD_Units_head_D",
+          "UD_Units_arms_D",
+          "UD_Units_legs_D",
+          "UD_Units_shoulderpads_B",
+          "UD_Units_head_F",
+          "UD_Units_arms_B",
+          "UD_Units_legs_B",
+          "UD_Units_head_L",
+          "UD_Units_arms_E",
+          "UD_Units_arms_C",
+          "UD_Units_legs_C",
+          "UD_Units_arms_A",
+          "UD_Units_legs_A",
+          "UD_Units_head_A",
+          "UD_Units_head_B",
+          "UD_Units_head_H",
+          "UD_Units_head_I",
+          "UD_Units_head_K",
+          "UD_Units_head_C",
+          "UD_Units_head_E",
+          "UD_Units_body_E",
+          "UD_Units_head_G",
+          "UD_Units_head_M",
+          "UD_Units_head_J",
+          "UD_Units_shoulderpads_C"
+        ],
+        "boneNames": [
+          "Bip001 R Calf",
+          "Bip001 R Foot",
+          "Bip001 Pelvis",
+          "Bip001 R Thigh",
+          "Bip001 L Clavicle",
+          "Bip001 R Clavicle",
+          "Bip001 R UpperArm",
+          "Bip001 Spine",
+          "Bip001 L Foot",
+          "Bip001 Head",
+          "Bip001 R Forearm",
+          "Bip001 R Hand",
+          "Bip001 Neck",
+          "Bip001 L Calf",
+          "Bip001 L Thigh",
+          "Bip001 L UpperArm",
+          "Bip001 L Forearm",
+          "Bip001 L Hand"
+        ],
+        "attachPoints": [
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Bone_wood",
+          "Bone_bag",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "UD_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "UD_weapon_staff_D",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "UD_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "UD_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "UD_weapon_Hammer",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Sword_C",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_Xtra_Wood",
+            "slot": "prop",
+            "kind": "wood",
+            "attachPoint": "Bone_wood"
+          },
+          {
+            "name": "UD_Xtra_Bag",
+            "slot": "prop",
+            "kind": "bag",
+            "attachPoint": "Bone_bag"
+          },
+          {
+            "name": "UD_Xtra_Quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          },
+          {
+            "name": "UD_Units_body_G",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_body_C",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_body_F",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_body_D",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "UD_Units_body_A",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_body_B",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_head_D",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_arms_D",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_legs_D",
+            "slot": "legs"
+          },
+          {
+            "name": "UD_Units_shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "UD_Units_head_F",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "UD_Units_head_L",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_arms_E",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "UD_Units_arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "UD_Units_head_A",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_B",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_H",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_I",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_K",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_C",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_E",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_body_E",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_head_G",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_M",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_J",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_shoulderpads_C",
+            "slot": "shoulderpad"
+          }
+        ]
+      },
+      "cavalry": {
+        "meshCount": 50,
+        "meshNames": [
+          "UD_Horse",
+          "UD_Units_body_G",
+          "UD_Units_body_C",
+          "UD_Units_body_F",
+          "UD_Units_body_D",
+          "UD_Units_shoulderpads_A",
+          "UD_Units_body_A",
+          "UD_Units_body_B",
+          "UD_Units_head_D",
+          "UD_Units_arms_D",
+          "UD_Units_legs_D",
+          "UD_Units_shoulderpads_B",
+          "UD_Units_head_F",
+          "UD_Units_arms_B",
+          "UD_Units_legs_B",
+          "UD_Units_head_L",
+          "UD_Units_arms_E",
+          "UD_Units_arms_C",
+          "UD_Units_legs_C",
+          "UD_Units_arms_A",
+          "UD_Units_legs_A",
+          "UD_Units_head_A",
+          "UD_Units_head_B",
+          "UD_Units_head_H",
+          "UD_Units_head_I",
+          "UD_Units_head_K",
+          "UD_Units_head_C",
+          "UD_Units_head_E",
+          "UD_Units_body_E",
+          "UD_Units_head_G",
+          "UD_Units_head_M",
+          "UD_Units_head_J",
+          "UD_Units_shoulderpads_C",
+          "UD_weapon_staff_C",
+          "UD_weapon_Bow",
+          "UD_weapon_staff_D",
+          "UD_weapon_staff_A",
+          "UD_weapon_staff_B",
+          "UD_Shield_A",
+          "UD_Shield_B",
+          "UD_Shield_C",
+          "UD_weapon_Hammer",
+          "UD_weapon_Axe_A",
+          "UD_weapon_Axe_B",
+          "UD_weapon_Spear",
+          "UD_weapon_Sword_A",
+          "UD_weapon_Sword_B",
+          "UD_weapon_Sword_C",
+          "UD_weapon_lance",
+          "UD_Xtra_Quiver"
+        ],
+        "boneNames": [
+          "Bip001 Spine",
+          "Bip001 R Thigh",
+          "Bip001 R Foot",
+          "Bip001 Pelvis",
+          "Bip001 L Thigh",
+          "Bip001 L Foot",
+          "Bip001 R UpperArm",
+          "Bip001 Neck",
+          "Bip001 R Forearm",
+          "Bip001 L UpperArm",
+          "Bip001 L Forearm",
+          "Bip001 Tail",
+          "Bip001 Tail1",
+          "Bip001 Head",
+          "Bip001 R Hand",
+          "Bip001 L Hand",
+          "Bip001 R Finger0",
+          "Bip001 L Finger0",
+          "Bip001 R Calf",
+          "Bip001 R Toe0",
+          "Bip001 L Toe0",
+          "Bip001 L Calf",
+          "Bip001 R Calf001",
+          "Bip001 R Foot001",
+          "Bip001 Pelvis001",
+          "Bip001 R Thigh001",
+          "Bip001 L Clavicle001",
+          "Bip001 R Clavicle001",
+          "Bip001 R UpperArm001",
+          "Bip001 Spine001",
+          "Bip001 L Foot001",
+          "Bip001 Head001",
+          "Bip001 R Forearm001",
+          "Bip001 R Hand001",
+          "Bip001 Neck001",
+          "Bip001 L Calf001",
+          "Bip001 L Thigh001",
+          "Bip001 L UpperArm001",
+          "Bip001 L Forearm001",
+          "Bip001 L Hand001"
+        ],
+        "attachPoints": [
+          "Bone_Mount",
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Bone_wood",
+          "Bone_bag",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "UD_Horse",
+            "slot": "mount"
+          },
+          {
+            "name": "UD_Units_body_G",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_body_C",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_body_F",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_body_D",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "UD_Units_body_A",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_body_B",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_head_D",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_arms_D",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_legs_D",
+            "slot": "legs"
+          },
+          {
+            "name": "UD_Units_shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "UD_Units_head_F",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "UD_Units_head_L",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_arms_E",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "UD_Units_arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "UD_Units_legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "UD_Units_head_A",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_B",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_H",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_I",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_K",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_C",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_E",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_body_E",
+            "slot": "body"
+          },
+          {
+            "name": "UD_Units_head_G",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_M",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_head_J",
+            "slot": "head"
+          },
+          {
+            "name": "UD_Units_shoulderpads_C",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "UD_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "UD_weapon_staff_D",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "UD_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "UD_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "UD_weapon_Hammer",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_Sword_C",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_weapon_lance",
+            "slot": "weapon",
+            "kind": "lance",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "UD_Xtra_Quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          }
+        ]
+      }
+    },
+    "barbarian": {
+      "infantry": {
+        "meshCount": 47,
+        "meshNames": [
+          "BRB_weapon_staff_A",
+          "BRB_weapon_Bow",
+          "BRB_weapon_staff_C",
+          "BRB_weapon_staff_B",
+          "BRB_Shield_A",
+          "BRB_Shield_C",
+          "BRB_Shield_D",
+          "BRB_Shield_B",
+          "BRB_weapon_sword_A",
+          "BRB_weapon_spear",
+          "BRB_weapon_axe_A",
+          "BRB_weapon_sword_B",
+          "BRB_weapon_hammer_A",
+          "BRB_weapon_Dagger",
+          "BRB_weapon_axe_B",
+          "BRB_weapon_hammer_B",
+          "BRB_weapon_axe_C",
+          "BRB_Xtra_wood",
+          "BRB_Xtra_bag",
+          "BRB_Xtra_quiver",
+          "BRB_body_F",
+          "BRB_head_I",
+          "BRB_head_J",
+          "BRB_head_C",
+          "BRB_body_A",
+          "BRB_body_B",
+          "BRB_body_E",
+          "BRB_head_B",
+          "BRB_body_D",
+          "BRB_head_A",
+          "BRB_shoulderpads_B",
+          "BRB_body_G",
+          "BRB_head_D",
+          "BRB_head_F",
+          "BRB_head_H",
+          "BRB_shoulderpads_C",
+          "BRB_shoulderpads_A",
+          "BRB_head_E",
+          "BRB_head_G",
+          "BRB_body_C",
+          "BRB_body_H",
+          "BRB_arms_A",
+          "BRB_legs_A",
+          "BRB_arms_B",
+          "BRB_legs_B",
+          "BRB_arms_C",
+          "BRB_legs_C"
+        ],
+        "boneNames": [
+          "Bip001 R Calf",
+          "Bip001 R Foot",
+          "Bip001 Pelvis",
+          "Bip001 R Thigh",
+          "Bip001 L Clavicle",
+          "Bip001 R Clavicle",
+          "Bip001 R UpperArm",
+          "Bip001 Spine",
+          "Bip001 Head",
+          "Bip001 L Foot",
+          "Bip001 R Forearm",
+          "Bip001 Neck",
+          "Bip001 L Thigh",
+          "Bip001 L Calf",
+          "Bip001 L UpperArm",
+          "Bip001 L Forearm",
+          "Bip001 R Hand",
+          "Bip001 L Hand"
+        ],
+        "attachPoints": [
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Bone_wood",
+          "Bone_bag",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "BRB_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_Bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_Shield_D",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_weapon_sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_hammer_A",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_Dagger",
+            "slot": "weapon",
+            "kind": "dagger",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_hammer_B",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_axe_C",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_Xtra_wood",
+            "slot": "prop",
+            "kind": "wood",
+            "attachPoint": "Bone_wood"
+          },
+          {
+            "name": "BRB_Xtra_bag",
+            "slot": "prop",
+            "kind": "bag",
+            "attachPoint": "Bone_bag"
+          },
+          {
+            "name": "BRB_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          },
+          {
+            "name": "BRB_body_F",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_head_I",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_J",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_C",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_body_A",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_body_B",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_body_E",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_head_B",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_body_D",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_head_A",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "BRB_body_G",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_head_D",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_F",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_H",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_shoulderpads_C",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "BRB_shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "BRB_head_E",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_G",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_body_C",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_body_H",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "BRB_legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "BRB_arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "BRB_legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "BRB_arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "BRB_legs_C",
+            "slot": "legs"
+          }
+        ]
+      },
+      "cavalry": {
+        "meshCount": 47,
+        "meshNames": [
+          "BRB_Horse",
+          "BRB_horse_Seat",
+          "BRB_body_F",
+          "BRB_head_I",
+          "BRB_head_J",
+          "BRB_head_C",
+          "BRB_body_A",
+          "BRB_body_B",
+          "BRB_body_E",
+          "BRB_head_B",
+          "BRB_body_D",
+          "BRB_head_A",
+          "BRB_shoulderpads_B",
+          "BRB_body_G",
+          "BRB_head_D",
+          "BRB_head_F",
+          "BRB_head_H",
+          "BRB_shoulderpads_C",
+          "BRB_shoulderpads_A",
+          "BRB_head_E",
+          "BRB_head_G",
+          "BRB_body_C",
+          "BRB_body_H",
+          "BRB_arms_A",
+          "BRB_legs_A",
+          "BRB_arms_B",
+          "BRB_legs_B",
+          "BRB_arms_C",
+          "BRB_legs_C",
+          "BRB_weapon_staff_A",
+          "BRB_weapon_Bow",
+          "BRB_weapon_staff_C",
+          "BRB_weapon_staff_B",
+          "BRB_Shield_A",
+          "BRB_Shield_C",
+          "BRB_Shield_D",
+          "BRB_Shield_B",
+          "BRB_weapon_sword_A",
+          "BRB_weapon_spear",
+          "BRB_weapon_axe_A",
+          "BRB_weapon_sword_B",
+          "BRB_weapon_hammer_A",
+          "BRB_weapon_Dagger",
+          "BRB_weapon_axe_B",
+          "BRB_weapon_hammer_B",
+          "BRB_weapon_axe_C",
+          "BRB_Xtra_quiver"
+        ],
+        "boneNames": [
+          "Bip001 Spine",
+          "Bip001 R Thigh",
+          "Bip001 Pelvis",
+          "Bip001 R UpperArm",
+          "Bip001 R Forearm",
+          "Bip001 Tail",
+          "Bip001 Neck",
+          "Bip001 Head",
+          "Bip001 L UpperArm",
+          "Bip001 L Forearm",
+          "Bip001 R Hand",
+          "Bip001 L Hand",
+          "Bip001 R Finger0",
+          "Bip001 L Finger0",
+          "Bip001 R Foot",
+          "Bip001 L Thigh",
+          "Bip001 L Foot",
+          "Bip001 R Calf",
+          "Bip001 R Toe0",
+          "Bip001 L Toe0",
+          "Bip001 Tail1",
+          "Bip001 L Calf",
+          "Bip001 R Calf001",
+          "Bip001 R Foot001",
+          "Bip001 Pelvis001",
+          "Bip001 R Thigh001",
+          "Bip001 L Clavicle001",
+          "Bip001 R Clavicle001",
+          "Bip001 R UpperArm001",
+          "Bip001 Spine001",
+          "Bip001 Head001",
+          "Bip001 L Foot001",
+          "Bip001 R Forearm001",
+          "Bip001 Neck001",
+          "Bip001 L Thigh001",
+          "Bip001 L Calf001",
+          "Bip001 L UpperArm001",
+          "Bip001 L Forearm001",
+          "Bip001 R Hand001",
+          "Bip001 L Hand001"
+        ],
+        "attachPoints": [
+          "Bone_Mount",
+          "L_hand_container",
+          "L_shield_container",
+          "R_hand_container",
+          "Quiver_container"
+        ],
+        "parts": [
+          {
+            "name": "BRB_Horse",
+            "slot": "mount"
+          },
+          {
+            "name": "BRB_horse_Seat",
+            "slot": "mount"
+          },
+          {
+            "name": "BRB_body_F",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_head_I",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_J",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_C",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_body_A",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_body_B",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_body_E",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_head_B",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_body_D",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_head_A",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_shoulderpads_B",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "BRB_body_G",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_head_D",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_F",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_H",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_shoulderpads_C",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "BRB_shoulderpads_A",
+            "slot": "shoulderpad"
+          },
+          {
+            "name": "BRB_head_E",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_head_G",
+            "slot": "head"
+          },
+          {
+            "name": "BRB_body_C",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_body_H",
+            "slot": "body"
+          },
+          {
+            "name": "BRB_arms_A",
+            "slot": "arms"
+          },
+          {
+            "name": "BRB_legs_A",
+            "slot": "legs"
+          },
+          {
+            "name": "BRB_arms_B",
+            "slot": "arms"
+          },
+          {
+            "name": "BRB_legs_B",
+            "slot": "legs"
+          },
+          {
+            "name": "BRB_arms_C",
+            "slot": "arms"
+          },
+          {
+            "name": "BRB_legs_C",
+            "slot": "legs"
+          },
+          {
+            "name": "BRB_weapon_staff_A",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_Bow",
+            "slot": "weapon",
+            "kind": "bow",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_weapon_staff_C",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_staff_B",
+            "slot": "weapon",
+            "kind": "staff",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_Shield_A",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_Shield_C",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_Shield_D",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_Shield_B",
+            "slot": "shield",
+            "kind": "shield",
+            "attachPoint": "L_hand_container"
+          },
+          {
+            "name": "BRB_weapon_sword_A",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_spear",
+            "slot": "weapon",
+            "kind": "spear",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_axe_A",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_sword_B",
+            "slot": "weapon",
+            "kind": "sword",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_hammer_A",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_Dagger",
+            "slot": "weapon",
+            "kind": "dagger",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_axe_B",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_hammer_B",
+            "slot": "weapon",
+            "kind": "blunt",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_weapon_axe_C",
+            "slot": "weapon",
+            "kind": "axe",
+            "attachPoint": "R_hand_container"
+          },
+          {
+            "name": "BRB_Xtra_quiver",
+            "slot": "prop",
+            "kind": "quiver",
+            "attachPoint": "Bip001 Spine"
+          }
+        ]
+      }
+    }
+  }
+}

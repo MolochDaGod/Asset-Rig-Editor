@@ -1,0 +1,64 @@
+client:733 [vite] connecting...
+client:827 [vite] connected.
+installHook.js:1 THREE.THREE.Clock: This module has been deprecated. Please use THREE.Timer instead.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.WebGLShadowMap: PCFSoftShadowMap has been deprecated. Using PCFShadowMap instead.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_Tail.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_Tail.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_Tail1.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_Tail1.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip002.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_Spine001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_Spine001.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_Neck001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_Head001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_Head001.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_L_Clavicle001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_L_Clavicle001.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_L_UpperArm001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_L_UpperArm001.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_L_Forearm001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_R_Clavicle001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_R_Clavicle001.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_R_UpperArm001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_R_UpperArm001.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_R_Forearm001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_R_Forearm001.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_R_Hand001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_R_Hand001.quaternion.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.PropertyBinding: No target node found for track: Bip001_L_Calf001.position.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.WebGLShadowMap: PCFSoftShadowMap has been deprecated. Using PCFShadowMap instead.
+overrideMethod @ installHook.js:1
+installHook.js:1 THREE.WebGLShadowMap: PCFSoftShadowMap has been deprecated. Using PCFShadowMap instead.
+overrideMethod @ installHook.js:1
+warn @ chunk-L2UN6BKD.js?v=0baa212e:sourcemap:746
+WebGLShadowMap.render @ chunk-L2UN6BKD.js?v=0baa212e:sourcemap:37644
+WebGLRenderer.render @ chunk-L2UN6BKD.js?v=0baa212e:sourcemap:42317
+(anonymous) @ @react-three_drei.js?v=0baa212e:sourcemap:99831
+update @ events-760a1017.esm.js:16025
+loop @ events-760a1017.esm.js:16056

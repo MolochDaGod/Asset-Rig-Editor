@@ -1,0 +1,618 @@
+{
+  "asset": {
+    "generator": "FBX2glTF v0.9.7",
+    "version": "2.0"
+  },
+  "scene": 0,
+  "extensionsUsed": [
+    "KHR_materials_unlit"
+  ],
+  "buffers": [
+    {
+      "byteLength": 44592,
+      "uri": "siege_elf_boltthrower.bin"
+    }
+  ],
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 4,
+      "byteOffset": 0
+    },
+    {
+      "buffer": 0,
+      "byteLength": 16,
+      "byteOffset": 4
+    },
+    {
+      "buffer": 0,
+      "byteLength": 3468,
+      "byteOffset": 20,
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8616,
+      "byteOffset": 3488,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 8616,
+      "byteOffset": 12104,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5744,
+      "byteOffset": 20720,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 5744,
+      "byteOffset": 26464,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 11488,
+      "byteOffset": 32208,
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 896,
+      "byteOffset": 43696
+    }
+  ],
+  "scenes": [
+    {
+      "name": "Root Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "accessors": [
+    {
+      "componentType": 5126,
+      "type": "SCALAR",
+      "count": 1,
+      "bufferView": 0,
+      "byteOffset": 0,
+      "min": [
+        0
+      ],
+      "max": [
+        0
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC4",
+      "count": 1,
+      "bufferView": 1,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5123,
+      "type": "SCALAR",
+      "count": 1734,
+      "bufferView": 2,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 718,
+      "bufferView": 3,
+      "byteOffset": 0,
+      "min": [
+        -0.633234322071075,
+        -0.00951894745230675,
+        -0.682587563991547
+      ],
+      "max": [
+        0.484387457370758,
+        0.530683100223541,
+        0.682587444782257
+      ]
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC3",
+      "count": 718,
+      "bufferView": 4,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC2",
+      "count": 718,
+      "bufferView": 5,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5123,
+      "type": "VEC4",
+      "count": 718,
+      "bufferView": 6,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "VEC4",
+      "count": 718,
+      "bufferView": 7,
+      "byteOffset": 0
+    },
+    {
+      "componentType": 5126,
+      "type": "MAT4",
+      "count": 14,
+      "bufferView": 8,
+      "byteOffset": 0
+    }
+  ],
+  "images": [
+    {
+      "name": "Map #9",
+      "uri": "../textures/ELF_HighElves_Texture.png"
+    }
+  ],
+  "samplers": [
+    {}
+  ],
+  "textures": [
+    {
+      "name": "Map #9",
+      "sampler": 0,
+      "source": 0
+    }
+  ],
+  "materials": [
+    {
+      "name": "ELF_WoodElf_Standard_Units",
+      "alphaMode": "OPAQUE",
+      "extras": {
+        "fromFBX": {
+          "shadingModel": "Phong",
+          "isTruePBR": false
+        }
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0,
+          "texCoord": 0
+        },
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "metallicFactor": 0,
+        "roughnessFactor": 1
+      },
+      "extensions": {
+        "KHR_materials_unlit": {}
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "ELF_BoltThrower",
+      "primitives": [
+        {
+          "material": 0,
+          "mode": 4,
+          "attributes": {
+            "JOINTS_0": 6,
+            "NORMAL": 4,
+            "POSITION": 3,
+            "TEXCOORD_0": 5,
+            "WEIGHTS_0": 7
+          },
+          "indices": 2
+        }
+      ]
+    }
+  ],
+  "skins": [
+    {
+      "joints": [
+        6,
+        3,
+        13,
+        8,
+        11,
+        16,
+        5,
+        7,
+        4,
+        15,
+        9,
+        12,
+        14,
+        10
+      ],
+      "inverseBindMatrices": 8,
+      "skeleton": 3
+    }
+  ],
+  "animations": [
+    {
+      "name": "Take 001",
+      "channels": [
+        {
+          "sampler": 0,
+          "target": {
+            "node": 13,
+            "path": "rotation"
+          }
+        }
+      ],
+      "samplers": [
+        {
+          "input": 0,
+          "interpolation": "LINEAR",
+          "output": 1
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "name": "RootNode",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "ELF_BoltThrower",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        5.76011665032183e-8,
+        -0.707106709480286,
+        5.76011558450773e-8,
+        0.707106828689575
+      ],
+      "scale": [
+        2.53999996185303,
+        2.53999996185303,
+        2.53999996185303
+      ],
+      "mesh": 0,
+      "skin": 0
+    },
+    {
+      "name": "BONE_BASE",
+      "translation": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        -0.70710676908493,
+        -4.21468477895814e-8,
+        -4.21468477895814e-8,
+        0.70710676908493
+      ],
+      "scale": [
+        2.53999996185303,
+        2.53999996185303,
+        2.53999996185303
+      ],
+      "children": [
+        3
+      ]
+    },
+    {
+      "name": "Bone_Ballista",
+      "translation": [
+        -1.24690813230188e-9,
+        0.0104598235338926,
+        0.140433818101883
+      ],
+      "rotation": [
+        0.707106828689575,
+        0.707106709480286,
+        -3.09086232164191e-8,
+        3.09086161109917e-8
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "name": "Bone_L_block",
+      "translation": [
+        -0.0140909664332867,
+        0.0927861034870148,
+        -0.0891764014959335
+      ],
+      "rotation": [
+        -4.55764315177021e-8,
+        -0.0436189770698547,
+        -4.55764315177021e-8,
+        0.999048233032227
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_front",
+      "translation": [
+        -0.269409447908401,
+        7.62939365017701e-8,
+        -0.168481156229973
+      ],
+      "rotation": [
+        -0.500000059604645,
+        -0.499999970197678,
+        -0.499999940395355,
+        0.500000059604645
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_R_block",
+      "translation": [
+        -0.0140910241752863,
+        -0.0987861007452011,
+        -0.0891764461994171
+      ],
+      "rotation": [
+        -4.55764315177021e-8,
+        -0.0436189770698547,
+        -4.55764315177021e-8,
+        0.999048233032227
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_Bolt",
+      "translation": [
+        0.294857650995255,
+        -9.53674401671378e-8,
+        -0.19626672565937
+      ],
+      "rotation": [
+        1.62920684942947e-7,
+        1,
+        4.37113882867379e-8,
+        7.12148964337979e-15
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_string",
+      "translation": [
+        0.315810561180115,
+        -7.62939365017701e-8,
+        -0.191561758518219
+      ],
+      "rotation": [
+        0.70710676908493,
+        -1.06770158936342e-7,
+        -2.30404623380309e-7,
+        0.70710676908493
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_L_wing_A",
+      "translation": [
+        -0.171669274568558,
+        0.114960670471191,
+        -0.229471415281296
+      ],
+      "rotation": [
+        0.771853446960449,
+        0.63430243730545,
+        0.0336999259889126,
+        0.0276942681521177
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "children": [
+        10
+      ]
+    },
+    {
+      "name": "Bone_L_wing_B",
+      "translation": [
+        0.19068156182766,
+        -1.90734859017994e-8,
+        0
+      ],
+      "rotation": [
+        -4.58478421894171e-10,
+        1.80533810123507e-9,
+        0.246143683791161,
+        0.969233334064484
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_R_wing_A",
+      "translation": [
+        -0.171669349074364,
+        -0.114960581064224,
+        -0.229471445083618
+      ],
+      "rotation": [
+        0.0276943035423756,
+        -0.0336997471749783,
+        -0.634302496910095,
+        0.771853387355804
+      ],
+      "scale": [
+        1,
+        0.99999988079071,
+        1
+      ],
+      "children": [
+        12
+      ]
+    },
+    {
+      "name": "Bone_R_wing_B",
+      "translation": [
+        0.19068156182766,
+        -3.55271359939116e-17,
+        -3.81469718035987e-8
+      ],
+      "rotation": [
+        -4.58478449649746e-10,
+        1.80533787919046e-9,
+        0.246143728494644,
+        0.969233334064484
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_R_wheel_A",
+      "translation": [
+        -0.102530583739281,
+        -0.233476787805557,
+        -0.000850162468850613
+      ],
+      "rotation": [
+        0.499999970197678,
+        -0.500000059604645,
+        0.500000059604645,
+        -0.499999970197678
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_L_wheel_A",
+      "translation": [
+        -0.102530419826508,
+        0.267138481140137,
+        -0.000850152922794223
+      ],
+      "rotation": [
+        -0.49999988079071,
+        -0.499999970197678,
+        0.50000011920929,
+        0.500000059604645
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_L_wheel_B",
+      "translation": [
+        0.292689800262451,
+        0.209563538432121,
+        0.0436818972229958
+      ],
+      "rotation": [
+        -0.49999988079071,
+        -0.499999970197678,
+        0.50000011920929,
+        0.500000059604645
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    },
+    {
+      "name": "Bone_R_wheel_B",
+      "translation": [
+        0.292689710855484,
+        -0.229627832770348,
+        0.0436818972229958
+      ],
+      "rotation": [
+        0.0308436285704374,
+        -0.0308436136692762,
+        -0.706433594226837,
+        0.706433951854706
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ]
+    }
+  ]
+}

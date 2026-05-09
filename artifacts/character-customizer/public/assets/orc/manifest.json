@@ -1,0 +1,95 @@
+{
+  "race": "orc",
+  "label": "Iron Horde",
+  "heightMeters": 2.13,
+  "accentColor": "#a3e063",
+  "baseUrl": "/assets/orc/",
+  "character": {
+    "infantry": "character/infantry.gltf",
+    "cavalry": "character/cavalry.gltf",
+    "siege": [
+      "character/siege_orc_catapult.gltf"
+    ]
+  },
+  "equipment": [
+    {
+      "id": "ORC_Shield_D",
+      "url": "equipment/ORC_Shield_D.gltf"
+    },
+    {
+      "id": "ORC_weapon_Axe_A",
+      "url": "equipment/ORC_weapon_Axe_A.gltf"
+    },
+    {
+      "id": "ORC_weapon_staff_B",
+      "url": "equipment/ORC_weapon_staff_B.gltf"
+    }
+  ],
+  "animations": [
+    {
+      "id": "catapult_catapult_01_idle",
+      "url": "animations/catapult_catapult_01_idle.gltf",
+      "class": "catapult_catapult",
+      "action": "idle",
+      "variant": null
+    },
+    {
+      "id": "catapult_catapult_02_move",
+      "url": "animations/catapult_catapult_02_move.gltf",
+      "class": "catapult_catapult",
+      "action": "move",
+      "variant": null
+    },
+    {
+      "id": "catapult_catapult_03_attack",
+      "url": "animations/catapult_catapult_03_attack.gltf",
+      "class": "catapult_catapult",
+      "action": "attack",
+      "variant": null
+    },
+    {
+      "id": "catapult_catapult_04_death",
+      "url": "animations/catapult_catapult_04_death.gltf",
+      "class": "catapult_catapult",
+      "action": "death",
+      "variant": null
+    },
+    {
+      "id": "cavalry_cavalry_01_idle",
+      "url": "animations/cavalry_cavalry_01_idle.gltf",
+      "class": "cavalry_cavalry",
+      "action": "idle",
+      "variant": null
+    },
+    {
+      "id": "cavalry_cavalry_03_run",
+      "url": "animations/cavalry_cavalry_03_run.gltf",
+      "class": "cavalry_cavalry",
+      "action": "run",
+      "variant": null
+    },
+    {
+      "id": "cavalry_cavalry_10_death_b",
+      "url": "animations/cavalry_cavalry_10_death_b.gltf",
+      "class": "cavalry_cavalry",
+      "action": "death",
+      "variant": "b"
+    },
+    {
+      "id": "worker_worker_12_working_a",
+      "url": "animations/worker_worker_12_working_a.gltf",
+      "class": "worker_worker",
+      "action": "working",
+      "variant": "a"
+    }
+  ],
+  "textures": [
+    "textures/ORC_StandardUnits.png",
+    "textures/ORC_StandardUnits_black.png",
+    "textures/ORC_StandardUnits_blue.png",
+    "textures/ORC_StandardUnits_brown.png",
+    "textures/ORC_StandardUnits_green.png",
+    "textures/ORC_StandardUnits_red.png",
+    "textures/ORC_Wolf_texture_A.png"
+  ]
+}

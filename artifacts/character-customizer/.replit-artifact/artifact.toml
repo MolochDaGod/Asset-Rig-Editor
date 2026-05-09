@@ -1,0 +1,33 @@
+kind = "web"
+previewPath = "/"
+title = "Character Customizer"
+version = "1.0.0"
+id = "artifacts/character-customizer"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 20270
+
+[services.development]
+run = "pnpm --filter @workspace/character-customizer run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/character-customizer", "run", "build" ]
+publicDir = "artifacts/character-customizer/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "20270"
+BASE_PATH = "/"
+NODE_OPTIONS = "--max-old-space-size=2048"
+DISABLE_CARTOGRAPHER = "1"

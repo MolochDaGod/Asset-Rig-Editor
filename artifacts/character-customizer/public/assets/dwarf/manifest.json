@@ -1,0 +1,89 @@
+{
+  "race": "dwarf",
+  "label": "Mountain Holds",
+  "heightMeters": 1.52,
+  "accentColor": "#ffb86b",
+  "baseUrl": "/assets/dwarf/",
+  "character": {
+    "infantry": "character/infantry.gltf",
+    "cavalry": "character/cavalry.gltf",
+    "siege": []
+  },
+  "equipment": [],
+  "animations": [
+    {
+      "id": "cavalry_cavalry_01_idle",
+      "url": "animations/cavalry_cavalry_01_idle.gltf",
+      "class": "cavalry_cavalry",
+      "action": "idle",
+      "variant": null
+    },
+    {
+      "id": "cavalry_cavalry_03_run",
+      "url": "animations/cavalry_cavalry_03_run.gltf",
+      "class": "cavalry_cavalry",
+      "action": "run",
+      "variant": null
+    },
+    {
+      "id": "cavalry_cavalry_10_death_b",
+      "url": "animations/cavalry_cavalry_10_death_b.gltf",
+      "class": "cavalry_cavalry",
+      "action": "death",
+      "variant": "b"
+    },
+    {
+      "id": "worker__idle",
+      "url": "animations/worker__idle.gltf",
+      "class": null,
+      "action": null,
+      "variant": null
+    },
+    {
+      "id": "worker_run",
+      "url": "animations/worker_run.gltf",
+      "class": null,
+      "action": null,
+      "variant": null
+    },
+    {
+      "id": "worker_run_diagonal",
+      "url": "animations/worker_run_diagonal.gltf",
+      "class": null,
+      "action": null,
+      "variant": null
+    },
+    {
+      "id": "worker_run_diagonal_1",
+      "url": "animations/worker_run_diagonal_1.gltf",
+      "class": null,
+      "action": null,
+      "variant": null
+    },
+    {
+      "id": "worker_run_reverse",
+      "url": "animations/worker_run_reverse.gltf",
+      "class": null,
+      "action": null,
+      "variant": null
+    },
+    {
+      "id": "worker_worker_07_attack",
+      "url": "animations/worker_worker_07_attack.gltf",
+      "class": "worker_worker",
+      "action": "attack",
+      "variant": null
+    },
+    {
+      "id": "worker_worker_10_death_b",
+      "url": "animations/worker_worker_10_death_b.gltf",
+      "class": "worker_worker",
+      "action": "death",
+      "variant": "b"
+    }
+  ],
+  "textures": [
+    "textures/DWF_Standard_Units.png",
+    "textures/DWF_Units_Brown.png"
+  ]
+}

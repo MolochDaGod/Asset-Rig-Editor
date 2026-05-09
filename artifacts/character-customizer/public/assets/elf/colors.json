@@ -1,0 +1,36 @@
+{
+  "race": "elf",
+  "notes": "Edit `variants` to change in-game color tints. Each variant is a hex multiplier applied to body.png at runtime.",
+  "variants": [
+    {
+      "id": "original",
+      "label": "Original",
+      "hex": "#ffffff"
+    },
+    {
+      "id": "royal",
+      "label": "Royal Blue",
+      "hex": "#7aa8ff"
+    },
+    {
+      "id": "crimson",
+      "label": "Crimson",
+      "hex": "#ff4d6d"
+    },
+    {
+      "id": "forest",
+      "label": "Forest Green",
+      "hex": "#5fbf72"
+    },
+    {
+      "id": "shadow",
+      "label": "Black Knight",
+      "hex": "#5a5a66"
+    },
+    {
+      "id": "gold",
+      "label": "Gold Trim",
+      "hex": "#ffd166"
+    }
+  ]
+}

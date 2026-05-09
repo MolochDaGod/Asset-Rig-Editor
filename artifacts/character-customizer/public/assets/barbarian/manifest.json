@@ -1,0 +1,54 @@
+{
+  "race": "barbarian",
+  "label": "Frost Clans",
+  "heightMeters": 1.98,
+  "accentColor": "#ff8a72",
+  "baseUrl": "/assets/barbarian/",
+  "character": {
+    "infantry": "character/infantry.gltf",
+    "cavalry": "character/cavalry.gltf",
+    "siege": []
+  },
+  "equipment": [
+    {
+      "id": "BRB_bag",
+      "url": "equipment/BRB_bag.gltf"
+    },
+    {
+      "id": "BRB_weapon_hammer_B",
+      "url": "equipment/BRB_weapon_hammer_B.gltf"
+    },
+    {
+      "id": "BRB_weapon_spear",
+      "url": "equipment/BRB_weapon_spear.gltf"
+    },
+    {
+      "id": "BRB_weapon_staff_B",
+      "url": "equipment/BRB_weapon_staff_B.gltf"
+    },
+    {
+      "id": "BRB_weapon_sword_B",
+      "url": "equipment/BRB_weapon_sword_B.gltf"
+    }
+  ],
+  "animations": [
+    {
+      "id": "mage_mage_11_cast_b",
+      "url": "animations/mage_mage_11_cast_b.gltf",
+      "class": "mage_mage",
+      "action": "cast",
+      "variant": "b"
+    },
+    {
+      "id": "spearman_spearman_07_attack",
+      "url": "animations/spearman_spearman_07_attack.gltf",
+      "class": "spearman_spearman",
+      "action": "attack",
+      "variant": null
+    }
+  ],
+  "textures": [
+    "textures/BRB_StandardUnits_texture.png",
+    "textures/BRB_Standard_Units_brown.png"
+  ]
+}

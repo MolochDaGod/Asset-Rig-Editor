@@ -1,0 +1,505 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>TOON_RTS · Model Info Packet</title>
+  <style>
+    :root {
+      --bg: #0c0d18;
+      --bg-2: #131527;
+      --bg-3: #1b1e36;
+      --fg: #e8eaf3;
+      --fg-dim: #9aa0c0;
+      --accent: #ffd166;
+      --accent-2: #6ec1ff;
+      --good: #6ee7a4;
+      --warn: #ffb86b;
+      --bad: #ff7a8a;
+      --br: #2a2e4d;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; background: var(--bg); color: var(--fg); font: 14px/1.5 -apple-system, BlinkMacSystemFont, "Segoe UI", Inter, sans-serif; }
+    a { color: var(--accent-2); }
+    header {
+      padding: 20px 28px; border-bottom: 1px solid var(--br);
+      display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+      background: linear-gradient(180deg, #181b32, #0c0d18);
+    }
+    header h1 { margin: 0; font-size: 20px; letter-spacing: 0.06em; text-transform: uppercase; }
+    header .sub { color: var(--fg-dim); font-size: 13px; }
+    nav.tabs {
+      display: flex; gap: 6px; padding: 0 28px; border-bottom: 1px solid var(--br);
+      background: var(--bg-2); overflow-x: auto;
+    }
+    nav.tabs button {
+      background: transparent; color: var(--fg-dim); border: 0; padding: 14px 18px;
+      cursor: pointer; font: inherit; font-weight: 600; letter-spacing: 0.04em;
+      text-transform: uppercase; border-bottom: 2px solid transparent;
+    }
+    nav.tabs button.active { color: var(--accent); border-bottom-color: var(--accent); }
+    nav.tabs button:hover:not(.active) { color: var(--fg); }
+
+    main { padding: 24px 28px 64px; max-width: 1400px; margin: 0 auto; }
+    .grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
+    .card {
+      background: var(--bg-2); border: 1px solid var(--br); border-radius: 10px;
+      padding: 16px 18px;
+    }
+    .card h3 { margin: 0 0 8px; font-size: 14px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--accent); }
+    .card .file { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 12px; color: var(--fg-dim); word-break: break-all; }
+    .stats { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; margin-top: 10px; }
+    .stat { background: var(--bg-3); padding: 6px 8px; border-radius: 6px; }
+    .stat .k { color: var(--fg-dim); font-size: 11px; text-transform: uppercase; }
+    .stat .v { color: var(--fg); font-size: 14px; font-weight: 600; }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; font-size: 13px; }
+    th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--br); }
+    th { color: var(--fg-dim); font-weight: 600; font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    details { background: var(--bg-2); border: 1px solid var(--br); border-radius: 8px; margin-bottom: 10px; }
+    details summary {
+      cursor: pointer; padding: 12px 16px; list-style: none;
+      display: flex; align-items: center; justify-content: space-between; gap: 12px;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after { content: "+"; color: var(--accent); font-size: 18px; }
+    details[open] summary::after { content: "−"; }
+    details .body { padding: 4px 16px 16px; border-top: 1px solid var(--br); }
+    .pill {
+      display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px;
+      background: var(--bg-3); color: var(--fg-dim); margin-right: 4px;
+    }
+    .pill.race-Barbarian { background: #5b2a2a; color: #ffd1c0; }
+    .pill.race-Dwarf { background: #4a3517; color: #ffd896; }
+    .pill.race-Elf { background: #1b4a32; color: #b3f1cf; }
+    .pill.race-Human { background: #2a3b6a; color: #c4d6ff; }
+    .pill.race-Orc { background: #2a4a26; color: #c4ffb3; }
+    .pill.race-Undead { background: #4b3859; color: #e1c5ff; }
+    .race-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(360px, 1fr)); }
+    .race-card { background: var(--bg-2); border: 1px solid var(--br); border-radius: 12px; padding: 18px 20px; }
+    .race-card h2 { margin: 0; font-size: 18px; letter-spacing: 0.05em; }
+    .race-card h2 .label { color: var(--accent); }
+    .row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px dashed var(--br); }
+    .row:last-child { border-bottom: 0; }
+    .row .k { color: var(--fg-dim); font-size: 12px; }
+    .row .v { color: var(--fg); font-weight: 600; }
+    .filter {
+      display: flex; gap: 10px; margin-bottom: 16px; flex-wrap: wrap; align-items: center;
+    }
+    .filter input, .filter select {
+      background: var(--bg-3); color: var(--fg); border: 1px solid var(--br);
+      padding: 8px 12px; border-radius: 8px; font: inherit;
+    }
+    .filter input { min-width: 240px; }
+    .empty { color: var(--fg-dim); padding: 40px; text-align: center; }
+    .meshy {
+      background: var(--bg-3); border-left: 3px solid var(--accent);
+      padding: 10px 12px; border-radius: 6px; margin: 6px 0;
+      font-size: 12px; white-space: pre-wrap;
+    }
+    .scroll-x { overflow-x: auto; }
+    code { background: var(--bg-3); padding: 1px 6px; border-radius: 4px; font-size: 12px; }
+    .badge { display: inline-block; padding: 2px 6px; border-radius: 4px; background: var(--bg-3); font-size: 11px; color: var(--fg-dim); }
+    .badge.tier-light { background: #2c3a4d; color: #aac9ff; }
+    .badge.tier-medium { background: #3d2c4d; color: #d8aaff; }
+    .badge.tier-heavy { background: #4d2c2c; color: #ffaaaa; }
+    .toolbar { padding: 12px 28px; background: var(--bg-2); border-bottom: 1px solid var(--br); color: var(--fg-dim); font-size: 12px; }
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+<header>
+  <h1>⚔ TOON_RTS · Model Info Packet</h1>
+  <span class="sub">Auto-generated from <code>model_summary</code>, <code>model_manifest</code>, <code>mmo_parts</code>, <code>meshy_prompts</code>, <code>gltf_inventory</code></span>
+</header>
+<nav class="tabs" id="tabs">
+  <button data-tab="overview" class="active">Overview</button>
+  <button data-tab="characters">Characters</button>
+  <button data-tab="equipment">Equipment</button>
+  <button data-tab="animations">Animations</button>
+  <button data-tab="meshy">Meshy Prompts</button>
+  <button data-tab="gltf">GLTF Inventory</button>
+</nav>
+<div class="toolbar" id="toolbar"></div>
+<main>
+  <section id="tab-overview"></section>
+  <section id="tab-characters" class="hidden"></section>
+  <section id="tab-equipment" class="hidden"></section>
+  <section id="tab-animations" class="hidden"></section>
+  <section id="tab-meshy" class="hidden"></section>
+  <section id="tab-gltf" class="hidden"></section>
+</main>
+
+<script>
+// ─── Minimal CSV parser (handles quoted fields with commas) ────────────
+function parseCSV(text) {
+  const rows = [];
+  let row = [], field = '', inQ = false;
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i], n = text[i + 1];
+    if (inQ) {
+      if (c === '"' && n === '"') { field += '"'; i++; }
+      else if (c === '"') { inQ = false; }
+      else { field += c; }
+    } else {
+      if (c === '"') inQ = true;
+      else if (c === ',') { row.push(field); field = ''; }
+      else if (c === '\n') { row.push(field); rows.push(row); row = []; field = ''; }
+      else if (c === '\r') {}
+      else { field += c; }
+    }
+  }
+  if (field || row.length) { row.push(field); rows.push(row); }
+  const headers = rows.shift();
+  return rows.filter(r => r.length === headers.length).map(r => {
+    const o = {};
+    headers.forEach((h, i) => o[h] = r[i]);
+    return o;
+  });
+}
+
+const FILES = {
+  summary:   '/data/model_summary.csv',
+  manifest:  '/data/model_manifest.csv',
+  parts:     '/data/mmo_parts.csv',
+  meshy:     '/data/meshy_prompts.csv',
+  gltf:      '/data/gltf_inventory.csv',
+};
+
+const RACE_LORE = {
+  Human:    { tagline: 'Northern Kingdoms',    height: '1.83 m (6 ft)',   accent: '#7aa8ff' },
+  Dwarf:    { tagline: 'Mountain Holds',       height: '1.52 m (5 ft)',   accent: '#ffb86b' },
+  Elf:      { tagline: 'Sylvan Ascendancy',    height: '1.95 m (6 ft 5)', accent: '#9beea8' },
+  Orc:      { tagline: 'Iron Horde',           height: '2.13 m (7 ft)',   accent: '#a3e063' },
+  Undead:   { tagline: 'Forsaken Court',       height: '1.83 m (6 ft)',   accent: '#c89cff' },
+  Barbarian:{ tagline: 'Frost Clans',          height: '1.98 m (6 ft 6)', accent: '#ff8a72' },
+};
+
+let DATA = {};
+
+async function loadAll() {
+  const [summary, manifest, parts, meshy, gltf] = await Promise.all(
+    Object.values(FILES).map(u => fetch(u).then(r => r.text()).then(parseCSV))
+  );
+  DATA = { summary, manifest, parts, meshy, gltf };
+  document.getElementById('toolbar').textContent =
+    `Loaded ${summary.length} model files · ${parts.length} body/equipment parts · ` +
+    `${meshy.length} Meshy prompts · ${gltf.length} GLTF assets`;
+  renderOverview();
+  renderCharacters();
+  renderEquipment();
+  renderAnimations();
+  renderMeshy();
+  renderGltf();
+}
+
+function num(s) { const n = parseFloat(s); return Number.isFinite(n) ? n : 0; }
+function fmt(n) { return n.toLocaleString(); }
+function uniq(arr) { return [...new Set(arr)]; }
+function byRace(rows) {
+  const out = {};
+  rows.forEach(r => { (out[r.Race] ||= []).push(r); });
+  return out;
+}
+
+// ─── OVERVIEW ─────────────────────────────────────────────────────────
+function renderOverview() {
+  const root = document.getElementById('tab-overview');
+  const races = uniq(DATA.summary.map(r => r.Race)).sort();
+  const totalVerts = DATA.summary.reduce((a, r) => a + num(r.TotalVerts), 0);
+  const totalAnims = DATA.summary.filter(r => r.Category === 'animation').length;
+  const totalChar = DATA.summary.filter(r => r.Category === 'character' || r.Category === 'cavalry-character').length;
+  const totalEquip = DATA.summary.filter(r => r.Category === 'equipment').length;
+
+  root.innerHTML = `
+    <div class="grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); margin-bottom:24px;">
+      <div class="card"><div class="row"><span class="k">Races</span><span class="v">${races.length}</span></div></div>
+      <div class="card"><div class="row"><span class="k">Character files</span><span class="v">${totalChar}</span></div></div>
+      <div class="card"><div class="row"><span class="k">Equipment files</span><span class="v">${totalEquip}</span></div></div>
+      <div class="card"><div class="row"><span class="k">Animation clips</span><span class="v">${totalAnims}</span></div></div>
+      <div class="card"><div class="row"><span class="k">Total vertices</span><span class="v">${fmt(totalVerts)}</span></div></div>
+      <div class="card"><div class="row"><span class="k">GLTF assets</span><span class="v">${DATA.gltf.length}</span></div></div>
+    </div>
+
+    <h2 style="margin:0 0 12px;font-size:14px;letter-spacing:0.06em;text-transform:uppercase;color:var(--fg-dim)">Races</h2>
+    <div class="race-grid">
+      ${races.map(race => raceCard(race)).join('')}
+    </div>
+  `;
+}
+
+function raceCard(race) {
+  const lore = RACE_LORE[race] || {};
+  const rows = DATA.summary.filter(r => r.Race === race);
+  const character = rows.find(r => r.Category === 'character');
+  const cavalry = rows.find(r => r.Category === 'cavalry-character');
+  const anims = rows.filter(r => r.Category === 'animation').length;
+  const equip = rows.filter(r => r.Category === 'equipment').length;
+  const verts = rows.reduce((a, r) => a + num(r.TotalVerts), 0);
+  const partsForRace = DATA.parts.filter(p => p.Race === race);
+  const slots = uniq(partsForRace.map(p => p.Slot)).filter(Boolean).length;
+
+  return `
+    <div class="race-card" style="border-left:4px solid ${lore.accent || '#888'}">
+      <h2><span class="pill race-${race}">${race}</span> <span class="label">${lore.tagline || ''}</span></h2>
+      <div style="margin-top:10px">
+        <div class="row"><span class="k">Lore height</span><span class="v">${lore.height || '—'}</span></div>
+        <div class="row"><span class="k">Infantry verts</span><span class="v">${character ? fmt(num(character.TotalVerts)) : '—'}</span></div>
+        <div class="row"><span class="k">Cavalry verts</span><span class="v">${cavalry ? fmt(num(cavalry.TotalVerts)) : '—'}</span></div>
+        <div class="row"><span class="k">Mesh parts (infantry)</span><span class="v">${character ? character.MeshParts : '—'}</span></div>
+        <div class="row"><span class="k">Bones (infantry)</span><span class="v">${character ? character.Bones : '—'}</span></div>
+        <div class="row"><span class="k">Animation clips</span><span class="v">${anims}</span></div>
+        <div class="row"><span class="k">Equipment files</span><span class="v">${equip}</span></div>
+        <div class="row"><span class="k">Equipment slots</span><span class="v">${slots}</span></div>
+        <div class="row"><span class="k">Total verts (all)</span><span class="v">${fmt(verts)}</span></div>
+      </div>
+    </div>
+  `;
+}
+
+// ─── CHARACTERS ───────────────────────────────────────────────────────
+function renderCharacters() {
+  const root = document.getElementById('tab-characters');
+  const chars = DATA.summary.filter(r => r.Category === 'character' || r.Category === 'cavalry-character');
+  root.innerHTML = `
+    <div class="grid">
+      ${chars.map(c => `
+        <div class="card">
+          <h3><span class="pill race-${c.Race}">${c.Race}</span> ${c.Category === 'cavalry-character' ? 'Cavalry' : 'Infantry'}</h3>
+          <div class="file">${c.File}</div>
+          <div class="stats">
+            <div class="stat"><div class="k">Verts</div><div class="v">${fmt(num(c.TotalVerts))}</div></div>
+            <div class="stat"><div class="k">Mesh parts</div><div class="v">${c.MeshParts}</div></div>
+            <div class="stat"><div class="k">Bones</div><div class="v">${c.Bones}</div></div>
+            <div class="stat"><div class="k">Materials</div><div class="v">${c.Materials}</div></div>
+          </div>
+          <div style="margin-top:10px">
+            <span class="badge">Geometries: ${c.Geometries}</span>
+            <span class="badge">Textures: ${c.Textures}</span>
+            <span class="badge">Deformers: ${c.Deformers}</span>
+          </div>
+        </div>
+      `).join('')}
+    </div>
+  `;
+}
+
+// ─── EQUIPMENT ────────────────────────────────────────────────────────
+function tierClass(t) {
+  if (!t) return '';
+  if (/light|cloth/i.test(t)) return 'tier-light';
+  if (/medium|leather/i.test(t)) return 'tier-medium';
+  if (/heavy|plate/i.test(t)) return 'tier-heavy';
+  return '';
+}
+
+function renderEquipment() {
+  const root = document.getElementById('tab-equipment');
+  const races = uniq(DATA.parts.map(p => p.Race)).sort();
+  root.innerHTML = `
+    <div class="filter">
+      <input id="eq-search" placeholder="Search part / weapon name…" />
+      <select id="eq-race">
+        <option value="">All races</option>
+        ${races.map(r => `<option>${r}</option>`).join('')}
+      </select>
+      <select id="eq-slot">
+        <option value="">All slots</option>
+        ${uniq(DATA.parts.map(p => p.Slot)).filter(Boolean).sort().map(s => `<option>${s}</option>`).join('')}
+      </select>
+    </div>
+    <div id="eq-results"></div>
+  `;
+  const draw = () => {
+    const q = document.getElementById('eq-search').value.toLowerCase();
+    const race = document.getElementById('eq-race').value;
+    const slot = document.getElementById('eq-slot').value;
+    const filtered = DATA.parts.filter(p =>
+      (!race || p.Race === race) &&
+      (!slot || p.Slot === slot) &&
+      (!q || (p.PartName + ' ' + p.SubType + ' ' + p.Variant).toLowerCase().includes(q))
+    );
+    document.getElementById('eq-results').innerHTML = `
+      <div class="scroll-x">
+      <table>
+        <thead><tr>
+          <th>Race</th><th>Part</th><th>Slot</th><th>Sub</th><th>Variant</th>
+          <th>Tier</th><th>Hand</th><th>Bone</th><th>Size (W×H×D cm)</th><th>Verts</th>
+        </tr></thead>
+        <tbody>
+          ${filtered.map(p => `
+            <tr>
+              <td><span class="pill race-${p.Race}">${p.Race}</span></td>
+              <td><code>${p.PartName}</code></td>
+              <td>${p.Slot || ''}</td>
+              <td>${p.SubType || ''}</td>
+              <td>${p.Variant || ''}</td>
+              <td><span class="badge ${tierClass(p.Tier)}">${p.Tier || '—'}</span></td>
+              <td>${p.Hand || ''}</td>
+              <td><code>${p.PrimaryBone || ''}</code></td>
+              <td>${num(p.WidthCm).toFixed(0)}×${num(p.HeightCm).toFixed(0)}×${num(p.DepthCm).toFixed(0)}</td>
+              <td>${p.Vertices}</td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+      </div>
+      <div class="empty ${filtered.length ? 'hidden' : ''}">No matches.</div>
+    `;
+  };
+  ['eq-search', 'eq-race', 'eq-slot'].forEach(id => document.getElementById(id).addEventListener('input', draw));
+  draw();
+}
+
+// ─── ANIMATIONS ───────────────────────────────────────────────────────
+function renderAnimations() {
+  const root = document.getElementById('tab-animations');
+  const anims = DATA.summary.filter(r => r.Category === 'animation');
+  const groups = byRace(anims);
+  // Pull anim_stack rows from manifest for clip names
+  const clipMap = {};
+  DATA.manifest.filter(r => r.PartType === 'anim_stack').forEach(r => {
+    clipMap[r.File] = r.Description || r.PartName;
+  });
+  root.innerHTML = Object.keys(groups).sort().map(race => {
+    const rows = groups[race];
+    return `
+      <details ${race === 'Human' ? 'open' : ''}>
+        <summary>
+          <span><span class="pill race-${race}">${race}</span> ${rows.length} animation clips · ${rows.reduce((a,r)=>a+num(r.Bones),0)} total bones referenced</span>
+        </summary>
+        <div class="body scroll-x">
+        <table>
+          <thead><tr><th>Clip / Class</th><th>File</th><th>Bones</th><th>Stack</th></tr></thead>
+          <tbody>
+            ${rows.map(r => {
+              const m = r.File.match(/animation\/([^/]+)\/([^/]+)\.FBX/i);
+              const cls = m ? m[1] : '';
+              const clipName = clipMap[r.File] || (m ? m[2] : '');
+              return `<tr>
+                <td><strong>${clipName}</strong> <span class="badge">${cls}</span></td>
+                <td><code style="font-size:11px">${r.File}</code></td>
+                <td>${r.Bones}</td>
+                <td>${r.AnimStacks}</td>
+              </tr>`;
+            }).join('')}
+          </tbody>
+        </table>
+        </div>
+      </details>
+    `;
+  }).join('');
+}
+
+// ─── MESHY ─────────────────────────────────────────────────────────────
+function renderMeshy() {
+  const root = document.getElementById('tab-meshy');
+  const races = uniq(DATA.meshy.map(r => r.Race)).sort();
+  root.innerHTML = `
+    <div class="filter">
+      <input id="mx-search" placeholder="Search prompt…" />
+      <select id="mx-race">
+        <option value="">All races</option>
+        ${races.map(r => `<option>${r}</option>`).join('')}
+      </select>
+      <select id="mx-slot">
+        <option value="">All slots</option>
+        ${uniq(DATA.meshy.map(p => p.Slot)).filter(Boolean).sort().map(s => `<option>${s}</option>`).join('')}
+      </select>
+    </div>
+    <div id="mx-results"></div>
+  `;
+  const draw = () => {
+    const q = document.getElementById('mx-search').value.toLowerCase();
+    const race = document.getElementById('mx-race').value;
+    const slot = document.getElementById('mx-slot').value;
+    const filtered = DATA.meshy.filter(p =>
+      (!race || p.Race === race) &&
+      (!slot || p.Slot === slot) &&
+      (!q || (p.PartName + ' ' + p.MeshyPrompt).toLowerCase().includes(q))
+    ).slice(0, 200);
+    document.getElementById('mx-results').innerHTML = filtered.map(p => `
+      <details>
+        <summary>
+          <span><span class="pill race-${p.Race}">${p.Race}</span> <code>${p.PartName}</code> · ${p.Slot} ${p.Variant ? '· '+p.Variant : ''} <span class="badge ${tierClass(p.Tier)}">${p.Tier || ''}</span></span>
+          <span class="badge">${p.SizeWxHxD_cm}</span>
+        </summary>
+        <div class="body">
+          <div class="meshy"><strong style="color:var(--accent)">Prompt:</strong>\n${p.MeshyPrompt}</div>
+          <div class="meshy" style="border-color:var(--bad)"><strong style="color:var(--bad)">Negative:</strong>\n${p.NegativePrompt}</div>
+        </div>
+      </details>
+    `).join('') + (filtered.length === 200 ? '<div class="empty">Showing first 200. Refine filters to see more.</div>' : '');
+  };
+  ['mx-search', 'mx-race', 'mx-slot'].forEach(id => document.getElementById(id).addEventListener('input', draw));
+  draw();
+}
+
+// ─── GLTF ─────────────────────────────────────────────────────────────
+function renderGltf() {
+  const root = document.getElementById('tab-gltf');
+  const buckets = uniq(DATA.gltf.map(r => r.Bucket)).sort();
+  root.innerHTML = `
+    <div class="filter">
+      <input id="gl-search" placeholder="Search asset name…" />
+      <select id="gl-bucket">
+        <option value="">All buckets</option>
+        ${buckets.map(b => `<option>${b}</option>`).join('')}
+      </select>
+    </div>
+    <div id="gl-results"></div>
+  `;
+  const draw = () => {
+    const q = document.getElementById('gl-search').value.toLowerCase();
+    const b = document.getElementById('gl-bucket').value;
+    const filtered = DATA.gltf.filter(r =>
+      (!b || r.Bucket === b) &&
+      (!q || (r.AssetName + ' ' + r.Race + ' ' + r.Class).toLowerCase().includes(q))
+    );
+    document.getElementById('gl-results').innerHTML = `
+      <div class="scroll-x">
+      <table>
+        <thead><tr>
+          <th>Bucket</th><th>Race</th><th>Class</th><th>Action</th><th>Asset</th>
+          <th>Size KB</th><th>Verts</th><th>Tris</th><th>Bones</th><th>Anim (s)</th><th>URL</th>
+        </tr></thead>
+        <tbody>
+          ${filtered.map(r => `
+            <tr>
+              <td>${r.Bucket}</td>
+              <td><span class="pill race-${r.Race[0].toUpperCase()+r.Race.slice(1)}">${r.Race}</span></td>
+              <td>${r.Class}</td>
+              <td>${r.Action}${r.Variant ? ' '+r.Variant : ''} ${r.Loop ? '<span class="badge">'+r.Loop+'</span>' : ''}</td>
+              <td><code>${r.AssetName}</code></td>
+              <td>${num(r.FileSizeKB).toFixed(1)}</td>
+              <td>${fmt(num(r.TotalVerts))}</td>
+              <td>${fmt(num(r.TotalTris))}</td>
+              <td>${r.BoneCount}</td>
+              <td>${r.AnimDurationSec || '—'}</td>
+              <td><a href="${r.Url}" target="_blank">open</a></td>
+            </tr>
+          `).join('')}
+        </tbody>
+      </table>
+      </div>
+    `;
+  };
+  ['gl-search', 'gl-bucket'].forEach(id => document.getElementById(id).addEventListener('input', draw));
+  draw();
+}
+
+// ─── Tabs ─────────────────────────────────────────────────────────────
+document.getElementById('tabs').addEventListener('click', e => {
+  const btn = e.target.closest('button[data-tab]');
+  if (!btn) return;
+  document.querySelectorAll('#tabs button').forEach(b => b.classList.toggle('active', b === btn));
+  document.querySelectorAll('main > section').forEach(s => s.classList.toggle('hidden', s.id !== 'tab-' + btn.dataset.tab));
+});
+
+loadAll().catch(e => {
+  document.getElementById('toolbar').innerHTML =
+    `<span style="color:var(--bad)">Failed to load CSVs: ${e.message}</span>`;
+});
+</script>
+</body>
+</html>

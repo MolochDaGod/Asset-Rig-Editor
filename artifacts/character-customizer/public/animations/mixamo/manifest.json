@@ -1,0 +1,112 @@
+{
+  "animations": [
+    {
+      "id": "climbing_ladder",
+      "name": "Climbing Ladder",
+      "category": "other",
+      "gltfPath": "/animations/mixamo/climbing_ladder.glb"
+    },
+    {
+      "id": "cover_to_stand",
+      "name": "Cover To Stand",
+      "category": "other",
+      "gltfPath": "/animations/mixamo/cover_to_stand.glb"
+    },
+    {
+      "id": "crouch_idle",
+      "name": "Crouch",
+      "category": "idle",
+      "gltfPath": "/animations/mixamo/crouch_idle.glb"
+    },
+    {
+      "id": "disarmed_other",
+      "name": "Disarmed",
+      "category": "other",
+      "gltfPath": "/animations/mixamo/disarmed_other.glb"
+    },
+    {
+      "id": "dual_weapon_combo_attack",
+      "name": "Dual Weapon Combo",
+      "category": "attack",
+      "gltfPath": "/animations/mixamo/dual_weapon_combo_attack.glb"
+    },
+    {
+      "id": "great_sword_slash_attack",
+      "name": "Great Sword Slash",
+      "category": "attack",
+      "gltfPath": "/animations/mixamo/great_sword_slash_attack.glb"
+    },
+    {
+      "id": "idle",
+      "name": "idle",
+      "category": "idle",
+      "gltfPath": "/animations/mixamo/idle.glb"
+    },
+    {
+      "id": "kick_attack",
+      "name": "Kick",
+      "category": "attack",
+      "gltfPath": "/animations/mixamo/kick_attack.glb"
+    },
+    {
+      "id": "look_over_shoulder_other",
+      "name": "Look Over Shoulder",
+      "category": "other",
+      "gltfPath": "/animations/mixamo/look_over_shoulder_other.glb"
+    },
+    {
+      "id": "one_hand_sword_combo_attack",
+      "name": "One Hand Sword Combo",
+      "category": "attack",
+      "gltfPath": "/animations/mixamo/one_hand_sword_combo_attack.glb"
+    },
+    {
+      "id": "reacting_other",
+      "name": "Reacting",
+      "category": "other",
+      "gltfPath": "/animations/mixamo/reacting_other.glb"
+    },
+    {
+      "id": "sitting_pose_other",
+      "name": "Sitting Pose",
+      "category": "other",
+      "gltfPath": "/animations/mixamo/sitting_pose_other.glb"
+    },
+    {
+      "id": "standing_to_crouch",
+      "name": "Standing To Crouch",
+      "category": "other",
+      "gltfPath": "/animations/mixamo/standing_to_crouch.glb"
+    },
+    {
+      "id": "swagger_walk",
+      "name": "Swagger",
+      "category": "move",
+      "gltfPath": "/animations/mixamo/swagger_walk.glb"
+    },
+    {
+      "id": "sword_shield_attack",
+      "name": "Sword Shield",
+      "category": "attack",
+      "gltfPath": "/animations/mixamo/sword_shield_attack.glb"
+    },
+    {
+      "id": "sword_shield_slash_attack",
+      "name": "Sword Shield Slash",
+      "category": "attack",
+      "gltfPath": "/animations/mixamo/sword_shield_slash_attack.glb"
+    },
+    {
+      "id": "taunt_battlecry_other",
+      "name": "Taunt Battlecry",
+      "category": "other",
+      "gltfPath": "/animations/mixamo/taunt_battlecry_other.glb"
+    },
+    {
+      "id": "two_hand_club_combo_attack",
+      "name": "Two Hand Club Combo",
+      "category": "attack",
+      "gltfPath": "/animations/mixamo/two_hand_club_combo_attack.glb"
+    }
+  ]
+}

@@ -1,0 +1,155 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Tailwind v4 auto-detection scans the entire project — including the
+   100+ MB of GLB/PNG assets in public/ — which alone can OOM the build.
+   Restrict scanning to source code only. */
+@source "./**/*.{ts,tsx,html}";
+@source not "../public/**";
+@source not "../node_modules/**";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --font-sans: var(--app-font-sans);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+}
+
+:root {
+  --background: 220 20% 10%;
+  --foreground: 220 10% 95%;
+  --border: 220 15% 20%;
+  --input: 220 15% 18%;
+  --ring: 38 92% 50%;
+  --card: 220 18% 13%;
+  --card-foreground: 220 10% 90%;
+  --primary: 38 92% 50%;
+  --primary-foreground: 220 20% 8%;
+  --secondary: 220 15% 18%;
+  --secondary-foreground: 220 10% 85%;
+  --muted: 220 15% 16%;
+  --muted-foreground: 220 10% 55%;
+  --accent: 260 60% 55%;
+  --accent-foreground: 220 10% 95%;
+  --destructive: 0 72% 51%;
+  --app-font-sans: 'Cinzel', 'Georgia', serif;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--app-font-sans);
+    overflow: hidden;
+  }
+}
+
+.scrollbar-thin {
+  scrollbar-width: thin;
+  scrollbar-color: hsl(38 92% 30%) transparent;
+}
+.scrollbar-thin::-webkit-scrollbar { width: 4px; }
+.scrollbar-thin::-webkit-scrollbar-track { background: transparent; }
+.scrollbar-thin::-webkit-scrollbar-thumb { background: hsl(38 92% 30%); border-radius: 2px; }
+
+.panel-bg {
+  background: linear-gradient(135deg, hsl(220 20% 11%) 0%, hsl(220 18% 9%) 100%);
+  border: 1px solid hsl(220 15% 22%);
+}
+
+.race-card {
+  transition: all 0.2s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+.race-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, transparent 60%, hsl(38 92% 50% / 0.05));
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+.race-card:hover::before { opacity: 1; }
+.race-card.selected {
+  border-color: hsl(38 92% 50%) !important;
+  box-shadow: 0 0 20px hsl(38 92% 50% / 0.3), inset 0 0 20px hsl(38 92% 50% / 0.05);
+}
+
+.gear-item {
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+.gear-item:hover { transform: translateY(-1px); }
+.gear-item.selected {
+  border-color: hsl(38 92% 50%) !important;
+  background: hsl(38 92% 50% / 0.1) !important;
+}
+
+.color-swatch {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  border: 2px solid transparent;
+}
+.color-swatch:hover { transform: scale(1.15); }
+.color-swatch.selected {
+  border-color: white;
+  box-shadow: 0 0 8px rgba(255,255,255,0.5);
+}
+
+.section-header {
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: hsl(38 92% 50%);
+  font-weight: 600;
+  padding: 0.5rem 0 0.25rem;
+  border-bottom: 1px solid hsl(38 92% 50% / 0.2);
+  margin-bottom: 0.5rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.3s ease; }
+
+@keyframes float-item {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-5px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+.loading-shimmer {
+  background: linear-gradient(90deg, hsl(220 20% 15%) 25%, hsl(220 20% 20%) 50%, hsl(220 20% 15%) 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}

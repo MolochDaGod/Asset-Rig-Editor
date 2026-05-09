@@ -1,0 +1,98 @@
+{
+  "race": "elf",
+  "label": "Sylvan Ascendancy",
+  "heightMeters": 1.95,
+  "accentColor": "#9beea8",
+  "baseUrl": "/assets/elf/",
+  "character": {
+    "infantry": "character/infantry.gltf",
+    "cavalry": "character/cavalry.gltf",
+    "siege": [
+      "character/siege_elf_boltthrower.gltf"
+    ]
+  },
+  "equipment": [
+    {
+      "id": "ELF_weapon_spear",
+      "url": "equipment/ELF_weapon_spear.gltf"
+    },
+    {
+      "id": "ELF_weapon_staff_C",
+      "url": "equipment/ELF_weapon_staff_C.gltf"
+    }
+  ],
+  "animations": [
+    {
+      "id": "boltthrower_boltthrower_01_idle",
+      "url": "animations/boltthrower_boltthrower_01_idle.gltf",
+      "class": "boltthrower_boltthrower",
+      "action": "idle",
+      "variant": null
+    },
+    {
+      "id": "boltthrower_boltthrower_02_move",
+      "url": "animations/boltthrower_boltthrower_02_move.gltf",
+      "class": "boltthrower_boltthrower",
+      "action": "move",
+      "variant": null
+    },
+    {
+      "id": "boltthrower_boltthrower_03_attack",
+      "url": "animations/boltthrower_boltthrower_03_attack.gltf",
+      "class": "boltthrower_boltthrower",
+      "action": "attack",
+      "variant": null
+    },
+    {
+      "id": "boltthrower_boltthrower_04_death",
+      "url": "animations/boltthrower_boltthrower_04_death.gltf",
+      "class": "boltthrower_boltthrower",
+      "action": "death",
+      "variant": null
+    },
+    {
+      "id": "cavalry_mage_cavalry_mage_08_attack_b",
+      "url": "animations/cavalry_mage_cavalry_mage_08_attack_b.gltf",
+      "class": "cavalry_mage_cavalry_mage",
+      "action": "attack",
+      "variant": "b"
+    },
+    {
+      "id": "cavalry_spear_cavalry_spear_04_charge",
+      "url": "animations/cavalry_spear_cavalry_spear_04_charge.gltf",
+      "class": "cavalry_spear_cavalry_spear",
+      "action": "charge",
+      "variant": null
+    },
+    {
+      "id": "cavalry_spear_cavalry_spear_05_combat_idle",
+      "url": "animations/cavalry_spear_cavalry_spear_05_combat_idle.gltf",
+      "class": "cavalry_spear_cavalry_spear",
+      "action": "combat",
+      "variant": "idle"
+    },
+    {
+      "id": "cavalry_spear_cavalry_spear_07_attack",
+      "url": "animations/cavalry_spear_cavalry_spear_07_attack.gltf",
+      "class": "cavalry_spear_cavalry_spear",
+      "action": "attack",
+      "variant": null
+    },
+    {
+      "id": "cavalry_spear_cavalry_spear_10_death_a",
+      "url": "animations/cavalry_spear_cavalry_spear_10_death_a.gltf",
+      "class": "cavalry_spear_cavalry_spear",
+      "action": "death",
+      "variant": "a"
+    }
+  ],
+  "textures": [
+    "textures/ELF_DarkElves_Blue.png",
+    "textures/ELF_DarkElves_Green.png",
+    "textures/ELF_DarkElves_Red.png",
+    "textures/ELF_DarkElves_Texture.png",
+    "textures/ELF_HighElves_Texture.png",
+    "textures/ELF_WoodElves_Brown.png",
+    "textures/ELF_WoodElves_Texture.png"
+  ]
+}
