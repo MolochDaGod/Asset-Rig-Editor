@@ -234,9 +234,21 @@ importers:
       leva:
         specifier: ^0.10.1
         version: 0.10.1(@types/react-dom@19.2.3(@types/react@19.2.14))(@types/react@19.2.14)(react-dom@19.1.0(react@19.1.0))(react@19.1.0)
+      ossos:
+        specifier: ^0.0.3
+        version: 0.0.3
+      postprocessing:
+        specifier: ^6.39.1
+        version: 6.39.1(three@0.183.2)
       three:
         specifier: ^0.183.2
         version: 0.183.2
+      three-ik:
+        specifier: ^0.1.0
+        version: 0.1.0(three@0.183.2)
+      wiggle:
+        specifier: ^0.0.17
+        version: 0.0.17(three@0.183.2)
       zustand:
         specifier: ^5.0.12
         version: 5.0.12(@types/react@19.2.14)(react@19.1.0)(use-sync-external-store@1.6.0(react@19.1.0))
@@ -2677,6 +2689,9 @@ packages:
     resolution: {integrity: sha512-Ln0UQDlxH1BapMu3GPtf7CuYNwRZf2gwCuPqbyG6pB8WfmFpzqcy4xtAaAMUhnNqjMKTiCPZG2oMT3YSx8U2NA==}
     engines: {node: '>=0.10.0'}
 
+  gl-matrix@3.4.4:
+    resolution: {integrity: sha512-latSnyDNt/8zYUB6VIJ6PCh2jBjJX6gnDsoCZ7LyW7GkqrD51EWwa9qCoGixj8YqBtETQK/xY7OmpTF8xz1DdQ==}
+
   glob-parent@5.1.2:
     resolution: {integrity: sha512-AOIgSQCepiJYwP3ARnGx+5VnTu2HBYdzbGP45eLw1vr3zB3vZLeyed1sC9hnbcOc9/SrMyM5RPQrkGz4aS9Zow==}
     engines: {node: '>= 6'}
@@ -3074,6 +3089,9 @@ packages:
     peerDependenciesMeta:
       prettier:
         optional: true
+
+  ossos@0.0.3:
+    resolution: {integrity: sha512-rBAuf/UUvOr7aSe9bUJn7lKuaKKmztMCXRA29XwpJtEJSWYIKAlk7NMw2YnYruuBaQY7eoT7oeEsZfDFMlkdUQ==}
 
   p-limit@4.0.0:
     resolution: {integrity: sha512-5b0R4txpzjPWVw/cXXUResoD4hb6U/x9BH08L7nw+GN1sezDzPdxeRvpc9c433fZhBan/wusjbCsqwqm4EIBIQ==}
@@ -3574,6 +3592,11 @@ packages:
   thread-stream@3.1.0:
     resolution: {integrity: sha512-OqyPZ9u96VohAyMfJykzmivOrY2wfMSf3C5TtFJVgN+Hm6aj+voFhlK+kZEIv2FBh1X6Xp3DlnCOfEQ3B2J86A==}
 
+  three-ik@0.1.0:
+    resolution: {integrity: sha512-GwYgVSegvRI9/i/YFKxnIT4bn9gN5GtrZbgRRhxvihUccxYfjryrt9Gys5Bqn+ljbM/uF4a8wZETxdLVNAT+fw==}
+    peerDependencies:
+      three: '*'
+
   three-mesh-bvh@0.8.3:
     resolution: {integrity: sha512-4G5lBaF+g2auKX3P0yqx+MJC6oVt6sB5k+CchS6Ob0qvH0YIhuUk1eYr7ktsIpY+albCqE80/FVQGV190PmiAg==}
     peerDependencies:
@@ -3796,6 +3819,11 @@ packages:
     resolution: {integrity: sha512-BLI3Tl1TW3Pvl70l3yq3Y64i+awpwXqsGBYWkkqMtnbXgrMD+yj7rhW0kuEDxzJaYXGjEW5ogapKNMEKNMjibA==}
     engines: {node: '>= 8'}
     hasBin: true
+
+  wiggle@0.0.17:
+    resolution: {integrity: sha512-vF4Kx9a+lHVWia3ZLhZcMnam9VhFGND0+9WYnHq0rcnYDLlbL4iFzYUXJk2cx5reDolwt+EN5mhUP3uHGhWtRQ==}
+    peerDependencies:
+      three: '>= 0.152.0'
 
   wouter@3.9.0:
     resolution: {integrity: sha512-sF/od/PIgqEQBQcrN7a2x3MX6MQE6nW0ygCfy9hQuUkuB28wEZuu/6M5GyqkrrEu9M6jxdkgE12yDFsQMKos4Q==}
@@ -5908,6 +5936,8 @@ snapshots:
 
   get-value@2.0.6: {}
 
+  gl-matrix@3.4.4: {}
+
   glob-parent@5.1.2:
     dependencies:
       is-glob: 4.0.3
@@ -6294,6 +6324,10 @@ snapshots:
       - '@faker-js/faker'
       - supports-color
       - typescript
+
+  ossos@0.0.3:
+    dependencies:
+      gl-matrix: 3.4.4
 
   p-limit@4.0.0:
     dependencies:
@@ -6815,6 +6849,10 @@ snapshots:
     dependencies:
       real-require: 0.2.0
 
+  three-ik@0.1.0(three@0.183.2):
+    dependencies:
+      three: 0.183.2
+
   three-mesh-bvh@0.8.3(three@0.183.2):
     dependencies:
       three: 0.183.2
@@ -7002,6 +7040,10 @@ snapshots:
   which@2.0.2:
     dependencies:
       isexe: 2.0.0
+
+  wiggle@0.0.17(three@0.183.2):
+    dependencies:
+      three: 0.183.2
 
   wouter@3.9.0(react@19.1.0):
     dependencies:
