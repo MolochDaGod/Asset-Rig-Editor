@@ -77,17 +77,11 @@ export function detectRigType(boneNames: string[]): RigType {
 
 // ── Bone map: Mixamo-25 → Bip001 ───────────────────────────────────
 //
-// One entry per MAPPED PAIR. The map is 1:1 except for the spine
-// chain where Mixamo has 3 segments and Bip001 has 2:
-//
-//   mixamorigSpine  → Bip001_Spine   (lower torso)
-//   mixamorigSpine1 → Bip001_Spine1  (upper torso)
-//   mixamorigSpine2 → Bip001_Spine1  (compressed into upper torso)
-//
-// The last entry is NOT a retarget source — it's handled by the spine
-// compression in the retarget bake step. We include it so the mapping
-// table is complete for diagnostics, but the retargeter knows to
-// merge Spine1+Spine2 rotations into Bip001_Spine1.
+// Bip001 has ONE spine bone (Pelvis → Spine → Neck). Mixamo has
+// THREE (Hips → Spine → Spine1 → Spine2 → Neck). All three Mixamo
+// spines map to the single Bip001_Spine. The primary (Spine) drives
+// retargetClip; Spine1 and Spine2 are folded in via the spine
+// compression post-process in mixamoRetarget.ts.
 
 export interface BoneMapEntry {
   /** Mixamo source bone name (sanitized: colons stripped by GLTFLoader). */
@@ -101,10 +95,13 @@ export interface BoneMapEntry {
 
 export const BONE_MAP: readonly BoneMapEntry[] = [
   // ── Root / spine chain ──
+  // Bip001 has ONE spine bone. Mixamo has THREE (Spine, Spine1, Spine2).
+  // All three compress into Bip001_Spine. Spine is the primary (drives
+  // retargetClip), Spine1 and Spine2 are folded in via post-process.
   { src: 'mixamorigHips',            tgt: 'Bip001_Pelvis' },
   { src: 'mixamorigSpine',           tgt: 'Bip001_Spine' },
-  { src: 'mixamorigSpine1',          tgt: 'Bip001_Spine1' },
-  { src: 'mixamorigSpine2',          tgt: 'Bip001_Spine1', compressed: true },
+  { src: 'mixamorigSpine1',          tgt: 'Bip001_Spine', compressed: true },
+  { src: 'mixamorigSpine2',          tgt: 'Bip001_Spine', compressed: true },
 
   // ── Head / neck ──
   { src: 'mixamorigNeck',            tgt: 'Bip001_Neck' },
