@@ -53,3 +53,5 @@ attached_assets/*.zip
 
 # Vercel
 .vercel/
+
+.vercel

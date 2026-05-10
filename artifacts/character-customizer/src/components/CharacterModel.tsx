@@ -10,6 +10,7 @@ import { defaultLoadout } from '../utils/classifyPart';
 import { findRichestSkinnedMesh, findRichestTargetSkin, createRetargeter } from '../utils/mixamoRetarget';
 import { safeSkeletonClone } from '../utils/skeletonClone';
 import { useRigAnimationLibrary } from '../data/rigAnimationLibrary';
+import { detectRigType } from '../data/skeletonRegistry';
 
 // Material-name based mount detection (used for the texture override on
 // human/orc cavalry, where the mount has its own material like "WK_Horse_A"
@@ -541,14 +542,14 @@ function RaceGLTFModel({ raceId }: { raceId: string }) {
   // Undead/Human) which need per-clip retargeting through
   // `SkeletonUtils.retargetClip` to convert the source's Y-along
   // bone-local rotations into the target's X-along bone-local frame.
+  //
+  // Uses detectRigType() from the skeleton registry which filters out
+  // utility bones (bag, wood, quiver, hand containers) before checking
+  // — so extra equipment bones never pollute the detection ratio.
   const isMixamoRig = useMemo(() => {
     if (!targetSkin) return false;
-    const bones = targetSkin.skeleton.bones;
-    if (bones.length === 0) return false;
-    const hasHips = bones.some((b) => b.name === 'mixamorigHips');
-    if (!hasHips) return false;
-    const mixamoCount = bones.filter((b) => b.name.startsWith('mixamorig')).length;
-    return mixamoCount / bones.length >= 0.8;
+    const boneNames = targetSkin.skeleton.bones.map((b) => b.name);
+    return detectRigType(boneNames) === 'mixamo25';
   }, [targetSkin]);
 
   // Build the per-race retargeter ONCE (per characterClone). It clones

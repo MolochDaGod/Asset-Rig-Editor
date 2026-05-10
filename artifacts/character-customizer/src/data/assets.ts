@@ -94,17 +94,11 @@ export const TOON_RACES: ToonRace[] = [
     lore: 'Born in the icy wastes, Barbarians channel primal fury into devastating warfare. Their battle-cries shatter morale and their war hammers shatter bones.',
     color: '#A0522D',
     accentColor: '#8B0000',
-    // ─── MIXAMO-RIGGED INFANTRY (May 1 2026 PoC) ─────────────────────
-    // barbarian.obj decimated proxy was uploaded to mixamo.com auto-
-    // rigger; the returned T-pose-with-skin FBX was converted to GLB
-    // via scripts/src/convert-rigged-race.cjs and then scaled 100x via
-    // scripts/src/fix-mixamo-scale.cjs (fbx2gltf cm→m bug).
-    // Skeleton is `mixamorig*` (sanitized form), 22 joints, identical
-    // bone names to every clip in mixamo-melee.glb — so animations
-    // play DIRECTLY with no SkeletonUtils.retargetClip math involved.
-    // The retarget code path remains for the other 5 races until they
-    // are similarly re-rigged.
-    gltfPath: `/models/barbarian-mixamo.glb`,
+    // Full-textured Bip001 infantry model — same format as the other
+    // 5 races. The Mixamo proxy (`/models/barbarian-mixamo.glb`) is
+    // still loaded by CharacterModel.tsx as the retarget SOURCE
+    // skeleton; it is NOT the display model.
+    gltfPath: `${A}/barbarian/character/infantry.gltf`,
     mainTexturePath: `${A}/barbarian/textures/BRB_StandardUnits_texture.png`,
     cavalryGltfPath: `${A}/barbarian/character/cavalry.gltf`,
     heightMeters: 1.98,

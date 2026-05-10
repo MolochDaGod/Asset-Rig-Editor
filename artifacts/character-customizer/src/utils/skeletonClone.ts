@@ -1,5 +1,6 @@
 import * as THREE from 'three';
 import * as SkeletonUtils from 'three/examples/jsm/utils/SkeletonUtils.js';
+import { isUtilityBone } from '../data/skeletonRegistry';
 
 /**
  * Reattach orphaned bones to the GLTF scene tree.
@@ -74,8 +75,29 @@ export function attachOrphanBones(scene: THREE.Object3D): void {
  */
 export function sanitizeNodeNames(root: THREE.Object3D): void {
   root.traverse((o) => {
-    if (o.name && o.name.includes(' ')) {
+    if (!o.name) return;
+    // Replace spaces with underscores (3DS Max Biped: "Bip001 L Hand")
+    if (o.name.includes(' ')) {
       o.name = o.name.replace(/\s/g, '_');
+    }
+    // Normalize single-zero Bip01_ to triple-zero Bip001_ so bone
+    // names match the canonical registry format. Some exporters use
+    // "Bip01" instead of "Bip001".
+    if (/^Bip01_/i.test(o.name)) {
+      o.name = o.name.replace(/^Bip01_/i, 'Bip001_');
+    }
+  });
+}
+
+/**
+ * Mark utility/equipment bones with `userData.__utilityBone = true`
+ * so downstream code (retargeter, skeleton helper, debug panels) can
+ * skip them efficiently without re-running the name classifier.
+ */
+export function tagUtilityBones(root: THREE.Object3D): void {
+  root.traverse((o) => {
+    if (o.name && isUtilityBone(o.name)) {
+      o.userData.__utilityBone = true;
     }
   });
 }
@@ -92,6 +114,7 @@ export function safeSkeletonClone<T extends THREE.Object3D>(source: T): T {
   attachOrphanBones(source);
   const cloned = SkeletonUtils.clone(source) as T;
   sanitizeNodeNames(cloned);
+  tagUtilityBones(cloned);
 
   if (process.env.NODE_ENV !== 'production') {
     const reachable = new Set<THREE.Object3D>();
