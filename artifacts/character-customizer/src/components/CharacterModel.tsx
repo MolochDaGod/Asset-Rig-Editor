@@ -701,50 +701,37 @@ function RaceGLTFModel({ raceId }: { raceId: string }) {
 
   // ─── Scale & ground offset
   //
-  // INFANTRY: every race GLB ships authored on the SAME 22-bone rig
-  // with identity scales and minY=0 (verified offline against all six
-  // race files). Authored heights are 1.44–1.70m — within the natural
-  // human range, with dwarf naturally shorter, exactly what the lore
-  // calls for. So we render infantry at the authored size with no
-  // bbox math at all: scale = userMul, offset = 0.
+  // ALL character types use the same normalize-to-target pipeline:
+  // measure the structural bbox under the default loadout, divide
+  // the lore-accurate target height by the authored height, and
+  // ground the result so feet land at Y=0.
   //
-  // CAVALRY / SIEGE: those load entirely different GLBs (mount + rider,
-  // catapult, etc.) whose authored sizes do not line up with infantry.
-  // For those we keep the measure-and-fit pipeline: take the structural
-  // bbox under the default loadout, divide the lore target height by
-  // it, and ground the result so feet land at Y=0.
+  // The race models have a 2.54x scale baked into the Bip001 root
+  // AND each body mesh node (3DS Max inches→cm conversion). We
+  // measure AFTER that scale is applied, then fit to heightMeters.
   const userMul = isSiege ? siegeScale : isCavalry ? cavalryScale : infantryScale;
 
   const fittedTransform = useMemo(() => {
-    if (!isCavalry && !isSiege) {
-      // Infantry path — keep the user-controlled scale, but still
-      // measure-and-ground so the character's FEET (not their pelvis)
-      // sit at the outer group's origin. Without this, the Biped
-      // exports — whose root bone Bip001_Pelvis is authored at hip
-      // height with feet at ~Y=-1 — float with the gizmo running
-      // through their midsection.
-      const box = measureStructuralBBox(characterClone, 'infantry', defaultVisibleSet);
-      const offset = computeGroundOffset(box, userMul);
-      if (process.env.NODE_ENV !== 'production') {
-        // eslint-disable-next-line no-console
-        console.log(
-          `[fittedTransform] ${raceId} infantry — bbox.min.y=${box.min.y.toFixed(3)} ` +
-          `bbox.max.y=${box.max.y.toFixed(3)} scale=${userMul.toFixed(3)} ` +
-          `offset.y=${offset.y.toFixed(3)}`,
-        );
-      }
-      return { scale: userMul, offset };
-    }
-    const ct: 'cavalry' | 'siege' = isSiege ? 'siege' : 'cavalry';
+    const ct = isSiege ? 'siege' as const : isCavalry ? 'cavalry' as const : 'infantry' as const;
     const target = isSiege
       ? (SIEGE_HEIGHT_M[raceId] ?? 3.5)
-      : (CAVALRY_HEIGHT_M[raceId] ?? 2.5);
+      : isCavalry
+      ? (CAVALRY_HEIGHT_M[raceId] ?? 2.5)
+      : race.heightMeters;
     const box = measureStructuralBBox(characterClone, ct, defaultVisibleSet);
     const authored = Math.max(box.max.y - box.min.y, 1e-4);
     const s = (target / authored) * userMul;
+    if (process.env.NODE_ENV !== 'production') {
+      // eslint-disable-next-line no-console
+      console.log(
+        `[fittedTransform] ${raceId} ${ct} — authored=${authored.toFixed(3)}m ` +
+        `target=${target.toFixed(3)}m scale=${s.toFixed(3)} ` +
+        `bbox=[${box.min.y.toFixed(3)}, ${box.max.y.toFixed(3)}]`,
+      );
+    }
     return { scale: s, offset: computeGroundOffset(box, s) };
   }, [
-    isCavalry, isSiege, raceId, userMul,
+    isCavalry, isSiege, raceId, userMul, race.heightMeters,
     characterClone, defaultVisibleSet,
   ]);
 

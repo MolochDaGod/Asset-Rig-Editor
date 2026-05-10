@@ -184,11 +184,11 @@ export const useCharacterStore = create<CharacterState>()(persist((set) => ({
   siegeScale: 1.0,
   weaponScale: 1.0,
 
-  // Default placement: a clear strip of dungeon floor near the front-left
-  // door (away from the central tables/barrels).
-  characterPosX: -3.5,
+  // Default placement: world origin (feet at Y=0). The dungeon
+  // environment is offset so the character lands on the floor.
+  characterPosX: 0,
   characterPosY: 0,
-  characterPosZ: 4.0,
+  characterPosZ: 0,
   characterRotY: 0,
   editMode: false,
   hiddenDungeonMeshes: [],
@@ -207,7 +207,7 @@ export const useCharacterStore = create<CharacterState>()(persist((set) => ({
   setCharacterRotY: (rad) => set({ characterRotY: rad }),
   setEditMode: (v) => set({ editMode: v }),
   resetCharacterPlacement: () =>
-    set({ characterPosX: -3.5, characterPosY: 0, characterPosZ: 4.0, characterRotY: 0 }),
+    set({ characterPosX: 0, characterPosY: 0, characterPosZ: 0, characterRotY: 0 }),
   toggleHiddenDungeonMesh: (name) =>
     set((state) => {
       const has = state.hiddenDungeonMeshes.includes(name);
@@ -321,8 +321,8 @@ export const useCharacterStore = create<CharacterState>()(persist((set) => ({
   // can re-derive from the gltf (availableAnimations) is excluded.
   // Bumping `version` will discard old saves on a breaking schema
   // change so users don't get stuck with an invalid persisted state.
-  name: 'toon-rts-customizer-v1',
-  version: 1,
+  name: 'toon-rts-customizer-v2',
+  version: 2,
   storage: createJSONStorage(() => localStorage),
   partialize: (state) => ({
     selectedRace: state.selectedRace,
