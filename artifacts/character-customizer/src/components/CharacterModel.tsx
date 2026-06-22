@@ -9,6 +9,7 @@ import { TOON_RACES, WeaponItem, AnimationEntry, CAVALRY_HEIGHT_M, SIEGE_HEIGHT_
 import { defaultLoadout } from '../utils/classifyPart';
 import { findRichestSkinnedMesh, findRichestTargetSkin, createRetargeter } from '../utils/mixamoRetarget';
 import { safeSkeletonClone } from '../utils/skeletonClone';
+import { adaptClipForRig, migrateSkeletonToMixamo } from '../utils/skeletonMigration';
 import { useRigAnimationLibrary } from '../data/rigAnimationLibrary';
 import { detectRigType } from '../data/skeletonRegistry';
 
@@ -214,9 +215,9 @@ function WeaponAttachment({
     // forms — the asset pack uses `Bip001 R Hand` (3 zeros + space-
     // separated), normalisation strips spaces so both patterns survive.
     const boneHintMap: Record<string, string[]> = {
-      lefthand:  ['lefthand', 'l_hand', 'hand_l', 'bip001lhand', 'bip01lhand'],
-      righthand: ['righthand', 'r_hand', 'hand_r', 'bip001rhand', 'bip01rhand'],
-      spine:     ['spine', 'spine1', 'pelvis', 'hips', 'bip001spine', 'bip001pelvis'],
+      lefthand:  ['lefthand', 'l_hand', 'hand_l', 'bip001lhand', 'bip01lhand', 'mixamoriglefthand'],
+      righthand: ['righthand', 'r_hand', 'hand_r', 'bip001rhand', 'bip01rhand', 'mixamorigrighthand'],
+      spine:     ['spine', 'spine1', 'pelvis', 'hips', 'bip001spine', 'bip001pelvis', 'mixamorigspine', 'mixamorighips'],
     };
     const key = weapon.attachBone.toLowerCase().replace(/[^a-z]/g, '');
     const hints = boneHintMap[key];
@@ -467,24 +468,26 @@ function RaceGLTFModel({ raceId }: { raceId: string }) {
   // shim is needed. Suspends on first call until the GLB is loaded.
   const activeAnimations: AnimationEntry[] = useRigAnimationLibrary();
 
-  // Skinned-aware clone of the gltf scene. `safeSkeletonClone` first
-  // re-attaches any orphan bones (3DS Max Biped exports leave the bone
-  // graph outside the scene tree, which makes plain `SkeletonUtils.clone`
-  // produce a clone whose `skeleton.bones[]` references stale source
-  // bones — animations then mutate one set of bones while skinning reads
-  // a different set, leaving the mesh frozen in T-pose).
-  const characterClone = useMemo(
-    () => safeSkeletonClone(gltf.scene),
-    [gltf]
-  );
-
   // Animation clip library — all clips on the mixamorig skeleton.
   const animLibGltf = useLoader(GLTFLoader, '/anims/mixamo-clips.glb');
-  // Retarget source skeleton — the Barbarian model has a SkinnedMesh
-  // on the mixamorig skeleton. We use it as the source for retargetClip
-  // when targeting Bip001 races. Separate from the clip GLB because the
-  // clip library may be animation-only (no SkinnedMesh).
+  // Mixamo reference rig — bind-pose source for Bip001→Mixamo migration
+  // and retargetClip source for cavalry/siege fused rigs.
   const retargetSourceGltf = useLoader(GLTFLoader, '/models/barbarian-mixamo.glb');
+
+  // Skinned-aware clone + skeleton migration. Infantry Bip001 rigs are
+  // renamed to mixamorig* in-place so Mixamo clips bind 1:1. Cavalry/siege
+  // fused rigs (rider + mount) keep their native skeleton and use retarget.
+  const characterClone = useMemo(() => {
+    const clone = safeSkeletonClone(gltf.scene);
+    if (!isCavalry && !isSiege) {
+      const rig = migrateSkeletonToMixamo(clone, retargetSourceGltf.scene);
+      if (process.env.NODE_ENV !== 'production') {
+        // eslint-disable-next-line no-console
+        console.log(`[CharacterModel] ${raceId} skeleton → ${rig}`);
+      }
+    }
+    return clone;
+  }, [gltf, isCavalry, isSiege, retargetSourceGltf, raceId]);
 
   useEffect(() => {
     applyTextureAndTint(characterClone, bodyTexture, mountTexture, colorHex, wireframe);
@@ -577,17 +580,18 @@ function RaceGLTFModel({ raceId }: { raceId: string }) {
     // already strips ALL position tracks; the native-mixamo path
     // strips them here so both paths produce in-place motion.
 
-    // ─── Native Mixamo path (Barbarian) ────────────────────────
+    // ─── Native Mixamo path (Barbarian + migrated infantry) ─────
     if (isMixamoRig) {
       return activeAnimations
         .map((entry) => {
           const src = byName.get(entry.id);
           if (!src) return null;
-          const clone = src.clone();
-          clone.tracks = clone.tracks.filter((t) => !/\.position$/.test(t.name));
-          clone.resetDuration();
-          clone.name = entry.name;
-          return clone;
+          let clip = adaptClipForRig(src, characterClone, 'mixamo25');
+          clip = clip.clone();
+          clip.tracks = clip.tracks.filter((t) => !/\.position$/.test(t.name));
+          clip.resetDuration();
+          clip.name = entry.name;
+          return clip;
         })
         .filter((c): c is THREE.AnimationClip => c !== null);
     }
