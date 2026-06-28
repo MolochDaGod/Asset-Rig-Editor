@@ -12,6 +12,7 @@ import { safeSkeletonClone } from '../utils/skeletonClone';
 import { adaptClipForRig, migrateSkeletonToMixamo } from '../utils/skeletonMigration';
 import { useRigAnimationLibrary } from '../data/rigAnimationLibrary';
 import { detectRigType } from '../data/skeletonRegistry';
+import type { GrudgeRaceId } from '../data/grudgeRaces';
 
 // Material-name based mount detection (used for the texture override on
 // human/orc cavalry, where the mount has its own material like "WK_Horse_A"
@@ -385,7 +386,7 @@ function computeGroundOffset(box: THREE.Box3, scale: number) {
   );
 }
 
-function RaceGLTFModel({ raceId }: { raceId: string }) {
+function RaceGLTFModel({ raceId }: { raceId: GrudgeRaceId }) {
   const race = TOON_RACES.find((r) => r.id === raceId)!;
 
   const {
@@ -446,7 +447,7 @@ function RaceGLTFModel({ raceId }: { raceId: string }) {
   const mountTexture = mountTexOverridePath ? mountTextureLoaded : null;
 
   // ─── Animation pipeline: Mixamo manifest is the SINGLE source of truth.
-  // Every race (Human, Elf, Dwarf, Orc, Undead, Barbarian) and every
+  // Every GRUDGE 6 race and every
   // character-type (Infantry, Cavalry, Siege) shares the same Bip001 rig
   // skeleton, so the same library plays on all of them. The previous
   // per-race `race.animations` / `race.siegeAnimations` arrays were a
@@ -849,7 +850,7 @@ function RaceGLTFModel({ raceId }: { raceId: string }) {
   );
 }
 
-export default function CharacterModel({ raceId }: { raceId: string }) {
+export default function CharacterModel({ raceId }: { raceId: GrudgeRaceId }) {
   return (
     <Suspense fallback={null}>
       <RaceGLTFModel raceId={raceId} />

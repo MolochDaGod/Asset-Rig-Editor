@@ -3,11 +3,11 @@ import { useCharacterStore } from '../store/customizer';
 import { CLASS_DEFS, CLASS_IDS } from '../data/grudgeStats';
 
 const RACE_ICONS: Record<string, string> = {
-  barbarian: '⚔️',
-  dwarf: '🪨',
-  elf: '🌿',
-  human: '🛡️',
-  orc: '🪓',
+  barbarians: '⚔️',
+  dwarves: '🪨',
+  'high-elves': '🌿',
+  'western-kingdoms': '🛡️',
+  orcs: '🪓',
   undead: '💀',
 };
 

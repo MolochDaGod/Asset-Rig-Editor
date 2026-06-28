@@ -1,6 +1,7 @@
 import { create } from 'zustand';
 import { persist, createJSONStorage } from 'zustand/middleware';
 import { TOON_RACES } from '../data/assets';
+import { normalizeRaceId, type GrudgeRaceId } from '../data/grudgeRaces';
 import type { ClassId } from '../data/grudgeStats';
 import type { AttributeId } from '../data/grudgeAttributes';
 import { ATTRIBUTE_IDS, totalPointsForLevel } from '../data/grudgeAttributes';
@@ -22,7 +23,7 @@ function makeDefaultAttrs(): Record<AttributeId, number> {
 }
 
 interface CharacterState {
-  selectedRace: string;
+  selectedRace: GrudgeRaceId;
   characterType: CharacterType;
   selectedWeapon: string | null;
   visibleMeshParts: Record<string, boolean>;
@@ -97,7 +98,7 @@ interface CharacterState {
   restoreAllDungeonMeshes: () => void;
   saveCamera: (pos: [number, number, number], target: [number, number, number]) => void;
   resetCamera: () => void;
-  setRace: (race: string) => void;
+  setRace: (race: GrudgeRaceId) => void;
   setCharacterType: (type: CharacterType) => void;
   setWeapon: (weaponId: string | null) => void;
   setMeshPartVisible: (partName: string, visible: boolean) => void;
@@ -132,11 +133,11 @@ interface CharacterState {
 }
 
 export const useCharacterStore = create<CharacterState>()(persist((set) => ({
-  selectedRace: 'human',
+  selectedRace: 'barbarians',
   characterType: 'infantry',
   selectedWeapon: null,
   visibleMeshParts: {},
-  selectedColorVariant: defaultVariantFor('human'),
+  selectedColorVariant: defaultVariantFor('barbarians'),
   animationPlaying: true,
   selectedAnimation: null,
   availableAnimations: [],
@@ -322,8 +323,16 @@ export const useCharacterStore = create<CharacterState>()(persist((set) => ({
   // Bumping `version` will discard old saves on a breaking schema
   // change so users don't get stuck with an invalid persisted state.
   name: 'toon-rts-customizer-v2',
-  version: 2,
+  version: 3,
   storage: createJSONStorage(() => localStorage),
+  migrate: (persisted, fromVersion) => {
+    const state = persisted as Partial<CharacterState>;
+    if (fromVersion < 3 && state.selectedRace) {
+      state.selectedRace = normalizeRaceId(state.selectedRace as string);
+      state.selectedColorVariant = defaultVariantFor(state.selectedRace);
+    }
+    return state as CharacterState;
+  },
   partialize: (state) => ({
     selectedRace: state.selectedRace,
     characterType: state.characterType,

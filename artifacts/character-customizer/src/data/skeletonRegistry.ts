@@ -4,7 +4,8 @@
  * Canonical definitions of the two skeleton types used across all
  * Grudge characters:
  *
- *   • Bip001  — 5 races (Human, Elf, Dwarf, Orc, Undead). 18–19 animation
+ *   • Bip001  — GRUDGE 6 (Barbarians, Dwarves, High Elves, Orcs, Undead,
+ *               Western Kingdoms). 18–19 animation
  *               bones from a 3DS Max Biped export, X-along bone locals.
  *   • Mixamo-25 — shared animation library + Mixamo-rigged exports. 22
  *               animation bones, Y-along bone locals, no fingers.

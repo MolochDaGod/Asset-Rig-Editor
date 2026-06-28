@@ -20,8 +20,15 @@
  */
 
 import inventoryJson from './partInventory.json';
+import {
+  GRUDGE_RACE_IDS,
+  inventoryKeyFor,
+  type GrudgeRaceId,
+  type LegacyFactionId,
+} from './grudgeRaces';
 
-export type FactionId = 'human' | 'elf' | 'dwarf' | 'orc' | 'undead' | 'barbarian';
+/** Canonical GRUDGE 6 race id (matches character-viewer). */
+export type FactionId = GrudgeRaceId;
 export type ModelKind = 'infantry' | 'cavalry' | 'siege';
 
 /** Logical part slot from the build sheet. */
@@ -72,7 +79,7 @@ export interface RaceInventory {
 
 interface Inventory {
   generatedAt: string;
-  races: Record<FactionId, RaceInventory>;
+  races: Record<LegacyFactionId, RaceInventory>;
 }
 
 export const INVENTORY = inventoryJson as Inventory;
@@ -149,10 +156,10 @@ export interface UnitRecipe {
   animationSet: AnimationSetId;
 }
 
-const FACTIONS: FactionId[] = ['human', 'elf', 'dwarf', 'orc', 'undead', 'barbarian'];
+const FACTIONS: FactionId[] = GRUDGE_RACE_IDS;
 
 function recipesFor(faction: FactionId): UnitRecipe[] {
-  const inv = INVENTORY.races[faction];
+  const inv = INVENTORY.races[inventoryKeyFor(faction)];
   const out: UnitRecipe[] = [
     { faction, unitType: 'infantry',       modelKind: 'infantry', weaponKind: 'sword', hasShield: true,  animationSet: 'infantry_sword_shield' },
     { faction, unitType: 'spearman',       modelKind: 'infantry', weaponKind: 'spear', hasShield: true,  animationSet: 'infantry_spear' },
@@ -182,13 +189,13 @@ export const UNIT_RECIPES: UnitRecipe[] = FACTIONS.flatMap(recipesFor);
 // ─────────────────────────────────────────────────────────────────────────────
 
 export function partsForFaction(faction: FactionId, kind: ModelKind, slot: PartSlot): InventoryPart[] {
-  const model = INVENTORY.races[faction]?.[kind];
+  const model = INVENTORY.races[inventoryKeyFor(faction)]?.[kind];
   if (!model) return [];
   return model.parts.filter((p) => p.slot === slot);
 }
 
 export function weaponsForKind(faction: FactionId, kind: ModelKind, weaponKind: WeaponKind): InventoryPart[] {
-  const model = INVENTORY.races[faction]?.[kind];
+  const model = INVENTORY.races[inventoryKeyFor(faction)]?.[kind];
   if (!model) return [];
   return model.parts.filter((p) => p.slot === 'weapon' && p.kind === weaponKind);
 }
