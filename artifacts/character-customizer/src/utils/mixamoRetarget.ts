@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import * as SkeletonUtils from 'three/examples/jsm/utils/SkeletonUtils.js';
 import {
   isUtilityBone,
+  detectRigType,
   RETARGET_NAMES,
   SPINE_COMPRESSION,
   type RetargetReport,
@@ -9,19 +10,17 @@ import {
 } from '../data/skeletonRegistry';
 
 /**
- * Mixamo-25 → Bip001 animation retargeting (v2).
+ * Mixamo-25 helpers (bind offsets / richest skin).
  *
- * Uses the canonical skeleton registry for bone mapping, utility bone
- * filtering, and spine-chain compression. One retargeter instance is
- * created per race/characterClone; its `bake(clip)` method converts a
- * single Mixamo AnimationClip into a Bip001-compatible clip in ~1ms.
+ * ⛔ RUNTIME PURGE (2026-07): Asset-Rig-Editor MUST NOT retarget Mixamo clips
+ * onto Bip001 / grudge6 / RTS_TOON race kits. Axis mismatch (Y-along Mixamo vs
+ * X-along Bip001) produces sideways limbs and hip-float.
  *
- * Key improvements over v1:
- *   • Toe bones mapped (LeftToeBase → L_Toe0, RightToeBase → R_Toe0)
- *   • Spine 3→2 compression handled properly (Spine2 merged into Spine1)
- *   • Utility bones excluded from findRichestSkinnedMesh
- *   • No reverse-map collision (RETARGET_NAMES is 1:1)
- *   • Diagnostic report for the debug panel
+ * `createRetargeter` remains for offline experiments only — CharacterModel no
+ * longer calls it for display races. Production Bip001 packs:
+ *   https://grudge-pipeline.vercel.app/  +  anims/baked/*
+ *
+ * Allowed: Mixamo library → mixamorig-only characters (detectRigType mixamo25).
  */
 
 // ── Helpers ─────────────────────────────────────────────────────────
@@ -131,6 +130,15 @@ export function createRetargeter(
   sourceScene: THREE.Object3D,
   targetSkin: THREE.SkinnedMesh,
 ) {
+  // Hard gate: never retarget Mixamo → Bip001 / grudge6 display kits.
+  const tgtBones = targetSkin.skeleton.bones.map((b) => b.name);
+  if (detectRigType(tgtBones) === 'bip001') {
+    throw new Error(
+      '[PURGED] createRetargeter(Mixamo → Bip001) is banned. ' +
+        'Use Bip001 packs on https://grudge-pipeline.vercel.app/ (anims/baked/*).',
+    );
+  }
+
   const sourceClone = SkeletonUtils.clone(sourceScene);
   const sourceSkin = findRichestSkinnedMesh(sourceClone);
   if (!sourceSkin) throw new Error('retarget: source scene has no SkinnedMesh');

@@ -10,14 +10,14 @@ import {
 } from '../data/skeletonRegistry';
 
 /**
- * Skeleton migration utilities — Bip001 ↔ Mixamo-25.
+ * Skeleton name helpers — Bip001 ↔ Mixamo-25.
  *
- * Infantry models ship on 3DS Max Biped (Bip001) while the animation
- * library is authored on Mixamo (mixamorig*). This module:
- *   1. Renames Bip001 bones → mixamorig* on the character mesh so clips
- *      bind 1:1 without retarget math (skeleton migration).
- *   2. Renames clip tracks Mixamo → Bip001 when retargeting is skipped.
- *   3. Prunes tracks that have no matching bone on the target rig.
+ * ⛔ RUNTIME PURGE (2026-07): `migrateSkeletonToMixamo` is a hard no-op.
+ * Asset-Rig-Editor must NOT rename grudge6 / RTS_TOON Bip001 kits to
+ * mixamorig for Mixamo clip binding. Axis families are incompatible.
+ *
+ * Clip rename helpers remain for offline experiments only. Production
+ * Bip001 packs: https://grudge-pipeline.vercel.app/ + anims/baked/*
  */
 
 const UTILITY_PARENT_MIXAMO: Record<string, string> = {
@@ -180,40 +180,29 @@ export function adaptClipForRig(
 }
 
 /**
- * Migrate a Bip001 character skeleton to Mixamo bone names in-place.
- * Optionally copies bind-pose locals from a Mixamo reference rig.
+ * ⛔ PURGED (2026-07) — DO NOT migrate Bip001 → mixamorig.
  *
- * Returns the detected rig type after migration.
+ * Asset-Rig-Editor previously renamed Toon RTS / grudge6 Bip001 bones to
+ * Mixamo names so Mixamo clips would bind. That is **incorrect** for fleet
+ * grudge6 production (X-along Bip001 vs Y-along Mixamo). CharacterModel no
+ * longer calls this. Production path: grudge-pipeline + anims/baked/*.
+ *
+ * This function is a **hard no-op** that returns the native rig type.
+ * Call sites that still import it get a console error instead of a broken
+ * skeleton.
  */
 export function migrateSkeletonToMixamo(
   root: THREE.Object3D,
-  referenceRoot?: THREE.Object3D,
+  _referenceRoot?: THREE.Object3D,
 ): RigType {
   const before = detectRigType(collectBoneNames(root));
-  if (before === 'mixamo25') return 'mixamo25';
-  if (before !== 'bip001') return before;
-
-  root.traverse((o) => {
-    if (!(o as THREE.Bone).isBone || isUtilityBone(o.name)) return;
-    const normalized = normalizeBoneName(o.name);
-    const mixName = BIP001_TO_MIXAMO.get(normalized);
-    if (mixName) o.name = mixName;
-  });
-
-  for (const [utilityName, parentMixamo] of Object.entries(UTILITY_PARENT_MIXAMO)) {
-    const util = findBoneByName(root, utilityName) ?? findBoneByName(root, normalizeBoneName(utilityName));
-    if (!util) continue;
-    const parent = findBoneByName(root, parentMixamo);
-    if (parent && util.parent !== parent) {
-      parent.add(util);
-    }
-  }
-
-  if (referenceRoot) {
-    syncBindPoseFromReference(root, referenceRoot);
-  }
-
-  return detectRigType(collectBoneNames(root));
+  // eslint-disable-next-line no-console
+  console.error(
+    '[PURGED] migrateSkeletonToMixamo is banned on grudge6 / Bip001. ' +
+      'Preserve native bones; use Bip001 packs on https://grudge-pipeline.vercel.app/ ' +
+      `(detected=${before})`,
+  );
+  return before;
 }
 
 /** Copy animation-bone locals from reference Mixamo rig onto migrated bones. */

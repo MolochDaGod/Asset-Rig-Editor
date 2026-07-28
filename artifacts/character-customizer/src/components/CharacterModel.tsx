@@ -7,12 +7,17 @@ import * as SkeletonUtils from 'three/examples/jsm/utils/SkeletonUtils.js';
 import { useCharacterStore } from '../store/customizer';
 import { TOON_RACES, WeaponItem, AnimationEntry, CAVALRY_HEIGHT_M, SIEGE_HEIGHT_M } from '../data/assets';
 import { defaultLoadout } from '../utils/classifyPart';
-import { findRichestSkinnedMesh, findRichestTargetSkin, createRetargeter } from '../utils/mixamoRetarget';
+import { findRichestTargetSkin, findRichestSkinnedMesh } from '../utils/mixamoRetarget';
 import { safeSkeletonClone } from '../utils/skeletonClone';
-import { adaptClipForRig, migrateSkeletonToMixamo } from '../utils/skeletonMigration';
 import { useRigAnimationLibrary } from '../data/rigAnimationLibrary';
 import { detectRigType } from '../data/skeletonRegistry';
 import type { GrudgeRaceId } from '../data/grudgeRaces';
+import {
+  FORBID_MIXAMO_ON_BIP001,
+  isClipSourceAllowed,
+  purgeReason,
+  GRUDGE6_PIPELINE_URL,
+} from '../data/grudge6Policy';
 
 // Material-name based mount detection (used for the texture override on
 // human/orc cavalry, where the mount has its own material like "WK_Horse_A"
@@ -446,49 +451,24 @@ function RaceGLTFModel({ raceId }: { raceId: GrudgeRaceId }) {
   const bodyTexture  = bodyTexOverridePath  ? bodyTextureLoaded  : null;
   const mountTexture = mountTexOverridePath ? mountTextureLoaded : null;
 
-  // ─── Animation pipeline: Mixamo manifest is the SINGLE source of truth.
-  // Every GRUDGE 6 race and every
-  // character-type (Infantry, Cavalry, Siege) shares the same Bip001 rig
-  // skeleton, so the same library plays on all of them. The previous
-  // per-race `race.animations` / `race.siegeAnimations` arrays were a
-  // separate pipeline that competed with Mixamo and produced inconsistent
-  // results across races (e.g. cavalry showing only cavalry-tagged clips
-  // for some races and a chaotic mix for others). They've been removed
-  // from `assets.ts`; the Mixamo manifest is the only place that lists
-  // playable clips. Bone-name retargeting (mixamorig:* → Bip001) happens
-  // in `adaptClipForRig`, so a clip authored for one rig binds correctly
-  // to all of them.
-  //
-  // Memo so the array reference is stable across renders — otherwise the
-  // dependent useMemo/useEffect chain (animPaths → animGltfs → allClips →
-  // setAvailableAnimations) re-fires every render and infinite-loops the
-  // store update.
-  // Rig-native animation source. ONE shared GLB (animation-library.glb)
-  // contains 186 clips already authored against the same Hips/Spine/...
-  // bone names every race uses, so no rename / prune / Mixamo-compat
-  // shim is needed. Suspends on first call until the GLB is loaded.
+  // ─── Animation pipeline (GRUDGE6 ADMIN PURGE 2026-07) ─────────────────
+  // Mixamo library is ALLOWED ONLY on mixamorig (mixamo25) skeletons.
+  // Bip001 / grudge6 / RTS_TOON kits: embedded model clips only.
+  // NEVER retarget Mixamo → Bip001 (axis mismatch Y-along vs X-along).
+  // NEVER migrateSkeletonToMixamo on infantry — that renames Bip001 to
+  // mixamorig and destroys grudge6 correctness.
+  // Production Bip001 packs: grudge-pipeline + anims/baked/* on CDN.
   const activeAnimations: AnimationEntry[] = useRigAnimationLibrary();
 
-  // Animation clip library — all clips on the mixamorig skeleton.
+  // Mixamo clip library — used ONLY when the *display* rig is mixamo25.
+  // Still loaded (hooks cannot be conditional) but ignored for Bip001.
   const animLibGltf = useLoader(GLTFLoader, '/anims/mixamo-clips.glb');
-  // Mixamo reference rig — bind-pose source for Bip001→Mixamo migration
-  // and retargetClip source for cavalry/siege fused rigs.
-  const retargetSourceGltf = useLoader(GLTFLoader, '/models/barbarian-mixamo.glb');
+  // barbarian-mixamo was retarget SOURCE — no longer used for Bip001 purge.
+  useLoader(GLTFLoader, '/models/barbarian-mixamo.glb');
 
-  // Skinned-aware clone + skeleton migration. Infantry Bip001 rigs are
-  // renamed to mixamorig* in-place so Mixamo clips bind 1:1. Cavalry/siege
-  // fused rigs (rider + mount) keep their native skeleton and use retarget.
-  const characterClone = useMemo(() => {
-    const clone = safeSkeletonClone(gltf.scene);
-    if (!isCavalry && !isSiege) {
-      const rig = migrateSkeletonToMixamo(clone, retargetSourceGltf.scene);
-      if (process.env.NODE_ENV !== 'production') {
-        // eslint-disable-next-line no-console
-        console.log(`[CharacterModel] ${raceId} skeleton → ${rig}`);
-      }
-    }
-    return clone;
-  }, [gltf, isCavalry, isSiege, retargetSourceGltf, raceId]);
+  // Skinned-aware clone — preserve native Bip001 / multipack skeleton.
+  // Do NOT rename bones to mixamorig (purged migrateSkeletonToMixamo).
+  const characterClone = useMemo(() => safeSkeletonClone(gltf.scene), [gltf]);
 
   useEffect(() => {
     applyTextureAndTint(characterClone, bodyTexture, mountTexture, colorHex, wireframe);
@@ -540,89 +520,59 @@ function RaceGLTFModel({ raceId }: { raceId: GrudgeRaceId }) {
     [characterClone],
   );
 
-  // True when this character is ALREADY on the canonical Mixamo
-  // skeleton (Barbarian) — the library clips bind 1:1 by name and no
-  // retarget is needed. False for the Bip001 races (Dwarf/Elf/Orc/
-  // Undead/Human) which need per-clip retargeting through
-  // `SkeletonUtils.retargetClip` to convert the source's Y-along
-  // bone-local rotations into the target's X-along bone-local frame.
-  //
-  // Uses detectRigType() from the skeleton registry which filters out
-  // utility bones (bag, wood, quiver, hand containers) before checking
-  // — so extra equipment bones never pollute the detection ratio.
+  // True only for mixamorig skeletons — Mixamo library binds 1:1.
+  // Bip001 races: embedded clips only (Mixamo retarget purged).
   const isMixamoRig = useMemo(() => {
     if (!targetSkin) return false;
     const boneNames = targetSkin.skeleton.bones.map((b) => b.name);
     return detectRigType(boneNames) === 'mixamo25';
   }, [targetSkin]);
 
-  // Build the per-race retargeter ONCE (per characterClone). It clones
-  // the source mixamo scene internally and snapshots the target bind
-  // pose. `bake(clip)` is then ~1ms per clip on a typical 305-clip pack.
-  // Null for the barbarian (no retargeting needed) and for the brief
-  // window before targetSkin resolves.
-  const retargeter = useMemo(() => {
-    if (!targetSkin || isMixamoRig) return null;
-    return createRetargeter(retargetSourceGltf.scene, targetSkin);
-  }, [retargetSourceGltf.scene, targetSkin, isMixamoRig]);
+  // PURGED: Mixamo→Bip001 retargeter is never constructed.
+  // Historical createRetargeter(mixamoSource, bip001Target) caused sideways
+  // limbs and hip-float. grudge-pipeline owns Bip001 pack production.
 
   const allClips = useMemo(() => {
-    const lib = animLibGltf.animations ?? [];
-    if (!lib.length || !targetSkin) {
-      return (gltf.animations ?? []).slice();
-    }
-    const byName = new Map<string, THREE.AnimationClip>();
-    for (const c of lib) byName.set(c.name, c);
+    const stripRootPos = (clip: THREE.AnimationClip) => {
+      const clone = clip.clone();
+      clone.tracks = clone.tracks.filter((t) => !/\.position$/i.test(t.name));
+      clone.resetDuration();
+      return clone;
+    };
 
-    // Strip Hips position tracks (root motion) on every output clip:
-    // the customizer animates in place on a fixed gizmo, so a baked
-    // pelvis translation would slide the character around the
-    // viewport / lift them off the floor. The retarget path's bake()
-    // already strips ALL position tracks; the native-mixamo path
-    // strips them here so both paths produce in-place motion.
-
-    // ─── Native Mixamo path (Barbarian + migrated infantry) ─────
-    if (isMixamoRig) {
-      return activeAnimations
+    // ─── Native Mixamo path only (mixamorig skeleton — not migrated Bip001) ─
+    if (
+      isMixamoRig &&
+      isClipSourceAllowed('mixamo25', 'mixamo-library') &&
+      targetSkin
+    ) {
+      const lib = animLibGltf.animations ?? [];
+      if (!lib.length) return (gltf.animations ?? []).map(stripRootPos);
+      const byName = new Map<string, THREE.AnimationClip>();
+      for (const c of lib) byName.set(c.name, c);
+      const fromLib = activeAnimations
         .map((entry) => {
           const src = byName.get(entry.id);
           if (!src) return null;
-          let clip = adaptClipForRig(src, characterClone, 'mixamo25');
-          clip = clip.clone();
-          clip.tracks = clip.tracks.filter((t) => !/\.position$/.test(t.name));
-          clip.resetDuration();
-          clip.name = entry.name;
-          return clip;
+          const clone = stripRootPos(src);
+          clone.name = entry.name;
+          return clone;
         })
         .filter((c): c is THREE.AnimationClip => c !== null);
+      return fromLib.length ? fromLib : (gltf.animations ?? []).map(stripRootPos);
     }
 
-    // ─── Retarget path (the five Bip001 races) ─────────────────
-    // SkeletonUtils.retargetClip projects each frame's source pose
-    // through world-space alignment back into the target's local
-    // bone basis. This is what makes a Y-along Mixamo "raise arm"
-    // rotation correctly become an X-along Bip001 "raise arm"
-    // rotation — instead of the sideways/inverted motion you'd get
-    // from a plain rename.
-    if (!retargeter) return (gltf.animations ?? []).slice();
-    return activeAnimations
-      .map((entry) => {
-        const src = byName.get(entry.id);
-        if (!src) return null;
-        try {
-          const baked = retargeter.bake(src);
-          baked.name = entry.name;
-          return baked;
-        } catch (e) {
-          if (process.env.NODE_ENV !== 'production') {
-            // eslint-disable-next-line no-console
-            console.warn(`[CharacterModel] retarget failed for clip "${entry.id}":`, e);
-          }
-          return null;
-        }
-      })
-      .filter((c): c is THREE.AnimationClip => c !== null);
-  }, [animLibGltf, activeAnimations, gltf.animations, targetSkin, isMixamoRig, retargeter]);
+    // ─── Bip001 / unknown: EMBEDDED clips only (PURGE mixamo + migration) ─
+    const reason = purgeReason(
+      isMixamoRig ? 'mixamo25' : 'bip001',
+      'mixamo-library',
+    );
+    if (FORBID_MIXAMO_ON_BIP001 && reason) {
+      // eslint-disable-next-line no-console
+      console.info(`[CharacterModel] ${reason} → ${GRUDGE6_PIPELINE_URL}`);
+    }
+    return (gltf.animations ?? []).map((c) => stripRootPos(c));
+  }, [animLibGltf, activeAnimations, gltf.animations, targetSkin, isMixamoRig]);
 
   const lastPushedNamesRef = useRef<string>('');
   useEffect(() => {
@@ -639,14 +589,10 @@ function RaceGLTFModel({ raceId }: { raceId: GrudgeRaceId }) {
   const prevAnimRef = useRef<string | null>(null);
 
   // Bind the mixer to the RICHEST SkinnedMesh in the clone — NOT to the
-  // group.
+  // group. PropertyBinding needs targetObject.skeleton for bone tracks.
+  // (Legacy retargetClip note removed — Mixamo→Bip001 purged.)
   //
-  // The baked clips coming out of `SkeletonUtils.retargetClip` use track
-  // paths of the form `.bones[Bip001_Pelvis].quaternion`. Three's
-  // `PropertyBinding` resolves that segment via the dedicated `bones`
-  // case which requires `targetObject.skeleton` to exist; otherwise it
-  // logs `THREE.PropertyBinding: Can not bind to bones as node does not
-  // have a skeleton.` and the track silently does nothing. A `Group`
+  // A `Group`
   // root has no `.skeleton`, so a Group-rooted mixer cannot drive any
   // `.bones[...]` track at all — no skinning deformation, character
   // stays in bind pose.

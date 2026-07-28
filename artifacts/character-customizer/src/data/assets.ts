@@ -32,9 +32,10 @@ export interface ToonRace {
   siegeGltfPath?: string;
   equipment: WeaponItem[];
   /**
-   * @deprecated Per-race animations are no longer used. The Mixamo library
-   * (loaded by `useMixamoLibrary` from `public/animations/mixamo/manifest.json`)
-   * is the single animation pipeline for every race and every character-type.
+   * @deprecated Not used. Animations:
+   *  - mixamorig rigs → mixamo-clips.glb only
+   *  - Bip001 / grudge6 multipacks → embedded clips only (no Mixamo retarget / no skeleton migration)
+   * Production Bip001 packs: grudge-pipeline.vercel.app + anims/baked/*
    */
   animations?: AnimationEntry[];
   siegeAnimations?: AnimationEntry[];

@@ -11,7 +11,7 @@ The frontend is a React + Vite web application built with React Three Fiber, lev
 
 **Key Features:**
 - **Character Customizer**: A 3D character customizer supporting 6 playable races with infantry and cavalry variants.
-- **Asset Pipeline**: Uses glTF and PNG for all 3D assets. Animations stream from a single Mixamo clip library (`public/anims/mixamo-clips.glb`) and are retargeted at runtime onto each race's own skeleton via `SkeletonUtils.retargetClip` (see `src/utils/mixamoRetarget.ts`).
+- **Asset Pipeline**: Uses glTF and PNG for multipack preview. **PURGED (2026-07):** Mixamo is NOT retargeted onto Bip001/grudge6 kits. Mixamo library binds only to mixamorig skeletons. Bip001 production packs + grudge6 admin live on **grudge-pipeline.vercel.app**. See `artifacts/character-customizer/docs/GRUDGE6_PURGE.md`.
 - **Scaling & Positional Contract**: Characters are scaled based on lore-target `heightMeters` and anchored to X/Z center and Y=0 for consistent world placement.
 - **UI/UX**: Features a WoW-style layout with a full-screen 3D viewport, floating left panel, and a bottom race bar.
 - **Rendering**: Employs `@react-three/postprocessing` with Bloom, SMAA, and ToneMapping for enhanced visual effects, complemented by dramatic 3-point lighting, atmospheric fog, floating particles, and a glow ring.
@@ -19,7 +19,7 @@ The frontend is a React + Vite web application built with React Three Fiber, lev
 
 **Technical Implementations:**
 - `vite.config.ts` ensures `resolve.dedupe: ["three"]` and `optimizeDeps.include: ["postprocessing"]` for correct Three.js and postprocessing library handling.
-- `CharacterModel.tsx` manages FBX/GLTF loading, cavalry FBX swapping, dual-texture application, and bone-attached weapons. For non-Mixamo races (the five Bip001 rigs) it builds a per-race retargeter via `createRetargeter(animLibScene, targetSkin)` and bakes each library clip onto the race's own skeleton; the Barbarian (already on a mixamorig skeleton) skips retargeting and binds clips directly. **Do NOT reintroduce a "skeleton swap" / shared-skeleton approach: Bip001 bones use local +X along the bone, Mixamo bones use local +Y, so reusing a Mixamo skeleton on a Bip001-authored mesh produces wrong-axis limb motion. `SkeletonUtils.retargetClip` is the only correct path.**
+- `CharacterModel.tsx` loads multipack glTF + atlas variants + equipment visibility. **Bip001 races: embedded clips only — no Mixamo retarget.** mixamorig-only: may bind `mixamo-clips.glb` 1:1. **Never** skeleton-swap Mixamo armature onto Bip001 mesh. Fleet grudge6 mesh/skeleton/texture admin = grudge-pipeline.
 - **Bind-pose `localOffsets` are required.** `SkeletonUtils.retargetClip` matches per-bone WORLD rotations as `target_world_R := source_world_R · localOffset[bone]`. Without `localOffsets`, the Bip001 limbs come out rotated ~90° (or more) from their bind axes — legs point sideways and the character appears to float above the ground. `mixamoRetarget.ts → computeBindPoseOffsets` snapshots the target bind, poses both skeletons, and computes `localOffset = source_world_R⁻¹ · target_world_R` per mapped bone. Verified offline: reconstruction error at the source-bind frame is 0.00° for all 18 mapped bones; Pelvis/Spine offsets are exactly 90° around Z (the X↔Y swap).
 
 # External Dependencies

@@ -5,6 +5,7 @@ import SidePanel from './components/SidePanel';
 import BottomBar from './components/BottomBar';
 import HudOverlay from './components/HudOverlay';
 import Hotbar from './components/Hotbar';
+import Grudge6AdminBanner from './components/Grudge6AdminBanner';
 import { useCharacterStore } from './store/customizer';
 import { TOON_RACES } from './data/assets';
 
@@ -155,6 +156,7 @@ export default function App() {
       )}
 
       <RaceOverlay />
+      <Grudge6AdminBanner />
       <HudOverlay />
 
       {/* Side panel sits BELOW the race header (which spans roughly the
