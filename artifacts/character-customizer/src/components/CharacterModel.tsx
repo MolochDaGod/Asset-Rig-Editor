@@ -18,6 +18,9 @@ import {
   purgeReason,
   GRUDGE6_PIPELINE_URL,
 } from '../data/grudge6Policy';
+import { diagnoseUnitScale, HUMAN_HEIGHT_M } from '../data/worldScale';
+import { buildKitIdentity } from '../utils/assetDeploy';
+import { useAssetIdentityStore } from '../store/assetIdentityStore';
 
 // Material-name based mount detection (used for the texture override on
 // human/orc cavalry, where the mount has its own material like "WK_Horse_A"
@@ -671,16 +674,26 @@ function RaceGLTFModel({ raceId }: { raceId: GrudgeRaceId }) {
       : race.heightMeters;
     const box = measureStructuralBBox(characterClone, ct, defaultVisibleSet);
     const authored = Math.max(box.max.y - box.min.y, 1e-4);
+    // SI best practice: diagnose unit decade (100× cm-as-m) then fit to lore height.
+    const unit = diagnoseUnitScale(authored, target);
     const s = (target / authored) * userMul;
     if (process.env.NODE_ENV !== 'production') {
       // eslint-disable-next-line no-console
       console.log(
         `[fittedTransform] ${raceId} ${ct} — authored=${authored.toFixed(3)}m ` +
-        `target=${target.toFixed(3)}m scale=${s.toFixed(3)} ` +
+        `target=${target.toFixed(3)}m scale=${s.toFixed(3)} unit=${unit.diagnosis} ` +
+        `×human=${(target / HUMAN_HEIGHT_M).toFixed(2)} ` +
         `bbox=[${box.min.y.toFixed(3)}, ${box.max.y.toFixed(3)}]`,
       );
     }
-    return { scale: s, offset: computeGroundOffset(box, s) };
+    return {
+      scale: s,
+      offset: computeGroundOffset(box, s),
+      authored,
+      target,
+      unitDiagnosis: unit.diagnosis,
+      characterType: ct,
+    };
   }, [
     isCavalry, isSiege, raceId, userMul, race.heightMeters,
     characterClone, defaultVisibleSet,
@@ -688,6 +701,42 @@ function RaceGLTFModel({ raceId }: { raceId: GrudgeRaceId }) {
 
   const scale = fittedTransform.scale;
   const offset = fittedTransform.offset;
+
+  // Publish grudge UUIDs + SI report for Assets tab / export
+  const setKitIdentity = useAssetIdentityStore((s) => s.setKit);
+
+  useEffect(() => {
+    // Stamp identity on the clone after scale math is known.
+    // World positions update when outer placement changes — rebuild then.
+    const kit = buildKitIdentity(characterClone, {
+      raceId,
+      characterType: fittedTransform.characterType,
+      heightM: fittedTransform.target,
+      fitScale: scale,
+      unitDiagnosis: fittedTransform.unitDiagnosis,
+      groundOffset: { x: offset.x, y: offset.y, z: offset.z },
+      position: { x: characterPosX, y: characterPosY, z: characterPosZ },
+      rotationY: characterRotY,
+    });
+    // Refresh world coords after matrix — traverse uses mesh world pos from current matrices
+    setKitIdentity(kit);
+  }, [
+    characterClone,
+    raceId,
+    scale,
+    offset.x,
+    offset.y,
+    offset.z,
+    fittedTransform.target,
+    fittedTransform.unitDiagnosis,
+    fittedTransform.characterType,
+    characterPosX,
+    characterPosY,
+    characterPosZ,
+    characterRotY,
+    visibleMeshParts,
+    setKitIdentity,
+  ]);
 
   // SkeletonHelper draws a line-segment overlay of the bone hierarchy.
   // We create one helper per characterClone (it walks the bone graph at

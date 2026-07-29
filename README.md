@@ -15,7 +15,16 @@ Equipment multipack viewer for Toon RTS–style glTF + PNG packs (body/arms/legs
 | Weapon skills + Forge deep links | Pipeline → forge.grudge-studio.com |
 | Mixamo → Bip001 retarget in this app | **PURGED** |
 
-### Rig Studio (new)
+### SI scale + asset identity (IDs tab)
+
+- **1 unit = 1 metre** · heroes fit lore height / **1.8 m human** yardstick  
+- Feet grounded via Box3 · weapons **never** hero-fit  
+- Every mesh stamped with **grudgeUuid**, **assetKey**, **slot**, **world location**, **attachPoint**  
+- Side panel **IDs** tab + Export JSON include full identity catalog  
+
+See [`artifacts/character-customizer/docs/ASSET_IDENTITY_SI.md`](artifacts/character-customizer/docs/ASSET_IDENTITY_SI.md).
+
+### Rig Studio
 
 Side panel **Rig** tab — Mixamo/Meshy-style workflow:
 

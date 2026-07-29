@@ -1,11 +1,14 @@
 /**
  * Load a user-uploaded 3D file into a Three.js scene graph + detect rig.
+ * Applies SI best practices (1 unit = 1 m, hero fit ~1.8 m, feet ground).
  */
 import * as THREE from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import { FBXLoader } from 'three/examples/jsm/loaders/FBXLoader.js';
 import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader.js';
 import { detectRigType, type RigType } from '../data/skeletonRegistry';
+import { deployObjectSI, type DeployResult } from './assetDeploy';
+import { HUMAN_HEIGHT_M } from '../data/worldScale';
 
 export interface LoadedUserModel {
   root: THREE.Object3D;
@@ -13,6 +16,7 @@ export interface LoadedUserModel {
   boneNames: string[];
   detectedRig: RigType;
   bbox: THREE.Box3;
+  deploy: DeployResult;
 }
 
 function collectBones(root: THREE.Object3D): string[] {
@@ -30,37 +34,6 @@ function collectBones(root: THREE.Object3D): string[] {
     }
   });
   return names;
-}
-
-function groundAndCenter(root: THREE.Object3D): THREE.Box3 {
-  root.updateMatrixWorld(true);
-  const box = new THREE.Box3().setFromObject(root);
-  if (box.isEmpty()) {
-    return new THREE.Box3(
-      new THREE.Vector3(-0.4, 0, -0.25),
-      new THREE.Vector3(0.4, 1.8, 0.25),
-    );
-  }
-  const size = box.getSize(new THREE.Vector3());
-  // Fit to ~1.8 m if wildly off (cm exports)
-  if (size.y > 0.01) {
-    let s = 1;
-    if (size.y > 50) s = 1.8 / size.y; // cm-ish
-    else if (size.y < 0.2) s = 1.8 / size.y; // tiny
-    else if (size.y > 3.5) s = 1.8 / size.y; // tall giant
-    if (s !== 1) {
-      root.scale.multiplyScalar(s);
-      root.updateMatrixWorld(true);
-      box.setFromObject(root);
-    }
-  }
-  // Feet to y=0, center XZ
-  const c = box.getCenter(new THREE.Vector3());
-  root.position.x -= c.x;
-  root.position.z -= c.z;
-  root.position.y -= box.min.y;
-  root.updateMatrixWorld(true);
-  return new THREE.Box3().setFromObject(root);
 }
 
 export async function loadUserModelFromUrl(
@@ -93,11 +66,27 @@ export async function loadUserModelFromUrl(
     }
   });
 
-  const bbox = groundAndCenter(root);
+  // SI deploy: unit decade + fit to HUMAN_HEIGHT_M + feet ground + stamp UUIDs
+  const deploy = deployObjectSI(root, {
+    category: 'character',
+    targetHeightM: HUMAN_HEIGHT_M,
+    raceId: 'user',
+    characterType: 'user',
+    applyTransform: true,
+    groundFeet: true,
+  });
+
+  const bbox = new THREE.Box3().setFromObject(root);
+  if (bbox.isEmpty()) {
+    bbox.set(
+      new THREE.Vector3(-0.4, 0, -0.25),
+      new THREE.Vector3(0.4, HUMAN_HEIGHT_M, 0.25),
+    );
+  }
   const boneNames = collectBones(root);
   const detectedRig = detectRigType(boneNames);
 
-  return { root, animations, boneNames, detectedRig, bbox };
+  return { root, animations, boneNames, detectedRig, bbox, deploy };
 }
 
 export function bboxToArrays(box: THREE.Box3): {

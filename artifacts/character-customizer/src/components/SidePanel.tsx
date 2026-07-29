@@ -6,12 +6,14 @@ import ExportPanel from './ExportPanel';
 import SceneEditorPanel from './SceneEditorPanel';
 import StatsPanel from './StatsPanel';
 import RigStudioPanel from './RigStudioPanel';
+import AssetIdentityPanel from './AssetIdentityPanel';
 
 const TABS = [
   { id: 'gear',        label: 'Gear',   icon: '🛡️' },
   { id: 'appearance',  label: 'Looks',  icon: '✨' },
   { id: 'animations',  label: 'Anim',   icon: '🎬' },
   { id: 'rig',         label: 'Rig',    icon: '🦴' },
+  { id: 'assets',      label: 'IDs',    icon: '🆔' },
   { id: 'stats',       label: 'Stats',  icon: '📊' },
   { id: 'scene',       label: 'Scene',  icon: '🎚️' },
   { id: 'export',      label: 'Export', icon: '📦' },
@@ -48,6 +50,7 @@ export default function SidePanel() {
         {activeTab === 'appearance'  && <AppearancePanel />}
         {activeTab === 'animations'  && <AnimationPanel />}
         {activeTab === 'rig'         && <RigStudioPanel />}
+        {activeTab === 'assets'      && <AssetIdentityPanel />}
         {activeTab === 'stats'       && <StatsPanel />}
         {activeTab === 'scene'       && <SceneEditorPanel />}
         {activeTab === 'export'      && <ExportPanel />}

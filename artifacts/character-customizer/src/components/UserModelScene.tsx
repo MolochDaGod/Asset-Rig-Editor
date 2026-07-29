@@ -6,6 +6,7 @@ import { useFrame, ThreeEvent } from '@react-three/fiber';
 import { TransformControls, Line } from '@react-three/drei';
 import * as THREE from 'three';
 import { useRigStudioStore } from '../store/rigStudio';
+import { useAssetIdentityStore } from '../store/assetIdentityStore';
 import { loadUserModelFromUrl } from '../utils/loadUserModel';
 import { REGION_COLORS } from '../data/rigTemplates';
 
@@ -91,6 +92,7 @@ export default function UserModelScene() {
   const autoPlaceJoints = useRigStudioStore((s) => s.autoPlaceJoints);
   const setUserModel = useRigStudioStore((s) => s.setUserModel);
   const setStatusMessage = useRigStudioStore((s) => s.setStatusMessage);
+  const setKitIdentity = useAssetIdentityStore((s) => s.setKit);
 
   const [root, setRoot] = useState<THREE.Object3D | null>(null);
   const [helper, setHelper] = useState<THREE.SkeletonHelper | null>(null);
@@ -147,8 +149,12 @@ export default function UserModelScene() {
           mixerRef.current = null;
         }
 
+        // SI + grudge UUID catalog from deployObjectSI
+        setKitIdentity(loaded.deploy.kit);
         setStatusMessage(
-          `Ready · ${userModel.name} · bones=${boneNames.length} · clips=${clipNames.length} · rig=${loaded.detectedRig}`,
+          `Ready · ${userModel.name} · ${loaded.deploy.scaleReport.message} · ` +
+          `bones=${boneNames.length} · clips=${clipNames.length} · rig=${loaded.detectedRig} · ` +
+          `uuid=${loaded.deploy.kit.grudgeUuid.slice(0, 8)}…`,
         );
       })
       .catch((err) => {
