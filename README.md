@@ -15,6 +15,18 @@ Equipment multipack viewer for Toon RTS–style glTF + PNG packs (body/arms/legs
 | Weapon skills + Forge deep links | Pipeline → forge.grudge-studio.com |
 | Mixamo → Bip001 retarget in this app | **PURGED** |
 
+### Rig Studio (new)
+
+Side panel **Rig** tab — Mixamo/Meshy-style workflow:
+
+1. **Add model** — drop GLB / GLTF / FBX / OBJ  
+2. Choose skeleton template **Mixamo-25** or **Bip001**  
+3. **Auto-place joints** on mesh bounds; refine with 3D gizmo  
+4. **Anim categories** (loco / combat / ranged / …) + bind-family rules  
+5. **Retarget viewer** — bone map docs + same-family gate (no Mixamo→Bip001)
+
+See [`artifacts/character-customizer/docs/ANIM_RIG_SYSTEM.md`](artifacts/character-customizer/docs/ANIM_RIG_SYSTEM.md).
+
 ### Purge (2026-07)
 
 - Mixamo clips are **not** retargeted onto Bip001 race kits (wrong bone axis).

@@ -3,11 +3,13 @@ import { Canvas, useThree, ThreeEvent } from '@react-three/fiber';
 import { OrbitControls, Grid, Stats, GizmoHelper, GizmoViewport, ContactShadows } from '@react-three/drei';
 import * as THREE from 'three';
 import CharacterModel from './CharacterModel';
+import UserModelScene from './UserModelScene';
 import DungeonEnvironment from './DungeonEnvironment';
 import TavernBackdrop from './TavernBackdrop';
 import { Physics } from '@react-three/rapier';
 import { GroundColliders, CharacterCollider } from './PhysicsRig';
 import { useCharacterStore } from '../store/customizer';
+import { useRigStudioStore } from '../store/rigStudio';
 import { TOON_RACES } from '../data/assets';
 
 // Dungeon floor footprint after the offset applied in DungeonEnvironment.
@@ -272,6 +274,7 @@ function SceneContents() {
     ambientIntensity, cameraFov, bgColor,
     editMode,
   } = useCharacterStore();
+  const viewportMode = useRigStudioStore((s) => s.viewportMode);
 
   const race = TOON_RACES.find((r) => r.id === selectedRace);
   const accent = race?.accentColor ?? '#8855ff';
@@ -321,17 +324,26 @@ function SceneContents() {
         />
       )}
 
-      <Suspense fallback={null}>
-        <CharacterModel raceId={selectedRace} />
-      </Suspense>
+      {/* Race multipack kit OR Rig Studio user model (add + joint place). */}
+      {viewportMode === 'race' ? (
+        <Suspense fallback={null}>
+          <CharacterModel raceId={selectedRace} />
+        </Suspense>
+      ) : (
+        <Suspense fallback={null}>
+          <UserModelScene />
+        </Suspense>
+      )}
 
       <Physics
         gravity={[0, -9.81, 0]}
-        paused={!physicsEnabled}
+        paused={!physicsEnabled || viewportMode === 'rigStudio'}
         debug={showColliders}
       >
         <GroundColliders />
-        <CharacterCollider referenceHeight={referenceHeight} />
+        {viewportMode === 'race' && (
+          <CharacterCollider referenceHeight={referenceHeight} />
+        )}
       </Physics>
 
       {editMode && (
