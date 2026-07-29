@@ -13,6 +13,11 @@ function racePath(raceId: GrudgeRaceId, ...segments: string[]): string {
   return `${A}/${assetDirFor(raceId)}/${segments.join('/')}`;
 }
 
+/** Misc props under assets/<legacy>/misc/ (e.g. elf bolt). */
+function raceMiscPath(raceId: GrudgeRaceId, file: string): string {
+  return racePath(raceId, 'misc', file);
+}
+
 export interface ToonRace {
   id: GrudgeRaceId;
   name: string;
@@ -149,9 +154,11 @@ export const TOON_RACES: ToonRace[] = [
     equipment: [
       { id: 'spear', name: 'Elven Spear', type: 'weapon', gltfPath: racePath('high-elves', 'equipment', 'ELF_weapon_spear.gltf'), attachBone: 'RightHand', icon: '🗡️' },
       { id: 'staff', name: 'Elven Staff', type: 'staff', gltfPath: racePath('high-elves', 'equipment', 'ELF_weapon_staff_C.gltf'), attachBone: 'RightHand', icon: '🪄' },
+      // Cavalry/siege anims in Lab; bolt is projectile prop for siege options
+      { id: 'bolt', name: 'Elf Bolt', type: 'weapon', gltfPath: racePath('high-elves', 'misc', 'ELF_bolt.gltf'), attachBone: 'RightHand', icon: '🏹' },
     ],
     colorVariants: [
-      { id: 'original', label: 'High Elves', hex: '#FFFFFF' },
+      { id: 'original', label: 'High Elves', hex: '#FFFFFF', texturePath: racePath('high-elves', 'textures', 'ELF_HighElves_Texture.png') },
       { id: 'wood', label: 'Wood Elves', hex: '#FFFFFF', texturePath: racePath('high-elves', 'textures', 'ELF_WoodElves_Texture.png') },
       { id: 'wood_brown', label: 'Wood Elf (Brown)', hex: '#FFFFFF', texturePath: racePath('high-elves', 'textures', 'ELF_WoodElves_Brown.png') },
       { id: 'dark', label: 'Dark Elves', hex: '#FFFFFF', texturePath: racePath('high-elves', 'textures', 'ELF_DarkElves_Texture.png') },

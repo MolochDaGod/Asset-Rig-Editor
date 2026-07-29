@@ -11,6 +11,7 @@ import { useAssetIdentityStore } from '../store/assetIdentityStore';
 import { loadUserModelFromUrl } from '../utils/loadUserModel';
 import { REGION_COLORS } from '../data/rigTemplates';
 import { characterBakeSession } from '../utils/characterBakeSession';
+import { characterAnimSession } from '../utils/characterAnimSession';
 import { smokePoseSkeleton } from '../utils/bindSkeleton';
 
 function JointMarker({
@@ -157,8 +158,14 @@ export default function UserModelScene() {
           const mixer = new THREE.AnimationMixer(loaded.root);
           mixerRef.current = mixer;
           mixer.clipAction(loaded.animations[0]!).play();
+          characterAnimSession.register(
+            mixer,
+            loaded.root,
+            loaded.boneNames,
+          );
         } else {
           mixerRef.current = null;
+          characterAnimSession.register(null, loaded.root, loaded.boneNames);
         }
 
         setKitIdentity(loaded.deploy.kit);
@@ -193,12 +200,18 @@ export default function UserModelScene() {
         if (clips.length) {
           const mixer = new THREE.AnimationMixer(bind.root);
           mixerRef.current = mixer;
+          characterAnimSession.register(mixer, bind.root, bind.boneNames);
           const name = useRigStudioStore.getState().selectedUserClip;
           const clip = clips.find((c) => c.name === name) ?? clips[0]!;
           mixer.stopAllAction();
           mixer.clipAction(clip).reset().play();
         } else {
           mixerRef.current = null;
+          characterAnimSession.register(
+            new THREE.AnimationMixer(bind.root),
+            bind.root,
+            bind.boneNames,
+          );
         }
       }
     });

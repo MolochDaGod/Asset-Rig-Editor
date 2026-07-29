@@ -21,6 +21,7 @@ import {
 import { diagnoseUnitScale, HUMAN_HEIGHT_M } from '../data/worldScale';
 import { buildKitIdentity } from '../utils/assetDeploy';
 import { useAssetIdentityStore } from '../store/assetIdentityStore';
+import { characterAnimSession } from '../utils/characterAnimSession';
 
 // Material-name based mount detection (used for the texture override on
 // human/orc cavalry, where the mount has its own material like "WK_Horse_A"
@@ -612,12 +613,14 @@ function RaceGLTFModel({ raceId }: { raceId: GrudgeRaceId }) {
       // Character has no skinned geometry — nothing to animate. Leave
       // the mixer null so the playback effect short-circuits.
       mixerRef.current = null;
+      characterAnimSession.unregister();
       return;
     }
     const mixer = new THREE.AnimationMixer(skin);
     mixerRef.current = mixer;
+    const skeletonBones = skin.skeleton.bones.map((b) => b.name);
+    characterAnimSession.register(mixer, characterClone, skeletonBones);
     if (process.env.NODE_ENV !== 'production') {
-      const skeletonBones = skin.skeleton.bones.map((b) => b.name).sort();
       let skinCount = 0;
       const allBones = new Set<string>();
       characterClone.traverse((o) => {
@@ -626,10 +629,14 @@ function RaceGLTFModel({ raceId }: { raceId: GrudgeRaceId }) {
       });
       // eslint-disable-next-line no-console
       console.log(
-        `[CharacterModel] ${raceId}: mixer rooted at SkinnedMesh "${skin.name}" — ${skinCount} skin(s), ${skeletonBones.length}/${allBones.size} bones in chosen skeleton:\n  ${skeletonBones.join(', ')}`,
+        `[CharacterModel] ${raceId}: mixer rooted at SkinnedMesh "${skin.name}" — ${skinCount} skin(s), ${skeletonBones.length}/${allBones.size} bones in chosen skeleton:\n  ${[...skeletonBones].sort().join(', ')}`,
       );
     }
-    return () => { mixer.stopAllAction(); mixerRef.current = null; };
+    return () => {
+      mixer.stopAllAction();
+      mixerRef.current = null;
+      characterAnimSession.unregister();
+    };
   }, [characterClone, raceId]);
 
   useEffect(() => {

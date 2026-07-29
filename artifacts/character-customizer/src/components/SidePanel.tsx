@@ -7,11 +7,13 @@ import SceneEditorPanel from './SceneEditorPanel';
 import StatsPanel from './StatsPanel';
 import RigStudioPanel from './RigStudioPanel';
 import AssetIdentityPanel from './AssetIdentityPanel';
+import AnimLabPanel from './AnimLabPanel';
 
 const TABS = [
   { id: 'gear',        label: 'Gear',   icon: '🛡️' },
   { id: 'appearance',  label: 'Looks',  icon: '✨' },
   { id: 'animations',  label: 'Anim',   icon: '🎬' },
+  { id: 'lab',         label: 'Lab',    icon: '🧪' },
   { id: 'rig',         label: 'Rig',    icon: '🦴' },
   { id: 'assets',      label: 'IDs',    icon: '🆔' },
   { id: 'stats',       label: 'Stats',  icon: '📊' },
@@ -49,6 +51,7 @@ export default function SidePanel() {
         {activeTab === 'gear'        && <GearPanel />}
         {activeTab === 'appearance'  && <AppearancePanel />}
         {activeTab === 'animations'  && <AnimationPanel />}
+        {activeTab === 'lab'         && <AnimLabPanel />}
         {activeTab === 'rig'         && <RigStudioPanel />}
         {activeTab === 'assets'      && <AssetIdentityPanel />}
         {activeTab === 'stats'       && <StatsPanel />}
