@@ -155,7 +155,7 @@ export const TOON_RACES: ToonRace[] = [
       { id: 'spear', name: 'Elven Spear', type: 'weapon', gltfPath: racePath('high-elves', 'equipment', 'ELF_weapon_spear.gltf'), attachBone: 'RightHand', icon: '🗡️' },
       { id: 'staff', name: 'Elven Staff', type: 'staff', gltfPath: racePath('high-elves', 'equipment', 'ELF_weapon_staff_C.gltf'), attachBone: 'RightHand', icon: '🪄' },
       // Cavalry/siege anims in Lab; bolt is projectile prop for siege options
-      { id: 'bolt', name: 'Elf Bolt', type: 'weapon', gltfPath: racePath('high-elves', 'misc', 'ELF_bolt.gltf'), attachBone: 'RightHand', icon: '🏹' },
+      { id: 'bolt', name: 'Elf Bolt', type: 'weapon', gltfPath: raceMiscPath('high-elves', 'ELF_bolt.gltf'), attachBone: 'RightHand', icon: '🏹' },
     ],
     colorVariants: [
       { id: 'original', label: 'High Elves', hex: '#FFFFFF', texturePath: racePath('high-elves', 'textures', 'ELF_HighElves_Texture.png') },
