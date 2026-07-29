@@ -1,6 +1,7 @@
 import { TOON_RACES } from '../data/assets';
 import { useCharacterStore } from '../store/customizer';
 import { CLASS_DEFS, CLASS_IDS } from '../data/grudgeStats';
+import BakeCharacterBar from './BakeCharacterBar';
 
 const RACE_ICONS: Record<string, string> = {
   barbarians: '⚔️',
@@ -132,6 +133,9 @@ export default function BottomBar() {
           </div>
         </div>
       )}
+      {/* Bind / bake / export custom characters (unique race+class+name) */}
+      <BakeCharacterBar />
+
       <div className="flex items-end justify-between gap-4 max-w-5xl mx-auto">
         {/* Race selector */}
         <div className="flex items-end gap-2">

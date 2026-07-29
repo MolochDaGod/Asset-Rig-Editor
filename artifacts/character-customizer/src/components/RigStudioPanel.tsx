@@ -400,6 +400,16 @@ export default function RigStudioPanel() {
         </>
       )}
 
+      <div
+        className="rounded-md border px-2 py-2 text-[9px] leading-snug"
+        style={{ borderColor: 'rgba(52,211,153,0.3)', background: 'rgba(16,185,129,0.06)', color: 'rgba(180,220,200,0.8)' }}
+      >
+        <strong style={{ color: '#6ee7b7' }}>Bake flow:</strong> place joints → bottom bar
+        set <em>custom name + race + class</em> → <strong>Bind skeleton</strong> → play Test
+        anim → <strong>Bake &amp; save</strong> / <strong>Export GLB</strong>. Labels avoid
+        filename conflicts.
+      </div>
+
       {/* Best practices */}
       <details className="rounded-md border px-2 py-1.5" style={{ borderColor: 'rgba(120,100,200,0.18)' }}>
         <summary className="cursor-pointer font-semibold text-[10px]" style={{ color: '#E6A817' }}>

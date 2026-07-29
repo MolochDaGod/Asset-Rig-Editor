@@ -24,15 +24,19 @@ Equipment multipack viewer for Toon RTS–style glTF + PNG packs (body/arms/legs
 
 See [`artifacts/character-customizer/docs/ASSET_IDENTITY_SI.md`](artifacts/character-customizer/docs/ASSET_IDENTITY_SI.md).
 
-### Rig Studio
+### Rig Studio + bake / export GLB
 
-Side panel **Rig** tab — Mixamo/Meshy-style workflow:
+Side panel **Rig** tab + bottom **CUSTOM BAKE** bar:
 
 1. **Add model** — drop GLB / GLTF / FBX / OBJ  
 2. Choose skeleton template **Mixamo-25** or **Bip001**  
 3. **Auto-place joints** on mesh bounds; refine with 3D gizmo  
-4. **Anim categories** (loco / combat / ranged / …) + bind-family rules  
-5. **Retarget viewer** — bone map docs + same-family gate (no Mixamo→Bip001)
+4. Bottom bar: **custom name** (unique) + **race** + **class** labels  
+5. **Bind skeleton** — distance weights → SkinnedMesh + Armature  
+6. **Test anim** — embedded clips or smoke pose on bones  
+7. **Bake & save** / **Export GLB** — binary GLB with extras (race/class/uuid)
+
+Filenames: `{custom}__{race}_{class}_{template}_{timestamp}.glb` (no collisions).
 
 See [`artifacts/character-customizer/docs/ANIM_RIG_SYSTEM.md`](artifacts/character-customizer/docs/ANIM_RIG_SYSTEM.md).
 

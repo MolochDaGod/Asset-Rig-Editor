@@ -1,5 +1,6 @@
 /**
- * Renders a user-uploaded model + Mixamo/Meshy-style joint markers for placement.
+ * Renders a user-uploaded model + Mixamo/Meshy-style joint markers.
+ * After bind: shows skinned baked root with skeleton helper + anim mixer.
  */
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { useFrame, ThreeEvent } from '@react-three/fiber';
@@ -9,6 +10,8 @@ import { useRigStudioStore } from '../store/rigStudio';
 import { useAssetIdentityStore } from '../store/assetIdentityStore';
 import { loadUserModelFromUrl } from '../utils/loadUserModel';
 import { REGION_COLORS } from '../data/rigTemplates';
+import { characterBakeSession } from '../utils/characterBakeSession';
+import { smokePoseSkeleton } from '../utils/bindSkeleton';
 
 function JointMarker({
   name,
@@ -86,6 +89,9 @@ export default function UserModelScene() {
   const selectedJoint = useRigStudioStore((s) => s.selectedJoint);
   const showJointMarkers = useRigStudioStore((s) => s.showJointMarkers);
   const showBoneLines = useRigStudioStore((s) => s.showBoneLines);
+  const skeletonBound = useRigStudioStore((s) => s.skeletonBound);
+  const selectedUserClip = useRigStudioStore((s) => s.selectedUserClip);
+  const animPlaying = useRigStudioStore((s) => s.animPlaying);
   const setSelectedJoint = useRigStudioStore((s) => s.setSelectedJoint);
   const updateJointPosition = useRigStudioStore((s) => s.updateJointPosition);
   const setUserClipNames = useRigStudioStore((s) => s.setUserClipNames);
@@ -94,17 +100,22 @@ export default function UserModelScene() {
   const setStatusMessage = useRigStudioStore((s) => s.setStatusMessage);
   const setKitIdentity = useAssetIdentityStore((s) => s.setKit);
 
-  const [root, setRoot] = useState<THREE.Object3D | null>(null);
+  const [sourceRoot, setSourceRoot] = useState<THREE.Object3D | null>(null);
+  const [displayRoot, setDisplayRoot] = useState<THREE.Object3D | null>(null);
   const [helper, setHelper] = useState<THREE.SkeletonHelper | null>(null);
+  const clipsRef = useRef<THREE.AnimationClip[]>([]);
   const mixerRef = useRef<THREE.AnimationMixer | null>(null);
-  const selectedRef = useRef<THREE.Object3D | null>(null);
+  const smokeT = useRef(0);
 
   // Load when meta changes
   useEffect(() => {
     if (!userModel) {
-      setRoot(null);
+      setSourceRoot(null);
+      setDisplayRoot(null);
       setHelper(null);
       mixerRef.current = null;
+      clipsRef.current = [];
+      characterBakeSession.clear();
       return;
     }
     let cancelled = false;
@@ -112,19 +123,22 @@ export default function UserModelScene() {
     loadUserModelFromUrl(userModel.objectUrl, userModel.ext)
       .then((loaded) => {
         if (cancelled) return;
-        setRoot(loaded.root);
+        setSourceRoot(loaded.root);
+        setDisplayRoot(loaded.root);
+        clipsRef.current = loaded.animations;
+        characterBakeSession.setLiveSource(loaded.root, loaded.animations);
+
         const boneNames = loaded.boneNames;
         if (boneNames.length >= 3) {
           const h = new THREE.SkeletonHelper(loaded.root);
-          (h.material as THREE.LineBasicMaterial).linewidth = 2;
+          (h.material as THREE.LineBasicMaterial).depthTest = false;
           setHelper(h);
         } else {
           setHelper(null);
         }
-        const clipNames = loaded.animations.map((c) => c.name || 'clip');
+        const clipNames = loaded.animations.map((c, i) => c.name || `clip_${i}`);
         setUserClipNames(clipNames);
 
-        // Update bbox on meta + auto-place joints
         const bb = loaded.bbox;
         setUserModel({
           ...userModel,
@@ -135,7 +149,6 @@ export default function UserModelScene() {
             max: [bb.max.x, bb.max.y, bb.max.z],
           },
         });
-        // Delay auto-place so store has bbox
         setTimeout(() => {
           if (!cancelled) autoPlaceJoints();
         }, 0);
@@ -143,18 +156,15 @@ export default function UserModelScene() {
         if (loaded.animations.length) {
           const mixer = new THREE.AnimationMixer(loaded.root);
           mixerRef.current = mixer;
-          const action = mixer.clipAction(loaded.animations[0]!);
-          action.play();
+          mixer.clipAction(loaded.animations[0]!).play();
         } else {
           mixerRef.current = null;
         }
 
-        // SI + grudge UUID catalog from deployObjectSI
         setKitIdentity(loaded.deploy.kit);
         setStatusMessage(
           `Ready · ${userModel.name} · ${loaded.deploy.scaleReport.message} · ` +
-          `bones=${boneNames.length} · clips=${clipNames.length} · rig=${loaded.detectedRig} · ` +
-          `uuid=${loaded.deploy.kit.grudgeUuid.slice(0, 8)}…`,
+            `bones=${boneNames.length} · clips=${clipNames.length} · place joints → Bind`,
         );
       })
       .catch((err) => {
@@ -169,35 +179,86 @@ export default function UserModelScene() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [userModel?.id, userModel?.objectUrl]);
 
+  // When bind completes, swap display root from session
+  useEffect(() => {
+    const unsub = characterBakeSession.subscribe(() => {
+      const bind = characterBakeSession.getBind();
+      if (bind) {
+        setDisplayRoot(bind.root);
+        const h = new THREE.SkeletonHelper(bind.root);
+        (h.material as THREE.LineBasicMaterial).depthTest = false;
+        setHelper(h);
+        // Mixer on bound root — rematch embedded clips by name if bone names match
+        const clips = characterBakeSession.getClips();
+        if (clips.length) {
+          const mixer = new THREE.AnimationMixer(bind.root);
+          mixerRef.current = mixer;
+          const name = useRigStudioStore.getState().selectedUserClip;
+          const clip = clips.find((c) => c.name === name) ?? clips[0]!;
+          mixer.stopAllAction();
+          mixer.clipAction(clip).reset().play();
+        } else {
+          mixerRef.current = null;
+        }
+      }
+    });
+    return unsub;
+  }, []);
+
+  // Clip / play state changes
+  useEffect(() => {
+    const mixer = mixerRef.current;
+    const clips = characterBakeSession.getClips();
+    if (!mixer || !clips.length) return;
+    mixer.stopAllAction();
+    if (!animPlaying) return;
+    const clip =
+      clips.find((c) => c.name === selectedUserClip) ??
+      clips.find((c) => (c.name || '') === selectedUserClip) ??
+      clips[0];
+    if (clip) mixer.clipAction(clip).reset().fadeIn(0.15).play();
+  }, [selectedUserClip, animPlaying, skeletonBound]);
+
   useFrame((_, dt) => {
-    mixerRef.current?.update(dt);
+    if (animPlaying) {
+      mixerRef.current?.update(dt);
+      // Smoke pose when bound but no clips
+      const bind = characterBakeSession.getBind();
+      if (bind && !characterBakeSession.getClips().length) {
+        smokeT.current += dt;
+        smokePoseSkeleton(bind.skeleton, smokeT.current);
+      }
+    }
   });
 
-  // Sync selected joint group for TransformControls
   const jointGroup = useMemo(() => {
-    if (!selectedJoint) return null;
+    if (!selectedJoint || skeletonBound) return null;
     const j = joints.find((x) => x.name === selectedJoint);
     if (!j) return null;
     const g = new THREE.Group();
     g.position.set(j.x, j.y, j.z);
     g.name = `joint:${selectedJoint}`;
     return g;
-  }, [selectedJoint, joints]);
+  }, [selectedJoint, joints, skeletonBound]);
 
+  // Keep session source updated before bind
   useEffect(() => {
-    selectedRef.current = jointGroup;
-  }, [jointGroup]);
+    if (sourceRoot && !skeletonBound) {
+      characterBakeSession.setLiveSource(sourceRoot, clipsRef.current);
+    }
+  }, [sourceRoot, skeletonBound]);
 
   if (!userModel) return null;
 
   return (
     <group>
-      {root && <primitive object={root} />}
+      {displayRoot && <primitive object={displayRoot} />}
       {helper && <primitive object={helper} />}
 
-      {showBoneLines && joints.length > 0 && <BoneLines joints={joints} />}
+      {!skeletonBound && showBoneLines && joints.length > 0 && <BoneLines joints={joints} />}
 
-      {showJointMarkers &&
+      {!skeletonBound &&
+        showJointMarkers &&
         joints.map((j) => (
           <JointMarker
             key={j.name}

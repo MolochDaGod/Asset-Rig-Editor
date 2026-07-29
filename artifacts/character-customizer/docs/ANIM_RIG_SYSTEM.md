@@ -60,9 +60,30 @@ See `src/data/animPractices.ts` `ANIM_BEST_PRACTICES`:
 | `components/AnimationPanel.tsx` | Category browser |
 | `data/grudge6Policy.ts` | Purge policy |
 
-## Not yet (future)
+## Bind · bake · export GLB (bottom CUSTOM BAKE bar)
 
-- Skin weight paint / auto-rig export to GLB  
+| Step | Action |
+|------|--------|
+| 1 | Rig tab: import mesh, template, auto-place joints |
+| 2 | Bottom: set **custom name** (unique), **race**, **class** |
+| 3 | **Bind skeleton** — builds Armature + SkinnedMesh (4-bone distance weights) |
+| 4 | **Test anim** — dropdown clips / smoke pose + play-pause |
+| 5 | **Bake & save** — download GLB + local catalog entry |
+| 6 | **Export GLB** — binary GLB with `userData.grudgeBake` extras |
+
+### Code
+
+| File | Role |
+|------|------|
+| `utils/bindSkeleton.ts` | Joints → bones + auto skin |
+| `utils/exportBakedGlb.ts` | GLTFExporter binary download |
+| `utils/characterBakeSession.ts` | Live root/bind handle |
+| `components/BakeCharacterBar.tsx` | Bottom custom UI |
+| `store/rigStudio.ts` | Labels, bound flag, saved list |
+
+### Not yet
+
+- Manual weight paint brush  
 - Server-side FBX bake  
-- Persist joint maps to ObjectStore  
+- Persist GLB blobs to ObjectStore / R2  
 - Full Bip001 pack browser from CDN  
