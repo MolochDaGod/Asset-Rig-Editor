@@ -412,6 +412,29 @@ export default function BakeCharacterBar() {
           >
             {busyAction === 'export' ? '…' : '3 · Export GLB'}
           </button>
+          <button
+            type="button"
+            title="Open Danger Room with this race/class as playable grudge6 kit"
+            onClick={() => {
+              const q = new URLSearchParams({
+                are: '1',
+                race: bakeRaceId,
+                class: bakeClassId,
+                name: uniqueLabel,
+              });
+              const url = `https://open.grudge-studio.com/danger?${q.toString()}`;
+              window.open(url, '_blank', 'noopener,noreferrer');
+              setStatusMessage(`Opened Danger · ${uniqueLabel} · ${bakeRaceId}/${bakeClassId}`);
+            }}
+            className="px-3 py-2 rounded text-[10px] font-bold border"
+            style={{
+              borderColor: 'rgba(248,113,113,0.5)',
+              color: '#fca5a5',
+              background: 'rgba(239,68,68,0.12)',
+            }}
+          >
+            ▶ Play Danger
+          </button>
         </div>
       </div>
 
